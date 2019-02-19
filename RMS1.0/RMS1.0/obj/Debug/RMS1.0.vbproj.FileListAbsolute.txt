@@ -1,0 +1,14 @@
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\bin\Debug\RMS1.0.exe.config
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\bin\Debug\RMS1.0.exe
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\bin\Debug\RMS1.0.pdb
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\bin\Debug\RMS1.0.xml
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\obj\Debug\RMS1._0.Form1.resources
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\obj\Debug\RMS1._0.Resources.resources
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\obj\Debug\RMS1._0.UserControl1.resources
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\obj\Debug\RMS1.0.vbproj.GenerateResource.cache
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\obj\Debug\RMS1.0.vbproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\obj\Debug\RMS1.0.vbproj.CopyComplete
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\obj\Debug\RMS1.0.exe
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\obj\Debug\RMS1.0.xml
+C:\Users\USER\source\repos\RMS1.0\RMS1.0\obj\Debug\RMS1.0.pdb
