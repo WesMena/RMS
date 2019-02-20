@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,12 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation8 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim Animation9 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.homebtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.appetizerbtn = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -36,6 +37,7 @@ Partial Class Form1
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnanim = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.UserControl11 = New RMS1._0.UserControl1()
+        Me.BunifuTransition1 = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.SuspendLayout()
         '
         'Panel1
@@ -279,22 +281,22 @@ Partial Class Form1
         '
         Me.btnanim.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide
         Me.btnanim.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.btnanim.DefaultAnimation = Animation1
+        Animation8.AnimateOnlyDifferences = True
+        Animation8.BlindCoeff = CType(resources.GetObject("Animation8.BlindCoeff"), System.Drawing.PointF)
+        Animation8.LeafCoeff = 0!
+        Animation8.MaxTime = 1.0!
+        Animation8.MinTime = 0!
+        Animation8.MosaicCoeff = CType(resources.GetObject("Animation8.MosaicCoeff"), System.Drawing.PointF)
+        Animation8.MosaicShift = CType(resources.GetObject("Animation8.MosaicShift"), System.Drawing.PointF)
+        Animation8.MosaicSize = 0
+        Animation8.Padding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Animation8.RotateCoeff = 0!
+        Animation8.RotateLimit = 0!
+        Animation8.ScaleCoeff = CType(resources.GetObject("Animation8.ScaleCoeff"), System.Drawing.PointF)
+        Animation8.SlideCoeff = CType(resources.GetObject("Animation8.SlideCoeff"), System.Drawing.PointF)
+        Animation8.TimeCoeff = 0!
+        Animation8.TransparencyCoeff = 0!
+        Me.btnanim.DefaultAnimation = Animation8
         '
         'UserControl11
         '
@@ -303,6 +305,27 @@ Partial Class Form1
         Me.UserControl11.Name = "UserControl11"
         Me.UserControl11.Size = New System.Drawing.Size(774, 453)
         Me.UserControl11.TabIndex = 10
+        '
+        'BunifuTransition1
+        '
+        Me.BunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide
+        Me.BunifuTransition1.Cursor = Nothing
+        Animation9.AnimateOnlyDifferences = True
+        Animation9.BlindCoeff = CType(resources.GetObject("Animation9.BlindCoeff"), System.Drawing.PointF)
+        Animation9.LeafCoeff = 0!
+        Animation9.MaxTime = 1.0!
+        Animation9.MinTime = 0!
+        Animation9.MosaicCoeff = CType(resources.GetObject("Animation9.MosaicCoeff"), System.Drawing.PointF)
+        Animation9.MosaicShift = CType(resources.GetObject("Animation9.MosaicShift"), System.Drawing.PointF)
+        Animation9.MosaicSize = 0
+        Animation9.Padding = New System.Windows.Forms.Padding(0, 0, 0, 0)
+        Animation9.RotateCoeff = 0!
+        Animation9.RotateLimit = 0!
+        Animation9.ScaleCoeff = CType(resources.GetObject("Animation9.ScaleCoeff"), System.Drawing.PointF)
+        Animation9.SlideCoeff = CType(resources.GetObject("Animation9.SlideCoeff"), System.Drawing.PointF)
+        Animation9.TimeCoeff = 0!
+        Animation9.TransparencyCoeff = 0!
+        Me.BunifuTransition1.DefaultAnimation = Animation9
         '
         'Form1
         '
@@ -320,10 +343,11 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.UserControl11)
         Me.btnanim.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuTransition1.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = " "
         Me.ResumeLayout(False)
 
     End Sub
@@ -339,4 +363,5 @@ Partial Class Form1
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btnanim As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents UserControl11 As UserControl1
+    Friend WithEvents BunifuTransition1 As BunifuAnimatorNS.BunifuTransition
 End Class
