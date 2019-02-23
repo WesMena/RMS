@@ -77,18 +77,61 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="appetizersUC.Designer.vb">
-      <DependentUpon>appetizersUC.vb</DependentUpon>
+    <Compile Include="appetizerUC.Designer.vb">
+      <DependentUpon>appetizerUC.vb</DependentUpon>
     </Compile>
-    <Compile Include="appetizersUC.vb">
+    <Compile Include="appetizerUC.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="appform.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="appform.Designer.vb">
+      <DependentUpon>appform.vb</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dessertsUC.Designer.vb">
+      <DependentUpon>dessertsUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dessertsUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="drinksUC.Designer.vb">
+      <DependentUpon>drinksUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="drinksUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="homehub.Designer.vb">
+      <DependentUpon>homehub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="homehub.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="homemodule.vb" />
+    <Compile Include="homescreen2.Designer.vb">
+      <DependentUpon>homescreen2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="homescreen2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="homescreen3.Designer.vb">
+      <DependentUpon>homescreen3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="homescreen3.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemtemplate.Designer.vb">
+      <DependentUpon>itemtemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="itemtemplate.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="maincourseUC.Designer.vb">
+      <DependentUpon>maincourseUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="maincourseUC.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -105,19 +148,52 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UserControl1.designer.vb">
-      <DependentUpon>UserControl1.vb</DependentUpon>
+    <Compile Include="homescreen1.designer.vb">
+      <DependentUpon>homescreen1.vb</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.vb">
+    <Compile Include="homescreen1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="notification.Designer.vb">
+      <DependentUpon>notification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="notification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order.Designer.vb">
+      <DependentUpon>Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Order.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="appetizersUC.resx">
-      <DependentUpon>appetizersUC.vb</DependentUpon>
+    <EmbeddedResource Include="appetizerUC.resx">
+      <DependentUpon>appetizerUC.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="appform.resx">
+      <DependentUpon>appform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dessertsUC.resx">
+      <DependentUpon>dessertsUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drinksUC.resx">
+      <DependentUpon>drinksUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homehub.resx">
+      <DependentUpon>homehub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homescreen2.resx">
+      <DependentUpon>homescreen2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homescreen3.resx">
+      <DependentUpon>homescreen3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemtemplate.resx">
+      <DependentUpon>itemtemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="maincourseUC.resx">
+      <DependentUpon>maincourseUC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -125,8 +201,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.vb</DependentUpon>
+    <EmbeddedResource Include="homescreen1.resx">
+      <DependentUpon>homescreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notification.resx">
+      <DependentUpon>notification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
