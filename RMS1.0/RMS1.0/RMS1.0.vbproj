@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Desktop\U\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -77,6 +80,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminClient.Designer.vb">
+      <DependentUpon>AdminClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl.Designer.vb">
+      <DependentUpon>AdminUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="AppetizerList.vb" />
     <Compile Include="appetizerUC.Designer.vb">
       <DependentUpon>appetizerUC.vb</DependentUpon>
@@ -89,6 +104,12 @@
     </Compile>
     <Compile Include="appform.Designer.vb">
       <DependentUpon>appform.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientSelection.Designer.vb">
+      <DependentUpon>ClientSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientSelection.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Component1.Designer.vb">
@@ -143,6 +164,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MenuItem.vb" />
+    <Compile Include="MenuItemList.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -191,11 +213,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminClient.resx">
+      <DependentUpon>AdminClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl.resx">
+      <DependentUpon>AdminUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="appetizerUC.resx">
       <DependentUpon>appetizerUC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="appform.resx">
       <DependentUpon>appform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientSelection.resx">
+      <DependentUpon>ClientSelection.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dessertsUC.resx">
       <DependentUpon>dessertsUC.vb</DependentUpon>
@@ -241,6 +272,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

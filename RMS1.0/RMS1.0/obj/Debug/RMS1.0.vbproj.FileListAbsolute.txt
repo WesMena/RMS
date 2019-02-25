@@ -77,3 +77,6 @@ C:\Users\HP\Documents\Francisco\RMS-backend2\RMS-backend\RMS1.0\RMS1.0\obj\Debug
 C:\Users\HP\Documents\Francisco\RMS-backend2\RMS-backend\RMS1.0\RMS1.0\obj\Debug\RMS1._0.homehub.resources
 C:\Users\HP\Documents\Francisco\RMS-backend2\RMS-backend\RMS1.0\RMS1.0\obj\Debug\RMS1._0.SpecialsUC.resources
 C:\Users\HP\Documents\Francisco\RMS-backend2\RMS-backend\RMS1.0\RMS1.0\obj\Debug\RMS1.0.vbprojAssemblyReference.cache
+C:\Users\HP\Documents\Francisco\RMS-backend2\RMS-backend\RMS1.0\RMS1.0\obj\Debug\RMS1._0.ClientSelection.resources
+C:\Users\HP\Documents\Francisco\RMS-backend2\RMS-backend\RMS1.0\RMS1.0\obj\Debug\RMS1._0.AdminUserControl.resources
+C:\Users\HP\Documents\Francisco\RMS-backend2\RMS-backend\RMS1.0\RMS1.0\obj\Debug\RMS1._0.AdminClient.resources
