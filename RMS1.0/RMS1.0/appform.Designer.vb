@@ -33,15 +33,14 @@ Partial Class appform
         Me.dessertsbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.orderbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.homepanel = New System.Windows.Forms.Panel()
+        Me.PanelUC = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnanim = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.cattransition = New BunifuAnimatorNS.BunifuTransition(Me.components)
-        Me.AppetizerUC1 = New RMS1._0.appetizerUC()
-        Me.DessertsUC1 = New RMS1._0.dessertsUC()
-        Me.DrinksUC1 = New RMS1._0.drinksUC()
-        Me.MaincourseUC1 = New RMS1._0.maincourseUC()
-        Me.Homehub1 = New RMS1._0.homehub()
         Me.Order1 = New RMS1._0.Order()
+        Me.Homehub1 = New RMS1._0.Homehub()
+        Me.CategoryUC1 = New RMS1._0.categoryUC()
+        Me.homepanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'homebtn
@@ -263,12 +262,22 @@ Partial Class appform
         'homepanel
         '
         Me.homepanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.homepanel.Controls.Add(Me.PanelUC)
         Me.cattransition.SetDecoration(Me.homepanel, BunifuAnimatorNS.DecorationType.None)
         Me.btnanim.SetDecoration(Me.homepanel, BunifuAnimatorNS.DecorationType.None)
         Me.homepanel.Location = New System.Drawing.Point(-2, 0)
         Me.homepanel.Name = "homepanel"
         Me.homepanel.Size = New System.Drawing.Size(49, 450)
         Me.homepanel.TabIndex = 8
+        '
+        'PanelUC
+        '
+        Me.cattransition.SetDecoration(Me.PanelUC, BunifuAnimatorNS.DecorationType.None)
+        Me.btnanim.SetDecoration(Me.PanelUC, BunifuAnimatorNS.DecorationType.None)
+        Me.PanelUC.Location = New System.Drawing.Point(44, 0)
+        Me.PanelUC.Name = "PanelUC"
+        Me.PanelUC.Size = New System.Drawing.Size(764, 450)
+        Me.PanelUC.TabIndex = 11
         '
         'Panel3
         '
@@ -322,59 +331,37 @@ Partial Class appform
         Animation1.TransparencyCoeff = 0!
         Me.cattransition.DefaultAnimation = Animation1
         '
-        'AppetizerUC1
+        'Order1
         '
-        Me.btnanim.SetDecoration(Me.AppetizerUC1, BunifuAnimatorNS.DecorationType.None)
-        Me.cattransition.SetDecoration(Me.AppetizerUC1, BunifuAnimatorNS.DecorationType.None)
-        Me.AppetizerUC1.Location = New System.Drawing.Point(43, 0)
-        Me.AppetizerUC1.Name = "AppetizerUC1"
-        Me.AppetizerUC1.Size = New System.Drawing.Size(774, 453)
-        Me.AppetizerUC1.TabIndex = 11
-        '
-        'DessertsUC1
-        '
-        Me.btnanim.SetDecoration(Me.DessertsUC1, BunifuAnimatorNS.DecorationType.None)
-        Me.cattransition.SetDecoration(Me.DessertsUC1, BunifuAnimatorNS.DecorationType.None)
-        Me.DessertsUC1.Location = New System.Drawing.Point(43, 0)
-        Me.DessertsUC1.Name = "DessertsUC1"
-        Me.DessertsUC1.Size = New System.Drawing.Size(774, 453)
-        Me.DessertsUC1.TabIndex = 12
-        '
-        'DrinksUC1
-        '
-        Me.btnanim.SetDecoration(Me.DrinksUC1, BunifuAnimatorNS.DecorationType.None)
-        Me.cattransition.SetDecoration(Me.DrinksUC1, BunifuAnimatorNS.DecorationType.None)
-        Me.DrinksUC1.Location = New System.Drawing.Point(43, 0)
-        Me.DrinksUC1.Name = "DrinksUC1"
-        Me.DrinksUC1.Size = New System.Drawing.Size(774, 453)
-        Me.DrinksUC1.TabIndex = 13
-        '
-        'MaincourseUC1
-        '
-        Me.btnanim.SetDecoration(Me.MaincourseUC1, BunifuAnimatorNS.DecorationType.None)
-        Me.cattransition.SetDecoration(Me.MaincourseUC1, BunifuAnimatorNS.DecorationType.None)
-        Me.MaincourseUC1.Location = New System.Drawing.Point(43, 0)
-        Me.MaincourseUC1.Name = "MaincourseUC1"
-        Me.MaincourseUC1.Size = New System.Drawing.Size(774, 453)
-        Me.MaincourseUC1.TabIndex = 14
+        Me.Order1.BackColor = System.Drawing.Color.Gainsboro
+        Me.btnanim.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
+        Me.cattransition.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
+        Me.Order1.Location = New System.Drawing.Point(166, 3)
+        Me.Order1.Name = "Order1"
+        Me.Order1.Size = New System.Drawing.Size(515, 441)
+        Me.Order1.TabIndex = 12
+        Me.Order1.Visible = False
         '
         'Homehub1
         '
         Me.btnanim.SetDecoration(Me.Homehub1, BunifuAnimatorNS.DecorationType.None)
         Me.cattransition.SetDecoration(Me.Homehub1, BunifuAnimatorNS.DecorationType.None)
-        Me.Homehub1.Location = New System.Drawing.Point(43, -3)
+        Me.Homehub1.Location = New System.Drawing.Point(45, -2)
         Me.Homehub1.Name = "Homehub1"
         Me.Homehub1.Size = New System.Drawing.Size(774, 453)
-        Me.Homehub1.TabIndex = 10
+        Me.Homehub1.TabIndex = 11
+        Me.Homehub1.Visible = False
         '
-        'Order1
+        'CategoryUC1
         '
-        Me.btnanim.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
-        Me.cattransition.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
-        Me.Order1.Location = New System.Drawing.Point(43, 0)
-        Me.Order1.Name = "Order1"
-        Me.Order1.Size = New System.Drawing.Size(774, 453)
-        Me.Order1.TabIndex = 15
+        Me.CategoryUC1.AutoScroll = True
+        Me.CategoryUC1.CategoryName = ""
+        Me.btnanim.SetDecoration(Me.CategoryUC1, BunifuAnimatorNS.DecorationType.None)
+        Me.cattransition.SetDecoration(Me.CategoryUC1, BunifuAnimatorNS.DecorationType.None)
+        Me.CategoryUC1.Location = New System.Drawing.Point(42, -2)
+        Me.CategoryUC1.Name = "CategoryUC1"
+        Me.CategoryUC1.Size = New System.Drawing.Size(764, 452)
+        Me.CategoryUC1.TabIndex = 10
         '
         'appform
         '
@@ -389,18 +376,16 @@ Partial Class appform
         Me.Controls.Add(Me.homebtn)
         Me.Controls.Add(Me.homepanel)
         Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.AppetizerUC1)
-        Me.Controls.Add(Me.DessertsUC1)
-        Me.Controls.Add(Me.DrinksUC1)
-        Me.Controls.Add(Me.MaincourseUC1)
-        Me.Controls.Add(Me.Homehub1)
         Me.Controls.Add(Me.Order1)
+        Me.Controls.Add(Me.Homehub1)
+        Me.Controls.Add(Me.CategoryUC1)
         Me.btnanim.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.cattransition.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "appform"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " "
+        Me.homepanel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -414,10 +399,8 @@ Partial Class appform
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btnanim As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents cattransition As BunifuAnimatorNS.BunifuTransition
-    Friend WithEvents Homehub1 As homehub
-    Friend WithEvents AppetizerUC1 As appetizerUC
-    Friend WithEvents DessertsUC1 As dessertsUC
-    Friend WithEvents DrinksUC1 As drinksUC
-    Friend WithEvents MaincourseUC1 As maincourseUC
+    Friend WithEvents CategoryUC1 As categoryUC
+    Friend WithEvents PanelUC As Panel
+    Friend WithEvents Homehub1 As Homehub
     Friend WithEvents Order1 As Order
 End Class

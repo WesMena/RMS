@@ -25,9 +25,9 @@ Partial Class itemtemplate
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(itemtemplate))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.itemlbl = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.descriptionlbl = New System.Windows.Forms.Label()
-        Me.pricelbl = New System.Windows.Forms.Label()
+        Me.itemNameLabel = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.itemDescriptionLabel = New System.Windows.Forms.Label()
+        Me.itemPriceLabel = New System.Windows.Forms.Label()
         Me.addbtn = New Bunifu.Framework.UI.BunifuImageButton()
         Me.idlbl = New System.Windows.Forms.Label()
         CType(Me.addbtn, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -38,41 +38,41 @@ Partial Class itemtemplate
         Me.BunifuElipse1.ElipseRadius = 5
         Me.BunifuElipse1.TargetControl = Me
         '
-        'itemlbl
+        'itemNameLabel
         '
-        Me.itemlbl.AutoSize = True
-        Me.itemlbl.BackColor = System.Drawing.Color.Transparent
-        Me.itemlbl.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.itemlbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.itemlbl.Location = New System.Drawing.Point(19, 16)
-        Me.itemlbl.Name = "itemlbl"
-        Me.itemlbl.Size = New System.Drawing.Size(155, 23)
-        Me.itemlbl.TabIndex = 0
-        Me.itemlbl.Text = "Pizza Cardinale"
+        Me.itemNameLabel.AutoSize = True
+        Me.itemNameLabel.BackColor = System.Drawing.Color.Transparent
+        Me.itemNameLabel.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.itemNameLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.itemNameLabel.Location = New System.Drawing.Point(19, 16)
+        Me.itemNameLabel.Name = "itemNameLabel"
+        Me.itemNameLabel.Size = New System.Drawing.Size(155, 23)
+        Me.itemNameLabel.TabIndex = 0
+        Me.itemNameLabel.Text = "Pizza Cardinale"
         '
-        'descriptionlbl
+        'itemDescriptionLabel
         '
-        Me.descriptionlbl.AutoSize = True
-        Me.descriptionlbl.BackColor = System.Drawing.Color.Transparent
-        Me.descriptionlbl.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.descriptionlbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.descriptionlbl.Location = New System.Drawing.Point(19, 65)
-        Me.descriptionlbl.Name = "descriptionlbl"
-        Me.descriptionlbl.Size = New System.Drawing.Size(235, 20)
-        Me.descriptionlbl.TabIndex = 2
-        Me.descriptionlbl.Text = "Tomate, mozzarella y prosciutto"
-        Me.descriptionlbl.UseMnemonic = False
+        Me.itemDescriptionLabel.AutoSize = True
+        Me.itemDescriptionLabel.BackColor = System.Drawing.Color.Transparent
+        Me.itemDescriptionLabel.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.itemDescriptionLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.itemDescriptionLabel.Location = New System.Drawing.Point(19, 65)
+        Me.itemDescriptionLabel.Name = "itemDescriptionLabel"
+        Me.itemDescriptionLabel.Size = New System.Drawing.Size(235, 20)
+        Me.itemDescriptionLabel.TabIndex = 2
+        Me.itemDescriptionLabel.Text = "Tomate, mozzarella y prosciutto"
+        Me.itemDescriptionLabel.UseMnemonic = False
         '
-        'pricelbl
+        'itemPriceLabel
         '
-        Me.pricelbl.AutoSize = True
-        Me.pricelbl.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.pricelbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.pricelbl.Location = New System.Drawing.Point(300, 50)
-        Me.pricelbl.Name = "pricelbl"
-        Me.pricelbl.Size = New System.Drawing.Size(27, 19)
-        Me.pricelbl.TabIndex = 3
-        Me.pricelbl.Text = "$2"
+        Me.itemPriceLabel.AutoSize = True
+        Me.itemPriceLabel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.itemPriceLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.itemPriceLabel.Location = New System.Drawing.Point(260, 49)
+        Me.itemPriceLabel.Name = "itemPriceLabel"
+        Me.itemPriceLabel.Size = New System.Drawing.Size(27, 19)
+        Me.itemPriceLabel.TabIndex = 3
+        Me.itemPriceLabel.Text = "$2"
         '
         'addbtn
         '
@@ -104,9 +104,9 @@ Partial Class itemtemplate
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.Controls.Add(Me.idlbl)
         Me.Controls.Add(Me.addbtn)
-        Me.Controls.Add(Me.pricelbl)
-        Me.Controls.Add(Me.descriptionlbl)
-        Me.Controls.Add(Me.itemlbl)
+        Me.Controls.Add(Me.itemPriceLabel)
+        Me.Controls.Add(Me.itemDescriptionLabel)
+        Me.Controls.Add(Me.itemNameLabel)
         Me.Name = "itemtemplate"
         Me.Size = New System.Drawing.Size(418, 104)
         CType(Me.addbtn, System.ComponentModel.ISupportInitialize).EndInit()
@@ -116,9 +116,9 @@ Partial Class itemtemplate
     End Sub
 
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
-    Friend WithEvents itemlbl As Bunifu.Framework.UI.BunifuCustomLabel
-    Friend WithEvents descriptionlbl As Label
+    Friend WithEvents itemNameLabel As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents itemDescriptionLabel As Label
     Friend WithEvents addbtn As Bunifu.Framework.UI.BunifuImageButton
-    Friend WithEvents pricelbl As Label
+    Friend WithEvents itemPriceLabel As Label
     Friend WithEvents idlbl As Label
 End Class

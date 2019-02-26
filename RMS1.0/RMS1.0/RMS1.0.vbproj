@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Desktop\U\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -77,6 +80,19 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminClient.Designer.vb">
+      <DependentUpon>AdminClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl.Designer.vb">
+      <DependentUpon>AdminUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppetizerList.vb" />
     <Compile Include="appetizerUC.Designer.vb">
       <DependentUpon>appetizerUC.vb</DependentUpon>
     </Compile>
@@ -90,25 +106,38 @@
       <DependentUpon>appform.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClientSelection.Designer.vb">
+      <DependentUpon>ClientSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientSelection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Component1.Designer.vb">
+      <DependentUpon>Component1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Component1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DessertList.vb" />
     <Compile Include="dessertsUC.Designer.vb">
       <DependentUpon>dessertsUC.vb</DependentUpon>
     </Compile>
     <Compile Include="dessertsUC.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="DrinksList.vb" />
     <Compile Include="drinksUC.Designer.vb">
       <DependentUpon>drinksUC.vb</DependentUpon>
     </Compile>
     <Compile Include="drinksUC.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="homehub.Designer.vb">
-      <DependentUpon>homehub.vb</DependentUpon>
+    <Compile Include="Homehub.Designer.vb">
+      <DependentUpon>Homehub.vb</DependentUpon>
     </Compile>
-    <Compile Include="homehub.vb">
+    <Compile Include="Homehub.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="homemodule.vb" />
     <Compile Include="homescreen2.Designer.vb">
       <DependentUpon>homescreen2.vb</DependentUpon>
     </Compile>
@@ -127,12 +156,15 @@
     <Compile Include="itemtemplate.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="MainCourseList.vb" />
     <Compile Include="maincourseUC.Designer.vb">
       <DependentUpon>maincourseUC.vb</DependentUpon>
     </Compile>
     <Compile Include="maincourseUC.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="MenuItem.vb" />
+    <Compile Include="MenuItemList.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -166,13 +198,35 @@
     <Compile Include="Order.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="categoryUC.Designer.vb">
+      <DependentUpon>categoryUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="categoryUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpecialsList.vb" />
+    <Compile Include="SpecialsUC.Designer.vb">
+      <DependentUpon>SpecialsUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialsUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminClient.resx">
+      <DependentUpon>AdminClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl.resx">
+      <DependentUpon>AdminUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="appetizerUC.resx">
       <DependentUpon>appetizerUC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="appform.resx">
       <DependentUpon>appform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientSelection.resx">
+      <DependentUpon>ClientSelection.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dessertsUC.resx">
       <DependentUpon>dessertsUC.vb</DependentUpon>
@@ -180,8 +234,8 @@
     <EmbeddedResource Include="drinksUC.resx">
       <DependentUpon>drinksUC.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="homehub.resx">
-      <DependentUpon>homehub.vb</DependentUpon>
+    <EmbeddedResource Include="Homehub.resx">
+      <DependentUpon>Homehub.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="homescreen2.resx">
       <DependentUpon>homescreen2.vb</DependentUpon>
@@ -210,8 +264,15 @@
     <EmbeddedResource Include="Order.resx">
       <DependentUpon>Order.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="categoryUC.resx">
+      <DependentUpon>categoryUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialsUC.resx">
+      <DependentUpon>SpecialsUC.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -222,6 +283,21 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner_steak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fruits-dessert-header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bottle-facts-header.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

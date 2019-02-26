@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class homehub
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class Homehub
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,16 @@ Partial Class homehub
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(homehub))
+        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Homehub))
         Me.currentplusbtn = New Bunifu.Framework.UI.BunifuImageButton()
         Me.currentminusbtn = New Bunifu.Framework.UI.BunifuImageButton()
         Me.hhubtransition = New BunifuAnimatorNS.BunifuTransition(Me.components)
-        Me.Homescreen21 = New RMS1._0.homescreen2()
-        Me.Homescreen31 = New RMS1._0.homescreen3()
-        Me.Homescreen11 = New RMS1._0.homescreen1()
+        Me.SpecialsUserControl = New RMS1._0.SpecialsUC()
+        Me.OrderButton = New System.Windows.Forms.Button()
         CType(Me.currentplusbtn, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.currentminusbtn, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -67,69 +66,64 @@ Partial Class homehub
         '
         Me.hhubtransition.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndHorizSlide
         Me.hhubtransition.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.hhubtransition.DefaultAnimation = Animation1
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.hhubtransition.DefaultAnimation = Animation2
         '
-        'Homescreen21
+        'SpecialsUserControl
         '
-        Me.hhubtransition.SetDecoration(Me.Homescreen21, BunifuAnimatorNS.DecorationType.None)
-        Me.Homescreen21.Location = New System.Drawing.Point(0, 0)
-        Me.Homescreen21.Name = "Homescreen21"
-        Me.Homescreen21.Size = New System.Drawing.Size(774, 453)
-        Me.Homescreen21.TabIndex = 1
+        Me.SpecialsUserControl.BackColor = System.Drawing.Color.White
+        Me.hhubtransition.SetDecoration(Me.SpecialsUserControl, BunifuAnimatorNS.DecorationType.None)
+        Me.SpecialsUserControl.Location = New System.Drawing.Point(0, 0)
+        Me.SpecialsUserControl.Name = "SpecialsUserControl"
+        Me.SpecialsUserControl.Size = New System.Drawing.Size(774, 453)
+        Me.SpecialsUserControl.TabIndex = 5
         '
-        'Homescreen31
+        'OrderButton
         '
-        Me.hhubtransition.SetDecoration(Me.Homescreen31, BunifuAnimatorNS.DecorationType.None)
-        Me.Homescreen31.Location = New System.Drawing.Point(3, 0)
-        Me.Homescreen31.Name = "Homescreen31"
-        Me.Homescreen31.Size = New System.Drawing.Size(774, 453)
-        Me.Homescreen31.TabIndex = 0
+        Me.OrderButton.BackColor = System.Drawing.Color.PaleVioletRed
+        Me.hhubtransition.SetDecoration(Me.OrderButton, BunifuAnimatorNS.DecorationType.None)
+        Me.OrderButton.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OrderButton.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.OrderButton.Location = New System.Drawing.Point(111, 308)
+        Me.OrderButton.Name = "OrderButton"
+        Me.OrderButton.Size = New System.Drawing.Size(239, 39)
+        Me.OrderButton.TabIndex = 6
+        Me.OrderButton.Text = "Ordenar"
+        Me.OrderButton.UseVisualStyleBackColor = False
         '
-        'Homescreen11
-        '
-        Me.hhubtransition.SetDecoration(Me.Homescreen11, BunifuAnimatorNS.DecorationType.None)
-        Me.Homescreen11.Location = New System.Drawing.Point(3, 3)
-        Me.Homescreen11.Name = "Homescreen11"
-        Me.Homescreen11.Size = New System.Drawing.Size(774, 453)
-        Me.Homescreen11.TabIndex = 5
-        '
-        'homehub
+        'Homehub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.OrderButton)
         Me.Controls.Add(Me.currentplusbtn)
         Me.Controls.Add(Me.currentminusbtn)
-        Me.Controls.Add(Me.Homescreen21)
-        Me.Controls.Add(Me.Homescreen31)
-        Me.Controls.Add(Me.Homescreen11)
+        Me.Controls.Add(Me.SpecialsUserControl)
         Me.hhubtransition.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
-        Me.Name = "homehub"
+        Me.Name = "Homehub"
         Me.Size = New System.Drawing.Size(774, 453)
         CType(Me.currentplusbtn, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.currentminusbtn, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Homescreen31 As homescreen3
-    Friend WithEvents Homescreen21 As homescreen2
     Friend WithEvents currentplusbtn As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents currentminusbtn As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents hhubtransition As BunifuAnimatorNS.BunifuTransition
-    Friend WithEvents Homescreen11 As homescreen1
+    Friend WithEvents SpecialsUserControl As SpecialsUC
+    Friend WithEvents OrderButton As Button
 End Class
