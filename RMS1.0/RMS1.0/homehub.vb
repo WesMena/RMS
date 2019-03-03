@@ -1,9 +1,16 @@
 ﻿Public Class Homehub
     Private specials As SpecialsList = New SpecialsList
 
+    'Tamanho de la Lista de Items Especiales
     Private count As Integer
 
     Private current As Integer = 0
+
+    Public Sub resetCurrent()
+        current = 0
+        updateItemInfo()
+    End Sub
+
 
     Private Sub updateItemInfo()
         If specials IsNot Nothing Then
@@ -18,7 +25,9 @@
             'entonces lo que recomiendo es solo cambiar el prefijo por el correspondiente a sus directorio
             ' y guardar el nombre de las imagenes en la base de datos (con extension) ejemplo: "quesoburguesa.png"
 
-            Dim path As String = "C:\Users\HP\Pictures\imagenes\" & currentSpecial.Imagepath
+            'Dim path As String = "C:\Users\HP\Pictures\imagenes\" & currentSpecial.Imagepath
+            Dim path As String = currentSpecial.Imagepath
+
             SpecialsUserControl.itemPhotoBox.Image = Image.FromFile(path)
         Else
             SpecialsUserControl.titleLabel.Text = "Vacio"

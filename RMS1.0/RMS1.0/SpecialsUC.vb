@@ -3,5 +3,7 @@
 
     End Sub
 
+    Private Sub itemPhotoBox_Click(sender As Object, e As EventArgs) Handles itemPhotoBox.Click
 
+    End Sub
 End Class

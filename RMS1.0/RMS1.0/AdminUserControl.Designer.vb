@@ -29,9 +29,6 @@ Partial Class AdminUserControl
         Me.dessertButton = New System.Windows.Forms.Button()
         Me.drinksButton = New System.Windows.Forms.Button()
         Me.itemsDataGridView = New System.Windows.Forms.DataGridView()
-        Me.removeItemButton = New System.Windows.Forms.Button()
-        Me.modifyButton = New System.Windows.Forms.Button()
-        Me.addButton = New System.Windows.Forms.Button()
         Me.idColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nameColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descriptionColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -44,7 +41,7 @@ Partial Class AdminUserControl
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(28, 19)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(187, 50)
@@ -54,7 +51,7 @@ Partial Class AdminUserControl
         '
         'specialsButton
         '
-        Me.specialsButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.specialsButton.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.specialsButton.Location = New System.Drawing.Point(28, 75)
         Me.specialsButton.Name = "specialsButton"
         Me.specialsButton.Size = New System.Drawing.Size(187, 50)
@@ -64,7 +61,7 @@ Partial Class AdminUserControl
         '
         'appertizersButton
         '
-        Me.appertizersButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.appertizersButton.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.appertizersButton.Location = New System.Drawing.Point(28, 131)
         Me.appertizersButton.Name = "appertizersButton"
         Me.appertizersButton.Size = New System.Drawing.Size(187, 50)
@@ -74,7 +71,7 @@ Partial Class AdminUserControl
         '
         'mainCourseButton
         '
-        Me.mainCourseButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mainCourseButton.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.mainCourseButton.Location = New System.Drawing.Point(28, 187)
         Me.mainCourseButton.Name = "mainCourseButton"
         Me.mainCourseButton.Size = New System.Drawing.Size(187, 58)
@@ -84,7 +81,7 @@ Partial Class AdminUserControl
         '
         'dessertButton
         '
-        Me.dessertButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dessertButton.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dessertButton.Location = New System.Drawing.Point(28, 251)
         Me.dessertButton.Name = "dessertButton"
         Me.dessertButton.Size = New System.Drawing.Size(187, 58)
@@ -94,7 +91,7 @@ Partial Class AdminUserControl
         '
         'drinksButton
         '
-        Me.drinksButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.drinksButton.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.drinksButton.Location = New System.Drawing.Point(28, 315)
         Me.drinksButton.Name = "drinksButton"
         Me.drinksButton.Size = New System.Drawing.Size(187, 58)
@@ -108,82 +105,57 @@ Partial Class AdminUserControl
         Me.itemsDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idColumn, Me.nameColumn, Me.descriptionColumn, Me.categoryColumn, Me.priceColumn, Me.specialColumn, Me.imagePathColumn})
         Me.itemsDataGridView.Location = New System.Drawing.Point(233, 19)
         Me.itemsDataGridView.Name = "itemsDataGridView"
+        Me.itemsDataGridView.ReadOnly = True
         Me.itemsDataGridView.Size = New System.Drawing.Size(644, 354)
         Me.itemsDataGridView.TabIndex = 6
-        '
-        'removeItemButton
-        '
-        Me.removeItemButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.removeItemButton.Location = New System.Drawing.Point(233, 394)
-        Me.removeItemButton.Name = "removeItemButton"
-        Me.removeItemButton.Size = New System.Drawing.Size(180, 58)
-        Me.removeItemButton.TabIndex = 7
-        Me.removeItemButton.Text = "Remover Item"
-        Me.removeItemButton.UseVisualStyleBackColor = True
-        '
-        'modifyButton
-        '
-        Me.modifyButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.modifyButton.Location = New System.Drawing.Point(419, 394)
-        Me.modifyButton.Name = "modifyButton"
-        Me.modifyButton.Size = New System.Drawing.Size(246, 58)
-        Me.modifyButton.TabIndex = 8
-        Me.modifyButton.Text = "Modificar Item"
-        Me.modifyButton.UseVisualStyleBackColor = True
-        '
-        'addButton
-        '
-        Me.addButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addButton.Location = New System.Drawing.Point(671, 394)
-        Me.addButton.Name = "addButton"
-        Me.addButton.Size = New System.Drawing.Size(206, 58)
-        Me.addButton.TabIndex = 9
-        Me.addButton.Text = "Agregar Item"
-        Me.addButton.UseVisualStyleBackColor = True
         '
         'idColumn
         '
         Me.idColumn.HeaderText = "idColumn"
         Me.idColumn.Name = "idColumn"
+        Me.idColumn.ReadOnly = True
         Me.idColumn.Visible = False
         '
         'nameColumn
         '
         Me.nameColumn.HeaderText = "Nombre"
         Me.nameColumn.Name = "nameColumn"
+        Me.nameColumn.ReadOnly = True
         '
         'descriptionColumn
         '
         Me.descriptionColumn.HeaderText = "Descripcion"
         Me.descriptionColumn.Name = "descriptionColumn"
+        Me.descriptionColumn.ReadOnly = True
         '
         'categoryColumn
         '
         Me.categoryColumn.HeaderText = "Categoria"
         Me.categoryColumn.Name = "categoryColumn"
+        Me.categoryColumn.ReadOnly = True
         '
         'priceColumn
         '
         Me.priceColumn.HeaderText = "Precio"
         Me.priceColumn.Name = "priceColumn"
+        Me.priceColumn.ReadOnly = True
         '
         'specialColumn
         '
         Me.specialColumn.HeaderText = "Especial"
         Me.specialColumn.Name = "specialColumn"
+        Me.specialColumn.ReadOnly = True
         '
         'imagePathColumn
         '
         Me.imagePathColumn.HeaderText = "Imagen"
         Me.imagePathColumn.Name = "imagePathColumn"
+        Me.imagePathColumn.ReadOnly = True
         '
         'AdminUserControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.addButton)
-        Me.Controls.Add(Me.modifyButton)
-        Me.Controls.Add(Me.removeItemButton)
         Me.Controls.Add(Me.itemsDataGridView)
         Me.Controls.Add(Me.drinksButton)
         Me.Controls.Add(Me.dessertButton)
@@ -205,9 +177,6 @@ Partial Class AdminUserControl
     Friend WithEvents dessertButton As Button
     Friend WithEvents drinksButton As Button
     Friend WithEvents itemsDataGridView As DataGridView
-    Friend WithEvents removeItemButton As Button
-    Friend WithEvents modifyButton As Button
-    Friend WithEvents addButton As Button
     Friend WithEvents idColumn As DataGridViewTextBoxColumn
     Friend WithEvents nameColumn As DataGridViewTextBoxColumn
     Friend WithEvents descriptionColumn As DataGridViewTextBoxColumn

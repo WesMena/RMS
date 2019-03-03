@@ -51,7 +51,7 @@ Partial Class Order
         Me.orderdgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.orderdgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSeaGreen
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold)
         DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PaleTurquoise
@@ -74,6 +74,7 @@ Partial Class Order
         Me.orderdgv.HeaderBgColor = System.Drawing.Color.SeaGreen
         Me.orderdgv.HeaderForeColor = System.Drawing.SystemColors.ButtonFace
         Me.orderdgv.Location = New System.Drawing.Point(-2, 0)
+        Me.orderdgv.MultiSelect = False
         Me.orderdgv.Name = "orderdgv"
         Me.orderdgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.orderdgv.RowHeadersVisible = False

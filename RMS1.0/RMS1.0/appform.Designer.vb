@@ -36,10 +36,10 @@ Partial Class appform
         Me.PanelUC = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnanim = New BunifuAnimatorNS.BunifuTransition(Me.components)
-        Me.cattransition = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.Order1 = New RMS1._0.Order()
         Me.Homehub1 = New RMS1._0.Homehub()
         Me.CategoryUC1 = New RMS1._0.categoryUC()
+        Me.cattransition = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.homepanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -310,27 +310,6 @@ Partial Class appform
         Animation2.TransparencyCoeff = 0!
         Me.btnanim.DefaultAnimation = Animation2
         '
-        'cattransition
-        '
-        Me.cattransition.AnimationType = BunifuAnimatorNS.AnimationType.Leaf
-        Me.cattransition.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 1.0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.cattransition.DefaultAnimation = Animation1
-        '
         'Order1
         '
         Me.Order1.BackColor = System.Drawing.Color.Gainsboro
@@ -362,6 +341,27 @@ Partial Class appform
         Me.CategoryUC1.Name = "CategoryUC1"
         Me.CategoryUC1.Size = New System.Drawing.Size(764, 452)
         Me.CategoryUC1.TabIndex = 10
+        '
+        'cattransition
+        '
+        Me.cattransition.AnimationType = BunifuAnimatorNS.AnimationType.Leaf
+        Me.cattransition.Cursor = Nothing
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 1.0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.cattransition.DefaultAnimation = Animation1
         '
         'appform
         '

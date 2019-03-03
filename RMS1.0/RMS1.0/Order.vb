@@ -1,6 +1,5 @@
 ﻿Public Class Order
 
-
     Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles deleteselectedbtn.Click
         orderdgv.ClearSelection()
     End Sub
@@ -47,4 +46,5 @@
         Dim totaltext = calculateTotal().ToString
         totalnumlbl.Text = totaltext
     End Sub
+
 End Class
