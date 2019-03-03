@@ -132,6 +132,12 @@
     <Compile Include="drinksUC.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Homehub.Designer.vb">
       <DependentUpon>Homehub.vb</DependentUpon>
     </Compile>
@@ -165,6 +171,12 @@
     </Compile>
     <Compile Include="MenuItem.vb" />
     <Compile Include="MenuItemList.vb" />
+    <Compile Include="ModifyItemUC.Designer.vb">
+      <DependentUpon>ModifyItemUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyItemUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -248,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="maincourseUC.resx">
       <DependentUpon>maincourseUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyItemUC.resx">
+      <DependentUpon>ModifyItemUC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

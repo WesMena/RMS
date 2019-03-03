@@ -1,11 +1,19 @@
 ﻿Public Class AdminUserControl
-    Private menuitemslist As MenuItemList = New MenuItemList
-    Private drinksList As DrinksList = New DrinksList
-    Private dessertsList As DessertList = New DessertList
-    Private appetizersList As AppetizerList = New AppetizerList
-    Private maincouseList As MainCourseList = New MainCourseList
-    Private specialsList As SpecialsList = New SpecialsList
+    'Private menuitemslist As MenuItemList = New MenuItemList
+    'Private drinksList As DrinksList = New DrinksList
+    'Private dessertsList As DessertList = New DessertList
+    'Private appetizersList As AppetizerList = New AppetizerList
+    'Private maincouseList As MainCourseList = New MainCourseList
+    'Private specialsList As SpecialsList = New SpecialsList
 
+
+    Private menuitemslist As MenuItemList
+    Private drinksList As DrinksList
+    Private dessertsList As DessertList
+    Private appetizersList As AppetizerList
+    Private maincouseList As MainCourseList
+    Private specialsList As SpecialsList
+    Private modifyitem As ModifyItemUC = New ModifyItemUC
 
     Public Sub PopulateDataGridView(itemlist As ArrayList)
         itemsDataGridView.Rows.Clear()
@@ -16,6 +24,9 @@
     End Sub
 
     Private Sub AdminUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        InitializeAllLists()
+        modifyitem.Visible = False
+        itemsDataGridView.MultiSelect = False
         Dim allitems As ArrayList = menuitemslist.getItemsArrayList()
         PopulateDataGridView(allitems)
     End Sub
@@ -51,4 +62,33 @@
         PopulateDataGridView(drinkitems)
     End Sub
 
+    Private Sub itemsDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles itemsDataGridView.CellContentClick
+        itemsDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+    End Sub
+
+    Private Sub modifyButton_Click(sender As Object, e As EventArgs)
+        Dim dgvr As DataGridViewRow = itemsDataGridView.CurrentRow
+        modifyitem.Id = Integer.Parse(dgvr.Cells(0).Value)
+        modifyitem.Name = dgvr.Cells(1).Value
+        modifyitem.Description = dgvr.Cells(2).Value
+        modifyitem.Category = dgvr.Cells(3).Value
+        modifyitem.Price = Decimal.Parse(dgvr.Cells(4).Value)
+        modifyitem.Special = Boolean.Parse(dgvr.Cells(5).Value)
+        modifyitem.Imagepath = dgvr.Cells(6).Value
+        modifyitem.Visible = True
+    End Sub
+
+    Private Sub InitializeAllLists()
+        menuitemslist = New MenuItemList
+        drinksList = New DrinksList
+        dessertsList = New DessertList
+        appetizersList = New AppetizerList
+        maincouseList = New MainCourseList
+        specialsList = New SpecialsList
+    End Sub
+
+
+    Private Sub AdminUserControl_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+        InitializeAllLists()
+    End Sub
 End Class

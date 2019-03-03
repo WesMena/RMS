@@ -18,12 +18,14 @@
 
 
     Private Sub homebtn_Click(sender As Object, e As EventArgs) Handles homebtn.Click
+
         If homebtn.Left = -112 Then
             homebtn.Visible = False
             homebtn.Left = -3
             btnanim.ShowSync(homebtn)
         Else
             Homehub1.Visible = True
+            Homehub1.resetCurrent()
             homebtn.Visible = False
             homebtn.Left = -112
             btnanim.ShowSync(homebtn)
@@ -68,4 +70,7 @@
 
     End Sub
 
+    Private Sub Homehub1_Load_1(sender As Object, e As EventArgs) Handles Homehub1.Load
+
+    End Sub
 End Class
