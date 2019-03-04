@@ -43,7 +43,7 @@ Partial Class categoryUC
         'categoryPhotoBox
         '
         Me.categoryPhotoBox.Image = CType(resources.GetObject("categoryPhotoBox.Image"), System.Drawing.Image)
-        Me.categoryPhotoBox.Location = New System.Drawing.Point(-28, 40)
+        Me.categoryPhotoBox.Location = New System.Drawing.Point(-18, 40)
         Me.categoryPhotoBox.Name = "categoryPhotoBox"
         Me.categoryPhotoBox.Size = New System.Drawing.Size(774, 99)
         Me.categoryPhotoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage

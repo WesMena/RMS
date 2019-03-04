@@ -4,7 +4,7 @@ Public Class SpecialsList
     Private myCmd As SqlCommand
     Private myReader As SqlDataReader
     Private results As String
-    Private connectionString As String = "Data Source=DESKTOP-KGOILL4;Initial Catalog=SimpleMenu;Integrated Security=True"
+    Private connectionString As String = "Data Source=LAPTOP-3U2PB6I2\WESMENA;Initial Catalog=SimpleMenu;Persist Security Info=True;User ID=sa;Password=wvjjk611"
 
     Public specialsList As New ArrayList()
 

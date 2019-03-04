@@ -36,10 +36,11 @@ Partial Class appform
         Me.PanelUC = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnanim = New BunifuAnimatorNS.BunifuTransition(Me.components)
+        Me.cattransition = New BunifuAnimatorNS.BunifuTransition(Me.components)
+        Me.HideTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Order1 = New RMS1._0.Order()
         Me.Homehub1 = New RMS1._0.Homehub()
         Me.CategoryUC1 = New RMS1._0.categoryUC()
-        Me.cattransition = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.homepanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,7 +70,7 @@ Partial Class appform
         Me.homebtn.Location = New System.Drawing.Point(-112, 40)
         Me.homebtn.Name = "homebtn"
         Me.homebtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.homebtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.homebtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.homebtn.OnHoverTextColor = System.Drawing.Color.White
         Me.homebtn.selected = False
         Me.homebtn.Size = New System.Drawing.Size(159, 48)
@@ -105,7 +106,7 @@ Partial Class appform
         Me.appetizerbtn.Location = New System.Drawing.Point(-112, 100)
         Me.appetizerbtn.Name = "appetizerbtn"
         Me.appetizerbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.appetizerbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.appetizerbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.appetizerbtn.OnHoverTextColor = System.Drawing.Color.White
         Me.appetizerbtn.selected = False
         Me.appetizerbtn.Size = New System.Drawing.Size(159, 48)
@@ -141,7 +142,7 @@ Partial Class appform
         Me.maincoursebtn.Location = New System.Drawing.Point(-112, 160)
         Me.maincoursebtn.Name = "maincoursebtn"
         Me.maincoursebtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.maincoursebtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.maincoursebtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.maincoursebtn.OnHoverTextColor = System.Drawing.Color.White
         Me.maincoursebtn.selected = False
         Me.maincoursebtn.Size = New System.Drawing.Size(159, 48)
@@ -177,7 +178,7 @@ Partial Class appform
         Me.drinksbtn.Location = New System.Drawing.Point(-112, 220)
         Me.drinksbtn.Name = "drinksbtn"
         Me.drinksbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.drinksbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.drinksbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.drinksbtn.OnHoverTextColor = System.Drawing.Color.White
         Me.drinksbtn.selected = False
         Me.drinksbtn.Size = New System.Drawing.Size(159, 48)
@@ -213,7 +214,7 @@ Partial Class appform
         Me.dessertsbtn.Location = New System.Drawing.Point(-112, 280)
         Me.dessertsbtn.Name = "dessertsbtn"
         Me.dessertsbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.dessertsbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.dessertsbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.dessertsbtn.OnHoverTextColor = System.Drawing.Color.White
         Me.dessertsbtn.selected = False
         Me.dessertsbtn.Size = New System.Drawing.Size(159, 48)
@@ -249,7 +250,7 @@ Partial Class appform
         Me.orderbtn.Location = New System.Drawing.Point(-112, 340)
         Me.orderbtn.Name = "orderbtn"
         Me.orderbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.orderbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.orderbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.orderbtn.OnHoverTextColor = System.Drawing.Color.White
         Me.orderbtn.selected = False
         Me.orderbtn.Size = New System.Drawing.Size(159, 48)
@@ -309,6 +310,33 @@ Partial Class appform
         Animation2.TimeCoeff = 0!
         Animation2.TransparencyCoeff = 0!
         Me.btnanim.DefaultAnimation = Animation2
+        Me.btnanim.Interval = 15
+        '
+        'cattransition
+        '
+        Me.cattransition.AnimationType = BunifuAnimatorNS.AnimationType.Leaf
+        Me.cattransition.Cursor = Nothing
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 1.0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.cattransition.DefaultAnimation = Animation1
+        '
+        'HideTimer
+        '
+        Me.HideTimer.Enabled = True
+        Me.HideTimer.Interval = 500
         '
         'Order1
         '
@@ -341,27 +369,6 @@ Partial Class appform
         Me.CategoryUC1.Name = "CategoryUC1"
         Me.CategoryUC1.Size = New System.Drawing.Size(764, 452)
         Me.CategoryUC1.TabIndex = 10
-        '
-        'cattransition
-        '
-        Me.cattransition.AnimationType = BunifuAnimatorNS.AnimationType.Leaf
-        Me.cattransition.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 1.0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.cattransition.DefaultAnimation = Animation1
         '
         'appform
         '
@@ -397,10 +404,11 @@ Partial Class appform
     Friend WithEvents orderbtn As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents homepanel As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents btnanim As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents cattransition As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents CategoryUC1 As categoryUC
     Friend WithEvents PanelUC As Panel
     Friend WithEvents Homehub1 As Homehub
     Friend WithEvents Order1 As Order
+    Friend WithEvents HideTimer As Timer
+    Friend WithEvents btnanim As BunifuAnimatorNS.BunifuTransition
 End Class
