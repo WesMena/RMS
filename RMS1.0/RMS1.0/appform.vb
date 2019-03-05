@@ -2,24 +2,15 @@
 
 
     Public Sub toggleButtonVisibility(btn As Control, categoryName As String)
-        If categoryName <> CategoryUC1.categoryNameLabel.Text Then
-            btn.Visible = False
-            btn.Left = -3
-            btnanim.ShowSync(btn)
+        Homehub1.Visible = False
+        Order1.Visible = False
 
-            'pasar a un evento click de aquí'
-            CategoryUC1.Visible = False
-            scrollToTop()
+        CategoryUC1.Visible = False
+        scrollToTop()
             CategoryUC1.categoryNameLabel.Text = categoryName
-            cattransition.ShowSync(CategoryUC1)
-            'a aquí
-            Homehub1.Visible = False
-            Order1.Visible = False
-            btn.Visible = False
-            btn.Left = -112
-            btnanim.HideSync(btn)
-            btn.Visible = True
-        End If
+        cattransition.ShowSync(CategoryUC1)
+
+
 
 
     End Sub
@@ -28,19 +19,11 @@
     Private Sub homebtn_Click(sender As Object, e As EventArgs) Handles homebtn.Click
 
 
-        If Homehub1.Visible = False Then
-            homebtn.Visible = False
-            homebtn.Left = -3
-            btnanim.ShowSync(homebtn)
-            cattransition.ShowSync(Homehub1)
-            Homehub1.Visible = True
-            Homehub1.resetCurrent()
-            homebtn.Visible = False
-            homebtn.Left = -112
-            btnanim.ShowSync(homebtn)
 
-        End If
-        CategoryUC1.categoryNameLabel.Text = " "
+        cattransition.Show(Homehub1)
+        Homehub1.resetCurrent()
+
+
     End Sub
 
 
@@ -49,34 +32,27 @@
         CategoryUC1.AutoScrollPosition = New Point(0, 0)
     End Sub
 
-    Private Sub appetizerbtn_MouseHover(sender As Object, e As EventArgs) Handles appetizerbtn.MouseHover
+    Private Sub appetizerbtn_Click(sender As Object, e As EventArgs) Handles appetizerbtn.Click
         toggleButtonVisibility(appetizerbtn, "Entradas")
-    End Sub
-    Private Sub appetizerbtn_MouseLeave(sender As Object, e As EventArgs) Handles appetizerbtn.MouseLeave
-        toggleButtonVisibility(appetizerbtn, "Entradas")
+        appetizerbtn.selected = True
     End Sub
 
-    Private Sub maincoursebtn_MouseHover(sender As Object, e As EventArgs) Handles maincoursebtn.MouseHover
-        toggleButtonVisibility(maincoursebtn, "Plato Fuerte")
-    End Sub
-    Private Sub maincoursebtn_MouseLeave(sender As Object, e As EventArgs) Handles maincoursebtn.MouseLeave
+
+    Private Sub maincoursebtn_Click(sender As Object, e As EventArgs) Handles maincoursebtn.Click
         toggleButtonVisibility(maincoursebtn, "Plato Fuerte")
     End Sub
 
-    Private Sub drinksbtn_MouseHover(sender As Object, e As EventArgs) Handles drinksbtn.MouseHover
+
+    Private Sub drinksbtn_Click(sender As Object, e As EventArgs) Handles drinksbtn.Click
         toggleButtonVisibility(drinksbtn, "Bebidas")
     End Sub
 
-    Private Sub drinksbtn_MouseLeave(sender As Object, e As EventArgs) Handles drinksbtn.MouseLeave
-        toggleButtonVisibility(drinksbtn, "Bebidas")
+
+
+    Private Sub dessertsbtn_Click(sender As Object, e As EventArgs) Handles dessertsbtn.Click
+        toggleButtonVisibility(dessertsbtn, "Postres")
     End Sub
 
-    Private Sub dessertsbtn_MouseHover(sender As Object, e As EventArgs) Handles dessertsbtn.MouseHover
-        toggleButtonVisibility(dessertsbtn, "Postres")
-    End Sub
-    Private Sub dessertsbtn_MouseLeave(sender As Object, e As EventArgs) Handles dessertsbtn.MouseLeave
-        toggleButtonVisibility(dessertsbtn, "Postres")
-    End Sub
 
     Private Sub orderbtn_Click(sender As Object, e As EventArgs) Handles orderbtn.Click
         Order1.Visible = Not Order1.Visible
@@ -86,6 +62,7 @@
         Homehub1.Visible = True
         Order1.Visible = False
         Order1.BringToFront()
+        homebtn.selected = True
     End Sub
 
     Private Sub Homehub1_Load(sender As Object, e As EventArgs)
@@ -104,11 +81,25 @@
 
     End Sub
 
-    Private Sub appetizerbtn_Click(sender As Object, e As EventArgs) Handles appetizerbtn.Click
 
-    End Sub
 
     Private Sub searchbtn_Click(sender As Object, e As EventArgs) Handles searchbtn.Click
         toggleButtonVisibility(searchbtn, "Busqueda")
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        Homehub1.Visible = False
+    End Sub
+
+    Private Sub sidepanelsliderbtn_Click(sender As Object, e As EventArgs) Handles sidepanelsliderbtn.Click
+        If sidepanel.Width = 48 Then
+            sidepanel.Visible = False
+            sidepanel.Width = 180
+            sidepaneltransitionOUT.ShowSync(sidepanel)
+        Else
+            sidepanel.Visible = False
+            sidepanel.Width = 48
+            sidepaneltransitionIN.ShowSync(sidepanel)
+        End If
     End Sub
 End Class

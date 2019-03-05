@@ -79,6 +79,7 @@
                 categoryNameLabel.ForeColor = Color.FromArgb(87, 153, 204)
                 categoryPhotoBox.Visible = False
                 Dim search As ArrayList = New ArrayList
+
                 categoryItems = search
             Case Else
                 img = My.Resources.drinksImg
@@ -148,6 +149,10 @@
     Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles SearchButton.Click
         Dim searchinput As String = SearchTextBox.Text
         Dim searchitems As ArrayList = New ArrayList()
+        clearItemTemplates()
+
+
+
         Dim query As String = "SELECT id, name, description, category, price, special FROM Menu WHERE  name LIKE  '%" & searchinput & "%'"
         AddItemToArrayList(query, searchitems)
         categoryItems = searchitems

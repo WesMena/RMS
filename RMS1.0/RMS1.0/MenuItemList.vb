@@ -24,7 +24,8 @@ Public Class MenuItemList
     End Function
 
     Public Sub New()
-        AddItemToArrayList("", menuItemsList)
+        Dim query As String = "SELECT id, name, description, category, price, special FROM Menu"
+        AddItemToArrayList(query, menuItemsList)
 
     End Sub
 

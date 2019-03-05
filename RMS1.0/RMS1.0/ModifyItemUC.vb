@@ -88,7 +88,9 @@ Public Class ModifyItemUC
         End Set
     End Property
 
-    Private Sub saveAddButton_Click(sender As Object, e As EventArgs) Handles saveAddButton.Click
+    Private Sub saveAddButton_Click(sender As Object, e As EventArgs)
+
+
         ItemName = NameTextBox.Text
         Description = descRichTextBox.Text
         Category = categoryComboBox.Text
@@ -114,8 +116,8 @@ Public Class ModifyItemUC
     End Sub
 
     Private Function requiredIsNull() As Boolean
-        Dim n As Boolean = itemName Is Nothing
-        Dim cat As Boolean = category Is Nothing
+        Dim n As Boolean = ItemName Is Nothing
+        Dim cat As Boolean = Category Is Nothing
         Dim p As Boolean = Price = 0
         Dim img As Boolean = Special And Imagepath = ""
         If img Then
@@ -204,7 +206,7 @@ Public Class ModifyItemUC
         filenameLabel.Text = Imagepath
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.Visible = False
     End Sub
 
@@ -212,10 +214,51 @@ Public Class ModifyItemUC
         updateFields()
     End Sub
 
-    Private Sub browseFileButton_Click(sender As Object, e As EventArgs) Handles browseFileButton.Click
+    Private Sub browseFileButton_Click(sender As Object, e As EventArgs)
         Dim ofd As OpenFileDialog = New OpenFileDialog
         If ofd.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             Imagepath = ofd.FileName
+        End If
+    End Sub
+
+    Private Sub BunifuiOSSwitch1_OnValueChange(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub maincoursebtn_Click(sender As Object, e As EventArgs) Handles browseFileButton.Click
+        Dim ofd As OpenFileDialog = New OpenFileDialog
+        If ofd.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Imagepath = ofd.FileName
+        End If
+    End Sub
+
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles cancelbtn.Click
+        Me.Visible = False
+    End Sub
+
+    Private Sub BunifuFlatButton1_Click_1(sender As Object, e As EventArgs) Handles saveAddButton.Click
+
+        ItemName = NameTextBox.Text
+        Description = descRichTextBox.Text
+        Category = categoryComboBox.Text
+        Price = priceNumericUpDown.Value
+        Special = specialCheckBox.Checked
+        If requiredIsNull() Then
+            MsgBox("Por favor llene todos los campos marcados con *")
+        Else
+            If IsUpdate Then
+                If Imagepath = "" Then
+                    Imagepath = "default"
+                End If
+                updateTable()
+            Else
+                If Imagepath = "" Then
+                    Imagepath = "default"
+                End If
+                addToTable()
+            End If
+            MsgBox("Se han guardado los cambios")
+            Me.Hide()
         End If
     End Sub
 End Class
