@@ -101,5 +101,7 @@
             sidepanel.Width = 48
             sidepaneltransitionIN.ShowSync(sidepanel)
         End If
+
+        'nota para la demostración
     End Sub
 End Class
