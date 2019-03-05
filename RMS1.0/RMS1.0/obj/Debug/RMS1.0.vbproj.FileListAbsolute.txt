@@ -87,3 +87,4 @@ C:\Users\USER\source\repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.vbproj.Cop
 C:\Users\USER\source\repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.exe
 C:\Users\USER\source\repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.xml
 C:\Users\USER\source\repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.pdb
+C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.SearchUC.resources

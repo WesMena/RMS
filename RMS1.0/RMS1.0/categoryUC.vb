@@ -26,38 +26,68 @@
     Private Sub categoryUC_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         categoryNameLabel.Text = Me.CategoryName
         Me.AutoScroll = True
+        If categoryNameLabel.Text = "Busqueda" Then
+            SearchTextBox.Visible = True
+        Else
+            SearchTextBox.Visible = False
+        End If
     End Sub
 
+    ' Selecciona la imagen de la categoria para el header
     Private Function getCategoryImg() As Image
         Dim img As Image
         Select Case Me.CategoryName
             Case "Entradas"
+                SearchTextBox.Visible = False
+                SearchButton.Visible = False
+                categoryPhotoBox.Visible = True
+
                 categoryNameLabel.ForeColor = Color.FromArgb(111, 224, 96)
                 img = My.Resources.appetizerImg
                 Dim appetizers As AppetizerList = New AppetizerList
                 categoryItems = appetizers.GetItemsArrayList()
             Case "Plato Fuerte"
+                SearchTextBox.Visible = False
+                SearchButton.Visible = False
+                categoryPhotoBox.Visible = True
+
                 categoryNameLabel.ForeColor = Color.FromArgb(214, 157, 85)
                 img = My.Resources.maincourseImg
                 Dim maincourses As MainCourseList = New MainCourseList
                 categoryItems = maincourses.GetItemsArrayList()
             Case "Postres"
+                SearchTextBox.Visible = False
+                SearchButton.Visible = False
+                categoryPhotoBox.Visible = True
+
                 categoryNameLabel.ForeColor = Color.FromArgb(255, 117, 150)
                 img = My.Resources.dessertImg
                 Dim desserts As DessertList = New DessertList
                 categoryItems = desserts.GetItemsArrayList()
-
             Case "Bebidas"
+                SearchTextBox.Visible = False
+                SearchButton.Visible = False
+                categoryPhotoBox.Visible = True
+
                 categoryNameLabel.ForeColor = Color.FromArgb(87, 153, 204)
                 img = My.Resources.drinksImg
                 Dim drinks As DrinksList = New DrinksList
                 categoryItems = drinks.getItemsArrayList()
+            Case "Busqueda"
+                SearchTextBox.Visible = True
+                SearchButton.Visible = True
+                categoryNameLabel.ForeColor = Color.FromArgb(87, 153, 204)
+                categoryPhotoBox.Visible = False
+                Dim search As ArrayList = New ArrayList
+                categoryItems = search
             Case Else
                 img = My.Resources.drinksImg
         End Select
         Return img
     End Function
 
+    ' Este metodo es el que agarra el nombre
+    ' TODO  Cambiar a usar el metodo
     Private Sub categoryNameLabel_TextChanged(sender As Object, e As EventArgs) Handles categoryNameLabel.TextChanged
         Me.CategoryName = categoryNameLabel.Text
         categoryPhotoBox.Image = getCategoryImg()
@@ -111,4 +141,16 @@
         End If
     End Sub
 
+    Private Sub SearchTextBox_TextChanged(sender As Object, e As EventArgs) Handles SearchTextBox.TextChanged
+
+    End Sub
+
+    Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles SearchButton.Click
+        Dim searchinput As String = SearchTextBox.Text
+        Dim searchitems As ArrayList = New ArrayList()
+        Dim query As String = "SELECT id, name, description, category, price, special FROM Menu WHERE  name LIKE  '%" & searchinput & "%'"
+        AddItemToArrayList(query, searchitems)
+        categoryItems = searchitems
+        CreateCategoryItems()
+    End Sub
 End Class

@@ -132,6 +132,7 @@
     <Compile Include="drinksUC.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ExchangeModule.vb" />
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -216,6 +217,13 @@
     <Compile Include="categoryUC.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="QueriesModule.vb" />
+    <Compile Include="SearchUC.Designer.vb">
+      <DependentUpon>SearchUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="SpecialsList.vb" />
     <Compile Include="SpecialsUC.Designer.vb">
       <DependentUpon>SpecialsUC.vb</DependentUpon>
@@ -281,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="categoryUC.resx">
       <DependentUpon>categoryUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchUC.resx">
+      <DependentUpon>SearchUC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SpecialsUC.resx">
       <DependentUpon>SpecialsUC.vb</DependentUpon>

@@ -23,8 +23,8 @@ Partial Class appform
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
-        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation4 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation3 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(appform))
         Me.homebtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.appetizerbtn = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -41,6 +41,7 @@ Partial Class appform
         Me.Order1 = New RMS1._0.Order()
         Me.Homehub1 = New RMS1._0.Homehub()
         Me.CategoryUC1 = New RMS1._0.categoryUC()
+        Me.searchbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.homepanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -263,6 +264,7 @@ Partial Class appform
         'homepanel
         '
         Me.homepanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.homepanel.Controls.Add(Me.searchbtn)
         Me.homepanel.Controls.Add(Me.PanelUC)
         Me.cattransition.SetDecoration(Me.homepanel, BunifuAnimatorNS.DecorationType.None)
         Me.btnanim.SetDecoration(Me.homepanel, BunifuAnimatorNS.DecorationType.None)
@@ -294,44 +296,44 @@ Partial Class appform
         '
         Me.btnanim.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide
         Me.btnanim.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.btnanim.DefaultAnimation = Animation2
+        Animation4.AnimateOnlyDifferences = True
+        Animation4.BlindCoeff = CType(resources.GetObject("Animation4.BlindCoeff"), System.Drawing.PointF)
+        Animation4.LeafCoeff = 0!
+        Animation4.MaxTime = 1.0!
+        Animation4.MinTime = 0!
+        Animation4.MosaicCoeff = CType(resources.GetObject("Animation4.MosaicCoeff"), System.Drawing.PointF)
+        Animation4.MosaicShift = CType(resources.GetObject("Animation4.MosaicShift"), System.Drawing.PointF)
+        Animation4.MosaicSize = 0
+        Animation4.Padding = New System.Windows.Forms.Padding(0)
+        Animation4.RotateCoeff = 0!
+        Animation4.RotateLimit = 0!
+        Animation4.ScaleCoeff = CType(resources.GetObject("Animation4.ScaleCoeff"), System.Drawing.PointF)
+        Animation4.SlideCoeff = CType(resources.GetObject("Animation4.SlideCoeff"), System.Drawing.PointF)
+        Animation4.TimeCoeff = 0!
+        Animation4.TransparencyCoeff = 0!
+        Me.btnanim.DefaultAnimation = Animation4
         Me.btnanim.Interval = 15
         '
         'cattransition
         '
         Me.cattransition.AnimationType = BunifuAnimatorNS.AnimationType.Leaf
         Me.cattransition.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 1.0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.cattransition.DefaultAnimation = Animation1
+        Animation3.AnimateOnlyDifferences = True
+        Animation3.BlindCoeff = CType(resources.GetObject("Animation3.BlindCoeff"), System.Drawing.PointF)
+        Animation3.LeafCoeff = 1.0!
+        Animation3.MaxTime = 1.0!
+        Animation3.MinTime = 0!
+        Animation3.MosaicCoeff = CType(resources.GetObject("Animation3.MosaicCoeff"), System.Drawing.PointF)
+        Animation3.MosaicShift = CType(resources.GetObject("Animation3.MosaicShift"), System.Drawing.PointF)
+        Animation3.MosaicSize = 0
+        Animation3.Padding = New System.Windows.Forms.Padding(0)
+        Animation3.RotateCoeff = 0!
+        Animation3.RotateLimit = 0!
+        Animation3.ScaleCoeff = CType(resources.GetObject("Animation3.ScaleCoeff"), System.Drawing.PointF)
+        Animation3.SlideCoeff = CType(resources.GetObject("Animation3.SlideCoeff"), System.Drawing.PointF)
+        Animation3.TimeCoeff = 0!
+        Animation3.TransparencyCoeff = 0!
+        Me.cattransition.DefaultAnimation = Animation3
         '
         'HideTimer
         '
@@ -369,6 +371,42 @@ Partial Class appform
         Me.CategoryUC1.Name = "CategoryUC1"
         Me.CategoryUC1.Size = New System.Drawing.Size(764, 452)
         Me.CategoryUC1.TabIndex = 10
+        '
+        'searchbtn
+        '
+        Me.searchbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.searchbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.searchbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.searchbtn.BorderRadius = 0
+        Me.searchbtn.ButtonText = "Pedido"
+        Me.searchbtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cattransition.SetDecoration(Me.searchbtn, BunifuAnimatorNS.DecorationType.None)
+        Me.btnanim.SetDecoration(Me.searchbtn, BunifuAnimatorNS.DecorationType.None)
+        Me.searchbtn.DisabledColor = System.Drawing.Color.Gray
+        Me.searchbtn.Iconcolor = System.Drawing.Color.Transparent
+        Me.searchbtn.Iconimage = Nothing
+        Me.searchbtn.Iconimage_right = CType(resources.GetObject("searchbtn.Iconimage_right"), System.Drawing.Image)
+        Me.searchbtn.Iconimage_right_Selected = Nothing
+        Me.searchbtn.Iconimage_Selected = Nothing
+        Me.searchbtn.IconMarginLeft = 0
+        Me.searchbtn.IconMarginRight = 0
+        Me.searchbtn.IconRightVisible = True
+        Me.searchbtn.IconRightZoom = 0R
+        Me.searchbtn.IconVisible = True
+        Me.searchbtn.IconZoom = 90.0R
+        Me.searchbtn.IsTab = False
+        Me.searchbtn.Location = New System.Drawing.Point(-110, 402)
+        Me.searchbtn.Name = "searchbtn"
+        Me.searchbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.searchbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.searchbtn.OnHoverTextColor = System.Drawing.Color.White
+        Me.searchbtn.selected = False
+        Me.searchbtn.Size = New System.Drawing.Size(159, 48)
+        Me.searchbtn.TabIndex = 13
+        Me.searchbtn.Text = "Pedido"
+        Me.searchbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.searchbtn.Textcolor = System.Drawing.Color.White
+        Me.searchbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'appform
         '
@@ -411,4 +449,5 @@ Partial Class appform
     Friend WithEvents Order1 As Order
     Friend WithEvents HideTimer As Timer
     Friend WithEvents btnanim As BunifuAnimatorNS.BunifuTransition
+    Friend WithEvents searchbtn As Bunifu.Framework.UI.BunifuFlatButton
 End Class

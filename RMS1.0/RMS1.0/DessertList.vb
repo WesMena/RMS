@@ -1,11 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class DessertList
-    Private myConn As SqlConnection
-    Private myCmd As SqlCommand
-    Private myReader As SqlDataReader
-    Private results As String
-    Private connectionString As String = "Data Source=LAPTOP-3U2PB6I2\WESMENA;Initial Catalog=SimpleMenu;Persist Security Info=True;User ID=sa;Password=wvjjk611"
 
     Public dessertList As New ArrayList()
 
@@ -25,23 +20,8 @@ Public Class DessertList
     End Function
 
     Public Sub New()
-        myConn = New SqlConnection(connectionString)
-
-        myCmd = myConn.CreateCommand
-
-        myCmd.CommandText = "SELECT id, name, description, category, price, special FROM Menu WHERE category = 'Postre'"
-        'Open the connection.
-        myConn.Open()
-
-        myReader = myCmd.ExecuteReader()
-
-        Do While myReader.Read()
-            dessertList.Add(New MenuItem(myReader.GetValue(0), myReader.GetValue(1), myReader.GetValue(2), myReader.GetValue(3), myReader.GetValue(4), myReader.GetValue(5)))
-        Loop
-
-        myReader.Close()
-
-        myConn.Close()
+        Dim query As String = "SELECT id, name, description, category, price, special FROM Menu WHERE category = 'Postre'"
+        AddItemToArrayList(query, dessertList)
 
     End Sub
 

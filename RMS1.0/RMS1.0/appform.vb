@@ -6,11 +6,13 @@
             btn.Visible = False
             btn.Left = -3
             btnanim.ShowSync(btn)
+
+            'pasar a un evento click de aquí'
             CategoryUC1.Visible = False
             scrollToTop()
             CategoryUC1.categoryNameLabel.Text = categoryName
             cattransition.ShowSync(CategoryUC1)
-
+            'a aquí
             Homehub1.Visible = False
             Order1.Visible = False
             btn.Visible = False
@@ -104,5 +106,9 @@
 
     Private Sub appetizerbtn_Click(sender As Object, e As EventArgs) Handles appetizerbtn.Click
 
+    End Sub
+
+    Private Sub searchbtn_Click(sender As Object, e As EventArgs) Handles searchbtn.Click
+        toggleButtonVisibility(searchbtn, "Busqueda")
     End Sub
 End Class
