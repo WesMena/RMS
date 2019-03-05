@@ -102,6 +102,6 @@
             sidepaneltransitionIN.ShowSync(sidepanel)
         End If
 
-        'nota para la demostración
+        'nota para la demostración :V 
     End Sub
 End Class
