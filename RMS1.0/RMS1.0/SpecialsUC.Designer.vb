@@ -80,7 +80,7 @@ Partial Class SpecialsUC
         Me.itemPhotoBox.Image = CType(resources.GetObject("itemPhotoBox.Image"), System.Drawing.Image)
         Me.itemPhotoBox.Location = New System.Drawing.Point(379, 92)
         Me.itemPhotoBox.Name = "itemPhotoBox"
-        Me.itemPhotoBox.Size = New System.Drawing.Size(383, 298)
+        Me.itemPhotoBox.Size = New System.Drawing.Size(328, 267)
         Me.itemPhotoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.itemPhotoBox.TabIndex = 18
         Me.itemPhotoBox.TabStop = False

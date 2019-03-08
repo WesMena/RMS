@@ -23,24 +23,25 @@ Partial Class Homehub
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Homehub))
         Me.currentplusbtn = New Bunifu.Framework.UI.BunifuImageButton()
         Me.currentminusbtn = New Bunifu.Framework.UI.BunifuImageButton()
         Me.hhubtransition = New BunifuAnimatorNS.BunifuTransition(Me.components)
-        Me.SpecialsUserControl = New RMS1._0.SpecialsUC()
         Me.OrderButton = New System.Windows.Forms.Button()
+        Me.SpecialsUserControl = New RMS1._0.SpecialsUC()
         CType(Me.currentplusbtn, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.currentminusbtn, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'currentplusbtn
         '
-        Me.currentplusbtn.BackColor = System.Drawing.Color.Transparent
+        Me.currentplusbtn.BackColor = System.Drawing.Color.White
         Me.hhubtransition.SetDecoration(Me.currentplusbtn, BunifuAnimatorNS.DecorationType.None)
         Me.currentplusbtn.Image = CType(resources.GetObject("currentplusbtn.Image"), System.Drawing.Image)
         Me.currentplusbtn.ImageActive = Nothing
-        Me.currentplusbtn.Location = New System.Drawing.Point(700, 175)
+        Me.currentplusbtn.InitialImage = Nothing
+        Me.currentplusbtn.Location = New System.Drawing.Point(691, 382)
         Me.currentplusbtn.Name = "currentplusbtn"
         Me.currentplusbtn.Size = New System.Drawing.Size(71, 71)
         Me.currentplusbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -50,11 +51,11 @@ Partial Class Homehub
         '
         'currentminusbtn
         '
-        Me.currentminusbtn.BackColor = System.Drawing.Color.Transparent
+        Me.currentminusbtn.BackColor = System.Drawing.Color.White
         Me.hhubtransition.SetDecoration(Me.currentminusbtn, BunifuAnimatorNS.DecorationType.None)
         Me.currentminusbtn.Image = CType(resources.GetObject("currentminusbtn.Image"), System.Drawing.Image)
         Me.currentminusbtn.ImageActive = Nothing
-        Me.currentminusbtn.Location = New System.Drawing.Point(3, 175)
+        Me.currentminusbtn.Location = New System.Drawing.Point(0, 382)
         Me.currentminusbtn.Name = "currentminusbtn"
         Me.currentminusbtn.Size = New System.Drawing.Size(71, 71)
         Me.currentminusbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -66,31 +67,22 @@ Partial Class Homehub
         '
         Me.hhubtransition.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndHorizSlide
         Me.hhubtransition.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.hhubtransition.DefaultAnimation = Animation2
-        '
-        'SpecialsUserControl
-        '
-        Me.SpecialsUserControl.BackColor = System.Drawing.Color.White
-        Me.hhubtransition.SetDecoration(Me.SpecialsUserControl, BunifuAnimatorNS.DecorationType.None)
-        Me.SpecialsUserControl.Location = New System.Drawing.Point(0, 0)
-        Me.SpecialsUserControl.Name = "SpecialsUserControl"
-        Me.SpecialsUserControl.Size = New System.Drawing.Size(774, 453)
-        Me.SpecialsUserControl.TabIndex = 5
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.hhubtransition.DefaultAnimation = Animation1
         '
         'OrderButton
         '
@@ -104,6 +96,15 @@ Partial Class Homehub
         Me.OrderButton.TabIndex = 6
         Me.OrderButton.Text = "Ordenar"
         Me.OrderButton.UseVisualStyleBackColor = False
+        '
+        'SpecialsUserControl
+        '
+        Me.SpecialsUserControl.BackColor = System.Drawing.Color.White
+        Me.hhubtransition.SetDecoration(Me.SpecialsUserControl, BunifuAnimatorNS.DecorationType.None)
+        Me.SpecialsUserControl.Location = New System.Drawing.Point(0, 0)
+        Me.SpecialsUserControl.Name = "SpecialsUserControl"
+        Me.SpecialsUserControl.Size = New System.Drawing.Size(774, 453)
+        Me.SpecialsUserControl.TabIndex = 5
         '
         'Homehub
         '

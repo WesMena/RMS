@@ -22,7 +22,11 @@
             AdminClient.Show()
             Me.Hide()
         Else
-            Label1.Text = "Contraseña Invalida"
+            wrongpass.Top = 0
+            wrongpass.Left = 0
+            wrongpass.ShowDialog()
+
+
         End If
     End Sub
 

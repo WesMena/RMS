@@ -231,6 +231,12 @@
     <Compile Include="SpecialsUC.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="wrongpass.Designer.vb">
+      <DependentUpon>wrongpass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wrongpass.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AdminClient.resx">
@@ -295,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SpecialsUC.resx">
       <DependentUpon>SpecialsUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wrongpass.resx">
+      <DependentUpon>wrongpass.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

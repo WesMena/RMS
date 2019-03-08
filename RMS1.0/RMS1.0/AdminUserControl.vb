@@ -29,6 +29,7 @@
         admindgv.MultiSelect = False
         Dim allitems As ArrayList = menuitemslist.getItemsArrayList()
         PopulateDataGridView(allitems)
+        categorylbl.Text = "TODOS LOS ITEMS"
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
@@ -94,35 +95,44 @@
     Private Sub appetizerbtn_Click(sender As Object, e As EventArgs) Handles appetizerbtn.Click
         Dim appetizeritems As ArrayList = appetizersList.GetItemsArrayList()
         PopulateDataGridView(appetizeritems)
+        categorylbl.Text = "ENTRADAS"
     End Sub
 
     Private Sub maincoursebtn_Click(sender As Object, e As EventArgs) Handles mainCourseButton.Click
         Dim mainitems As ArrayList = maincouseList.GetItemsArrayList()
         PopulateDataGridView(mainitems)
+        categorylbl.Text = "PLATO FUERTE"
     End Sub
 
     Private Sub drinksbtn_Click(sender As Object, e As EventArgs) Handles drinksButton.Click
         Dim drinkitems As ArrayList = drinksList.getItemsArrayList()
         PopulateDataGridView(drinkitems)
+        categorylbl.Text = "BEBIDAS"
     End Sub
 
     Private Sub dessertsbtn_Click(sender As Object, e As EventArgs) Handles dessertButton.Click
         Dim dessertsitems As ArrayList = dessertsList.GetItemsArrayList()
         PopulateDataGridView(dessertsitems)
-
+        categorylbl.Text = "POSTRES"
     End Sub
 
     Private Sub homebtn_Click(sender As Object, e As EventArgs) Handles specialsButton.Click
         Dim specialitems As ArrayList = specialsList.GetItemsArrayList()
         PopulateDataGridView(specialitems)
+        categorylbl.Text = "ESPECIALES"
     End Sub
 
     Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles allitemsButton.Click
         Dim allitems As ArrayList = menuitemslist.getItemsArrayList()
         PopulateDataGridView(allitems)
+        categorylbl.Text = "TODOS LOS ITEMS"
     End Sub
 
     Private Sub admindgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles admindgv.CellContentClick
+
+    End Sub
+
+    Private Sub categorylbl_Click(sender As Object, e As EventArgs) Handles categorylbl.Click
 
     End Sub
 End Class

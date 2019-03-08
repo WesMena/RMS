@@ -22,16 +22,10 @@ Partial Class AdminUserControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminUserControl))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.appetizerbtn = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.mainCourseButton = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.drinksButton = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.dessertButton = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.specialsButton = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.allitemsButton = New Bunifu.Framework.UI.BunifuFlatButton()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminUserControl))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.admindgv = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,77 +35,133 @@ Partial Class AdminUserControl
         Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Special = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.categorylbl = New System.Windows.Forms.Label()
+        Me.drinksButton = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.dessertButton = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.specialsButton = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.allitemsButton = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.mainCourseButton = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.appetizerbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Panel1.SuspendLayout()
         CType(Me.admindgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'appetizerbtn
+        'Panel1
         '
-        Me.appetizerbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.appetizerbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.appetizerbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.appetizerbtn.BorderRadius = 0
-        Me.appetizerbtn.ButtonText = "Entradas"
-        Me.appetizerbtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.appetizerbtn.DisabledColor = System.Drawing.Color.Gray
-        Me.appetizerbtn.Iconcolor = System.Drawing.Color.Transparent
-        Me.appetizerbtn.Iconimage = Nothing
-        Me.appetizerbtn.Iconimage_right = CType(resources.GetObject("appetizerbtn.Iconimage_right"), System.Drawing.Image)
-        Me.appetizerbtn.Iconimage_right_Selected = Nothing
-        Me.appetizerbtn.Iconimage_Selected = Nothing
-        Me.appetizerbtn.IconMarginLeft = 0
-        Me.appetizerbtn.IconMarginRight = 0
-        Me.appetizerbtn.IconRightVisible = True
-        Me.appetizerbtn.IconRightZoom = 0R
-        Me.appetizerbtn.IconVisible = True
-        Me.appetizerbtn.IconZoom = 90.0R
-        Me.appetizerbtn.IsTab = False
-        Me.appetizerbtn.Location = New System.Drawing.Point(0, 178)
-        Me.appetizerbtn.Name = "appetizerbtn"
-        Me.appetizerbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.appetizerbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.appetizerbtn.OnHoverTextColor = System.Drawing.Color.White
-        Me.appetizerbtn.selected = False
-        Me.appetizerbtn.Size = New System.Drawing.Size(238, 48)
-        Me.appetizerbtn.TabIndex = 7
-        Me.appetizerbtn.Text = "Entradas"
-        Me.appetizerbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.appetizerbtn.Textcolor = System.Drawing.Color.White
-        Me.appetizerbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.drinksButton)
+        Me.Panel1.Controls.Add(Me.dessertButton)
+        Me.Panel1.Controls.Add(Me.specialsButton)
+        Me.Panel1.Controls.Add(Me.allitemsButton)
+        Me.Panel1.Controls.Add(Me.mainCourseButton)
+        Me.Panel1.Controls.Add(Me.appetizerbtn)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(238, 482)
+        Me.Panel1.TabIndex = 13
         '
-        'mainCourseButton
+        'admindgv
         '
-        Me.mainCourseButton.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.mainCourseButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.mainCourseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.mainCourseButton.BorderRadius = 0
-        Me.mainCourseButton.ButtonText = "Plato Fuerte"
-        Me.mainCourseButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.mainCourseButton.DisabledColor = System.Drawing.Color.Gray
-        Me.mainCourseButton.Iconcolor = System.Drawing.Color.Transparent
-        Me.mainCourseButton.Iconimage = Nothing
-        Me.mainCourseButton.Iconimage_right = CType(resources.GetObject("mainCourseButton.Iconimage_right"), System.Drawing.Image)
-        Me.mainCourseButton.Iconimage_right_Selected = Nothing
-        Me.mainCourseButton.Iconimage_Selected = Nothing
-        Me.mainCourseButton.IconMarginLeft = 0
-        Me.mainCourseButton.IconMarginRight = 0
-        Me.mainCourseButton.IconRightVisible = True
-        Me.mainCourseButton.IconRightZoom = 0R
-        Me.mainCourseButton.IconVisible = True
-        Me.mainCourseButton.IconZoom = 90.0R
-        Me.mainCourseButton.IsTab = False
-        Me.mainCourseButton.Location = New System.Drawing.Point(0, 259)
-        Me.mainCourseButton.Name = "mainCourseButton"
-        Me.mainCourseButton.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.mainCourseButton.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.mainCourseButton.OnHoverTextColor = System.Drawing.Color.White
-        Me.mainCourseButton.selected = False
-        Me.mainCourseButton.Size = New System.Drawing.Size(238, 48)
-        Me.mainCourseButton.TabIndex = 8
-        Me.mainCourseButton.Text = "Plato Fuerte"
-        Me.mainCourseButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.mainCourseButton.Textcolor = System.Drawing.Color.White
-        Me.mainCourseButton.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.admindgv.AllowUserToResizeColumns = False
+        Me.admindgv.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(244, Byte), Integer))
+        Me.admindgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.admindgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.admindgv.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.admindgv.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.admindgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.admindgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.admindgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.admindgv.ColumnHeadersHeight = 35
+        Me.admindgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.admindgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.itemname, Me.Description, Me.DataGridViewTextBoxColumn2, Me.Price, Me.Special, Me.DataGridViewTextBoxColumn3})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(118, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.admindgv.DefaultCellStyle = DataGridViewCellStyle3
+        Me.admindgv.DoubleBuffered = True
+        Me.admindgv.EnableHeadersVisualStyles = False
+        Me.admindgv.HeaderBgColor = System.Drawing.Color.SeaGreen
+        Me.admindgv.HeaderForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.admindgv.Location = New System.Drawing.Point(238, 48)
+        Me.admindgv.MultiSelect = False
+        Me.admindgv.Name = "admindgv"
+        Me.admindgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.admindgv.RowHeadersVisible = False
+        Me.admindgv.Size = New System.Drawing.Size(682, 376)
+        Me.admindgv.TabIndex = 14
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "IdColumn"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'itemname
+        '
+        Me.itemname.HeaderText = "Nombre"
+        Me.itemname.Name = "itemname"
+        '
+        'Description
+        '
+        Me.Description.HeaderText = "Descripción"
+        Me.Description.Name = "Description"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Categoría"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Visible = False
+        '
+        'Price
+        '
+        Me.Price.HeaderText = "Precio"
+        Me.Price.Name = "Price"
+        '
+        'Special
+        '
+        Me.Special.HeaderText = "Especial"
+        Me.Special.Name = "Special"
+        Me.Special.Visible = False
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Imagen"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Visible = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.SeaGreen
+        Me.Panel2.Controls.Add(Me.categorylbl)
+        Me.Panel2.Location = New System.Drawing.Point(238, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(682, 52)
+        Me.Panel2.TabIndex = 15
+        '
+        'categorylbl
+        '
+        Me.categorylbl.AutoSize = True
+        Me.categorylbl.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.categorylbl.ForeColor = System.Drawing.SystemColors.Control
+        Me.categorylbl.Location = New System.Drawing.Point(268, 13)
+        Me.categorylbl.Name = "categorylbl"
+        Me.categorylbl.Size = New System.Drawing.Size(316, 32)
+        Me.categorylbl.TabIndex = 0
+        Me.categorylbl.Text = "La categoría sale aquí "
         '
         'drinksButton
         '
@@ -249,100 +299,73 @@ Partial Class AdminUserControl
         Me.allitemsButton.Textcolor = System.Drawing.Color.White
         Me.allitemsButton.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'Panel1
+        'mainCourseButton
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.drinksButton)
-        Me.Panel1.Controls.Add(Me.dessertButton)
-        Me.Panel1.Controls.Add(Me.specialsButton)
-        Me.Panel1.Controls.Add(Me.allitemsButton)
-        Me.Panel1.Controls.Add(Me.mainCourseButton)
-        Me.Panel1.Controls.Add(Me.appetizerbtn)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(238, 482)
-        Me.Panel1.TabIndex = 13
+        Me.mainCourseButton.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.mainCourseButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.mainCourseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.mainCourseButton.BorderRadius = 0
+        Me.mainCourseButton.ButtonText = "Plato Fuerte"
+        Me.mainCourseButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.mainCourseButton.DisabledColor = System.Drawing.Color.Gray
+        Me.mainCourseButton.Iconcolor = System.Drawing.Color.Transparent
+        Me.mainCourseButton.Iconimage = Nothing
+        Me.mainCourseButton.Iconimage_right = CType(resources.GetObject("mainCourseButton.Iconimage_right"), System.Drawing.Image)
+        Me.mainCourseButton.Iconimage_right_Selected = Nothing
+        Me.mainCourseButton.Iconimage_Selected = Nothing
+        Me.mainCourseButton.IconMarginLeft = 0
+        Me.mainCourseButton.IconMarginRight = 0
+        Me.mainCourseButton.IconRightVisible = True
+        Me.mainCourseButton.IconRightZoom = 0R
+        Me.mainCourseButton.IconVisible = True
+        Me.mainCourseButton.IconZoom = 90.0R
+        Me.mainCourseButton.IsTab = False
+        Me.mainCourseButton.Location = New System.Drawing.Point(0, 259)
+        Me.mainCourseButton.Name = "mainCourseButton"
+        Me.mainCourseButton.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.mainCourseButton.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.mainCourseButton.OnHoverTextColor = System.Drawing.Color.White
+        Me.mainCourseButton.selected = False
+        Me.mainCourseButton.Size = New System.Drawing.Size(238, 48)
+        Me.mainCourseButton.TabIndex = 8
+        Me.mainCourseButton.Text = "Plato Fuerte"
+        Me.mainCourseButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.mainCourseButton.Textcolor = System.Drawing.Color.White
+        Me.mainCourseButton.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'admindgv
+        'appetizerbtn
         '
-        Me.admindgv.AllowUserToResizeColumns = False
-        Me.admindgv.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(244, Byte), Integer))
-        Me.admindgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.admindgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.admindgv.BackgroundColor = System.Drawing.Color.Gainsboro
-        Me.admindgv.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.admindgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.admindgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.admindgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.admindgv.ColumnHeadersHeight = 35
-        Me.admindgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.admindgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.itemname, Me.Description, Me.DataGridViewTextBoxColumn2, Me.Price, Me.Special, Me.DataGridViewTextBoxColumn3})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(118, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.admindgv.DefaultCellStyle = DataGridViewCellStyle3
-        Me.admindgv.DoubleBuffered = True
-        Me.admindgv.EnableHeadersVisualStyles = False
-        Me.admindgv.HeaderBgColor = System.Drawing.Color.SeaGreen
-        Me.admindgv.HeaderForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.admindgv.Location = New System.Drawing.Point(238, 0)
-        Me.admindgv.MultiSelect = False
-        Me.admindgv.Name = "admindgv"
-        Me.admindgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.admindgv.RowHeadersVisible = False
-        Me.admindgv.Size = New System.Drawing.Size(682, 412)
-        Me.admindgv.TabIndex = 14
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "IdColumn"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'itemname
-        '
-        Me.itemname.HeaderText = "Nombre"
-        Me.itemname.Name = "itemname"
-        '
-        'Description
-        '
-        Me.Description.HeaderText = "Descripción"
-        Me.Description.Name = "Description"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Categoría"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Visible = False
-        '
-        'Price
-        '
-        Me.Price.HeaderText = "Precio"
-        Me.Price.Name = "Price"
-        '
-        'Special
-        '
-        Me.Special.HeaderText = "Especial"
-        Me.Special.Name = "Special"
-        Me.Special.Visible = False
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Imagen"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Visible = False
+        Me.appetizerbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.appetizerbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.appetizerbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.appetizerbtn.BorderRadius = 0
+        Me.appetizerbtn.ButtonText = "Entradas"
+        Me.appetizerbtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.appetizerbtn.DisabledColor = System.Drawing.Color.Gray
+        Me.appetizerbtn.Iconcolor = System.Drawing.Color.Transparent
+        Me.appetizerbtn.Iconimage = Nothing
+        Me.appetizerbtn.Iconimage_right = CType(resources.GetObject("appetizerbtn.Iconimage_right"), System.Drawing.Image)
+        Me.appetizerbtn.Iconimage_right_Selected = Nothing
+        Me.appetizerbtn.Iconimage_Selected = Nothing
+        Me.appetizerbtn.IconMarginLeft = 0
+        Me.appetizerbtn.IconMarginRight = 0
+        Me.appetizerbtn.IconRightVisible = True
+        Me.appetizerbtn.IconRightZoom = 0R
+        Me.appetizerbtn.IconVisible = True
+        Me.appetizerbtn.IconZoom = 90.0R
+        Me.appetizerbtn.IsTab = False
+        Me.appetizerbtn.Location = New System.Drawing.Point(0, 178)
+        Me.appetizerbtn.Name = "appetizerbtn"
+        Me.appetizerbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.appetizerbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.appetizerbtn.OnHoverTextColor = System.Drawing.Color.White
+        Me.appetizerbtn.selected = False
+        Me.appetizerbtn.Size = New System.Drawing.Size(238, 48)
+        Me.appetizerbtn.TabIndex = 7
+        Me.appetizerbtn.Text = "Entradas"
+        Me.appetizerbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.appetizerbtn.Textcolor = System.Drawing.Color.White
+        Me.appetizerbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'AdminUserControl
         '
@@ -350,10 +373,13 @@ Partial Class AdminUserControl
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.admindgv)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.Name = "AdminUserControl"
         Me.Size = New System.Drawing.Size(920, 482)
         Me.Panel1.ResumeLayout(False)
         CType(Me.admindgv, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -372,4 +398,6 @@ Partial Class AdminUserControl
     Friend WithEvents Price As DataGridViewTextBoxColumn
     Friend WithEvents Special As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents categorylbl As Label
 End Class

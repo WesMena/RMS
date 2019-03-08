@@ -36,7 +36,10 @@ Partial Class Order
         Me.deleteselectedbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.totaltext_lbl = New System.Windows.Forms.Label()
         Me.totalnumlbl = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.orderdgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'orderdgv
@@ -73,7 +76,7 @@ Partial Class Order
         Me.orderdgv.EnableHeadersVisualStyles = False
         Me.orderdgv.HeaderBgColor = System.Drawing.Color.SeaGreen
         Me.orderdgv.HeaderForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.orderdgv.Location = New System.Drawing.Point(-2, 0)
+        Me.orderdgv.Location = New System.Drawing.Point(0, 48)
         Me.orderdgv.MultiSelect = False
         Me.orderdgv.Name = "orderdgv"
         Me.orderdgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -131,7 +134,7 @@ Partial Class Order
         Me.paybtn.IconVisible = True
         Me.paybtn.IconZoom = 90.0R
         Me.paybtn.IsTab = False
-        Me.paybtn.Location = New System.Drawing.Point(3, 399)
+        Me.paybtn.Location = New System.Drawing.Point(5, 447)
         Me.paybtn.Name = "paybtn"
         Me.paybtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.paybtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
@@ -165,7 +168,7 @@ Partial Class Order
         Me.deleteorderbtn.IconVisible = True
         Me.deleteorderbtn.IconZoom = 90.0R
         Me.deleteorderbtn.IsTab = False
-        Me.deleteorderbtn.Location = New System.Drawing.Point(347, 399)
+        Me.deleteorderbtn.Location = New System.Drawing.Point(349, 447)
         Me.deleteorderbtn.Name = "deleteorderbtn"
         Me.deleteorderbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.deleteorderbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
@@ -199,7 +202,7 @@ Partial Class Order
         Me.deleteselectedbtn.IconVisible = True
         Me.deleteselectedbtn.IconZoom = 90.0R
         Me.deleteselectedbtn.IsTab = False
-        Me.deleteselectedbtn.Location = New System.Drawing.Point(151, 399)
+        Me.deleteselectedbtn.Location = New System.Drawing.Point(153, 447)
         Me.deleteselectedbtn.Name = "deleteselectedbtn"
         Me.deleteselectedbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.deleteselectedbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
@@ -217,7 +220,7 @@ Partial Class Order
         Me.totaltext_lbl.AutoSize = True
         Me.totaltext_lbl.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.totaltext_lbl.ForeColor = System.Drawing.Color.Gray
-        Me.totaltext_lbl.Location = New System.Drawing.Point(71, 335)
+        Me.totaltext_lbl.Location = New System.Drawing.Point(73, 383)
         Me.totaltext_lbl.Name = "totaltext_lbl"
         Me.totaltext_lbl.Size = New System.Drawing.Size(227, 28)
         Me.totaltext_lbl.TabIndex = 6
@@ -228,11 +231,31 @@ Partial Class Order
         Me.totalnumlbl.AutoSize = True
         Me.totalnumlbl.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.totalnumlbl.ForeColor = System.Drawing.Color.Gray
-        Me.totalnumlbl.Location = New System.Drawing.Point(304, 335)
+        Me.totalnumlbl.Location = New System.Drawing.Point(306, 383)
         Me.totalnumlbl.Name = "totalnumlbl"
         Me.totalnumlbl.Size = New System.Drawing.Size(77, 28)
         Me.totalnumlbl.TabIndex = 7
         Me.totalnumlbl.Text = "17900"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.SeaGreen
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(520, 56)
+        Me.Panel1.TabIndex = 8
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(199, 13)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(107, 32)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "ORDEN"
         '
         'Order
         '
@@ -245,9 +268,12 @@ Partial Class Order
         Me.Controls.Add(Me.orderdgv)
         Me.Controls.Add(Me.deleteselectedbtn)
         Me.Controls.Add(Me.deleteorderbtn)
+        Me.Controls.Add(Me.Panel1)
         Me.Name = "Order"
-        Me.Size = New System.Drawing.Size(515, 448)
+        Me.Size = New System.Drawing.Size(515, 495)
         CType(Me.orderdgv, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -263,4 +289,6 @@ Partial Class Order
     Friend WithEvents totalprice As DataGridViewTextBoxColumn
     Friend WithEvents totaltext_lbl As Label
     Friend WithEvents totalnumlbl As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label1 As Label
 End Class
