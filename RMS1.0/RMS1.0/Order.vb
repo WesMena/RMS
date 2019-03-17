@@ -1,5 +1,7 @@
-﻿Public Class Order
-
+﻿Imports System.Data.SqlClient
+Public Class Order
+    Public Shared id As Integer
+    Public Shared totaltext As String
     Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles deleteselectedbtn.Click
         orderdgv.ClearSelection()
     End Sub
@@ -16,11 +18,16 @@
 
     Public Sub AddItem(name As String, n As Integer, price As Decimal)
         Dim total As Decimal = n * price
+
         orderdgv.Rows.Add(name, n.ToString, price.ToString, total.ToString)
     End Sub
 
-    Private Sub appetizerbtn_Click(sender As Object, e As EventArgs) Handles paybtn.Click
-        MsgBox("Enseguida un Mesero Vendra a Cobrarle :) ")
+    Public Sub appetizerbtn_Click(sender As Object, e As EventArgs) Handles paybtn.Click
+
+
+
+        Customer_s_name.ShowDialog()
+
     End Sub
 
     Private Sub deleteorderbtn_Click(sender As Object, e As EventArgs) Handles deleteorderbtn.Click
@@ -43,8 +50,71 @@
     End Sub
 
     Private Sub Order_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
-        Dim totaltext = calculateTotal().ToString
+        totaltext = calculateTotal().ToString
         totalnumlbl.Text = totaltext
     End Sub
+
+    Private Sub totalnumlbl_Click(sender As Object, e As EventArgs) Handles totalnumlbl.Click
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Public Sub sqltrigger_Textchanged(sender As Object, e As EventArgs) Handles sqltrigger.TextChanged
+        Dim connection As New SqlConnection(QueriesModule.connectionString)
+        Dim query As New SqlCommand("INSERT INTO Order_identifier(total2pay, clientname, clientsurname) Values(@total2pay, @clientname, @clientsurname)", connection)
+        Dim query2 As New SqlCommand("SELECT MAX (OrderId)  FROM Order_identifier ", connection)
+        Dim query3 As New SqlCommand
+
+
+
+        Dim OrderId As Integer
+        With query
+            .Parameters.AddWithValue("@total2pay", totaltext)
+            .Parameters.AddWithValue("@clientname", Customer_s_name.firstname)
+            .Parameters.AddWithValue("@clientsurname", Customer_s_name.surname)
+            'aquí hace falta que envíe el  número de mesa
+        End With
+        connection.Open()
+        query.ExecuteNonQuery()
+        query.Dispose()
+
+        With query2
+            OrderId = query2.ExecuteScalar
+        End With
+
+
+        With query3
+            For i As Integer = 0 To orderdgv.Rows.Count - 2
+                .Parameters.Clear()
+                query3.Connection = connection
+                query3.CommandText = " INSERT INTO Order_lines(OrderId, name, unitprice,quantity,totalprice) Values(@OrderId, @name, @unitprice, @quantity, @totalprice)"
+                .Parameters.AddWithValue("@OrderId", OrderId)
+
+                .Parameters.AddWithValue("@name", orderdgv.Rows(i).Cells(0).Value)
+
+                .Parameters.AddWithValue("@unitprice", orderdgv.Rows(i).Cells(2).Value)
+
+                .Parameters.AddWithValue("@quantity", orderdgv.Rows(i).Cells(1).Value)
+
+                .Parameters.AddWithValue("@totalprice", orderdgv.Rows(i).Cells(3).Value)
+
+
+                query3.ExecuteNonQuery()
+
+
+            Next
+
+
+
+
+        End With
+
+
+
+    End Sub
+
 
 End Class

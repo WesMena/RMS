@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Order
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Order
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -31,13 +31,14 @@ Partial Class Order
         Me.quantity = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.unitprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.totalprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.paybtn = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.deleteorderbtn = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.deleteselectedbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.totaltext_lbl = New System.Windows.Forms.Label()
         Me.totalnumlbl = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.paybtn = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.deleteselectedbtn = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.deleteorderbtn = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.sqltrigger = New System.Windows.Forms.TextBox()
         CType(Me.orderdgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -81,7 +82,7 @@ Partial Class Order
         Me.orderdgv.Name = "orderdgv"
         Me.orderdgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.orderdgv.RowHeadersVisible = False
-        Me.orderdgv.Size = New System.Drawing.Size(520, 332)
+        Me.orderdgv.Size = New System.Drawing.Size(520, 290)
         Me.orderdgv.TabIndex = 0
         '
         'Item
@@ -113,114 +114,12 @@ Partial Class Order
         Me.totalprice.ReadOnly = True
         Me.totalprice.Width = 144
         '
-        'paybtn
-        '
-        Me.paybtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.paybtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.paybtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.paybtn.BorderRadius = 0
-        Me.paybtn.ButtonText = "Pagar"
-        Me.paybtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.paybtn.DisabledColor = System.Drawing.Color.Gray
-        Me.paybtn.Iconcolor = System.Drawing.Color.Transparent
-        Me.paybtn.Iconimage = Nothing
-        Me.paybtn.Iconimage_right = CType(resources.GetObject("paybtn.Iconimage_right"), System.Drawing.Image)
-        Me.paybtn.Iconimage_right_Selected = Nothing
-        Me.paybtn.Iconimage_Selected = Nothing
-        Me.paybtn.IconMarginLeft = 0
-        Me.paybtn.IconMarginRight = 0
-        Me.paybtn.IconRightVisible = True
-        Me.paybtn.IconRightZoom = 0R
-        Me.paybtn.IconVisible = True
-        Me.paybtn.IconZoom = 90.0R
-        Me.paybtn.IsTab = False
-        Me.paybtn.Location = New System.Drawing.Point(5, 447)
-        Me.paybtn.Name = "paybtn"
-        Me.paybtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.paybtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.paybtn.OnHoverTextColor = System.Drawing.Color.White
-        Me.paybtn.selected = False
-        Me.paybtn.Size = New System.Drawing.Size(146, 48)
-        Me.paybtn.TabIndex = 3
-        Me.paybtn.Text = "Pagar"
-        Me.paybtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.paybtn.Textcolor = System.Drawing.Color.White
-        Me.paybtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'deleteorderbtn
-        '
-        Me.deleteorderbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.deleteorderbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.deleteorderbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.deleteorderbtn.BorderRadius = 0
-        Me.deleteorderbtn.ButtonText = "Cancelar"
-        Me.deleteorderbtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.deleteorderbtn.DisabledColor = System.Drawing.Color.Gray
-        Me.deleteorderbtn.Iconcolor = System.Drawing.Color.Transparent
-        Me.deleteorderbtn.Iconimage = Nothing
-        Me.deleteorderbtn.Iconimage_right = CType(resources.GetObject("deleteorderbtn.Iconimage_right"), System.Drawing.Image)
-        Me.deleteorderbtn.Iconimage_right_Selected = Nothing
-        Me.deleteorderbtn.Iconimage_Selected = Nothing
-        Me.deleteorderbtn.IconMarginLeft = 0
-        Me.deleteorderbtn.IconMarginRight = 0
-        Me.deleteorderbtn.IconRightVisible = True
-        Me.deleteorderbtn.IconRightZoom = 0R
-        Me.deleteorderbtn.IconVisible = True
-        Me.deleteorderbtn.IconZoom = 90.0R
-        Me.deleteorderbtn.IsTab = False
-        Me.deleteorderbtn.Location = New System.Drawing.Point(349, 447)
-        Me.deleteorderbtn.Name = "deleteorderbtn"
-        Me.deleteorderbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.deleteorderbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.deleteorderbtn.OnHoverTextColor = System.Drawing.Color.White
-        Me.deleteorderbtn.selected = False
-        Me.deleteorderbtn.Size = New System.Drawing.Size(168, 48)
-        Me.deleteorderbtn.TabIndex = 4
-        Me.deleteorderbtn.Text = "Cancelar"
-        Me.deleteorderbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.deleteorderbtn.Textcolor = System.Drawing.Color.White
-        Me.deleteorderbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'deleteselectedbtn
-        '
-        Me.deleteselectedbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.deleteselectedbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.deleteselectedbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.deleteselectedbtn.BorderRadius = 0
-        Me.deleteselectedbtn.ButtonText = "Borrar Item"
-        Me.deleteselectedbtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.deleteselectedbtn.DisabledColor = System.Drawing.Color.Gray
-        Me.deleteselectedbtn.Iconcolor = System.Drawing.Color.Transparent
-        Me.deleteselectedbtn.Iconimage = Nothing
-        Me.deleteselectedbtn.Iconimage_right = CType(resources.GetObject("deleteselectedbtn.Iconimage_right"), System.Drawing.Image)
-        Me.deleteselectedbtn.Iconimage_right_Selected = Nothing
-        Me.deleteselectedbtn.Iconimage_Selected = Nothing
-        Me.deleteselectedbtn.IconMarginLeft = 0
-        Me.deleteselectedbtn.IconMarginRight = 0
-        Me.deleteselectedbtn.IconRightVisible = True
-        Me.deleteselectedbtn.IconRightZoom = 0R
-        Me.deleteselectedbtn.IconVisible = True
-        Me.deleteselectedbtn.IconZoom = 90.0R
-        Me.deleteselectedbtn.IsTab = False
-        Me.deleteselectedbtn.Location = New System.Drawing.Point(153, 447)
-        Me.deleteselectedbtn.Name = "deleteselectedbtn"
-        Me.deleteselectedbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.deleteselectedbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.deleteselectedbtn.OnHoverTextColor = System.Drawing.Color.White
-        Me.deleteselectedbtn.selected = False
-        Me.deleteselectedbtn.Size = New System.Drawing.Size(194, 48)
-        Me.deleteselectedbtn.TabIndex = 5
-        Me.deleteselectedbtn.Text = "Borrar Item"
-        Me.deleteselectedbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.deleteselectedbtn.Textcolor = System.Drawing.Color.White
-        Me.deleteselectedbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
         'totaltext_lbl
         '
         Me.totaltext_lbl.AutoSize = True
         Me.totaltext_lbl.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.totaltext_lbl.ForeColor = System.Drawing.Color.Gray
-        Me.totaltext_lbl.Location = New System.Drawing.Point(73, 383)
+        Me.totaltext_lbl.Location = New System.Drawing.Point(79, 345)
         Me.totaltext_lbl.Name = "totaltext_lbl"
         Me.totaltext_lbl.Size = New System.Drawing.Size(227, 28)
         Me.totaltext_lbl.TabIndex = 6
@@ -231,7 +130,7 @@ Partial Class Order
         Me.totalnumlbl.AutoSize = True
         Me.totalnumlbl.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.totalnumlbl.ForeColor = System.Drawing.Color.Gray
-        Me.totalnumlbl.Location = New System.Drawing.Point(306, 383)
+        Me.totalnumlbl.Location = New System.Drawing.Point(312, 345)
         Me.totalnumlbl.Name = "totalnumlbl"
         Me.totalnumlbl.Size = New System.Drawing.Size(77, 28)
         Me.totalnumlbl.TabIndex = 7
@@ -257,11 +156,122 @@ Partial Class Order
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ORDEN"
         '
+        'paybtn
+        '
+        Me.paybtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.paybtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.paybtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.paybtn.BorderRadius = 0
+        Me.paybtn.ButtonText = "Pagar"
+        Me.paybtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.paybtn.DisabledColor = System.Drawing.Color.Gray
+        Me.paybtn.Iconcolor = System.Drawing.Color.Transparent
+        Me.paybtn.Iconimage = Nothing
+        Me.paybtn.Iconimage_right = CType(resources.GetObject("paybtn.Iconimage_right"), System.Drawing.Image)
+        Me.paybtn.Iconimage_right_Selected = Nothing
+        Me.paybtn.Iconimage_Selected = Nothing
+        Me.paybtn.IconMarginLeft = 0
+        Me.paybtn.IconMarginRight = 0
+        Me.paybtn.IconRightVisible = True
+        Me.paybtn.IconRightZoom = 0R
+        Me.paybtn.IconVisible = True
+        Me.paybtn.IconZoom = 90.0R
+        Me.paybtn.IsTab = False
+        Me.paybtn.Location = New System.Drawing.Point(3, 376)
+        Me.paybtn.Name = "paybtn"
+        Me.paybtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.paybtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.paybtn.OnHoverTextColor = System.Drawing.Color.White
+        Me.paybtn.selected = False
+        Me.paybtn.Size = New System.Drawing.Size(146, 48)
+        Me.paybtn.TabIndex = 3
+        Me.paybtn.Text = "Pagar"
+        Me.paybtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.paybtn.Textcolor = System.Drawing.Color.White
+        Me.paybtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'deleteselectedbtn
+        '
+        Me.deleteselectedbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.deleteselectedbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.deleteselectedbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.deleteselectedbtn.BorderRadius = 0
+        Me.deleteselectedbtn.ButtonText = "Borrar Item"
+        Me.deleteselectedbtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.deleteselectedbtn.DisabledColor = System.Drawing.Color.Gray
+        Me.deleteselectedbtn.Iconcolor = System.Drawing.Color.Transparent
+        Me.deleteselectedbtn.Iconimage = Nothing
+        Me.deleteselectedbtn.Iconimage_right = CType(resources.GetObject("deleteselectedbtn.Iconimage_right"), System.Drawing.Image)
+        Me.deleteselectedbtn.Iconimage_right_Selected = Nothing
+        Me.deleteselectedbtn.Iconimage_Selected = Nothing
+        Me.deleteselectedbtn.IconMarginLeft = 0
+        Me.deleteselectedbtn.IconMarginRight = 0
+        Me.deleteselectedbtn.IconRightVisible = True
+        Me.deleteselectedbtn.IconRightZoom = 0R
+        Me.deleteselectedbtn.IconVisible = True
+        Me.deleteselectedbtn.IconZoom = 90.0R
+        Me.deleteselectedbtn.IsTab = False
+        Me.deleteselectedbtn.Location = New System.Drawing.Point(151, 376)
+        Me.deleteselectedbtn.Name = "deleteselectedbtn"
+        Me.deleteselectedbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.deleteselectedbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.deleteselectedbtn.OnHoverTextColor = System.Drawing.Color.White
+        Me.deleteselectedbtn.selected = False
+        Me.deleteselectedbtn.Size = New System.Drawing.Size(194, 48)
+        Me.deleteselectedbtn.TabIndex = 5
+        Me.deleteselectedbtn.Text = "Borrar Item"
+        Me.deleteselectedbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.deleteselectedbtn.Textcolor = System.Drawing.Color.White
+        Me.deleteselectedbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'deleteorderbtn
+        '
+        Me.deleteorderbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.deleteorderbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.deleteorderbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.deleteorderbtn.BorderRadius = 0
+        Me.deleteorderbtn.ButtonText = "Cancelar"
+        Me.deleteorderbtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.deleteorderbtn.DisabledColor = System.Drawing.Color.Gray
+        Me.deleteorderbtn.Iconcolor = System.Drawing.Color.Transparent
+        Me.deleteorderbtn.Iconimage = Nothing
+        Me.deleteorderbtn.Iconimage_right = CType(resources.GetObject("deleteorderbtn.Iconimage_right"), System.Drawing.Image)
+        Me.deleteorderbtn.Iconimage_right_Selected = Nothing
+        Me.deleteorderbtn.Iconimage_Selected = Nothing
+        Me.deleteorderbtn.IconMarginLeft = 0
+        Me.deleteorderbtn.IconMarginRight = 0
+        Me.deleteorderbtn.IconRightVisible = True
+        Me.deleteorderbtn.IconRightZoom = 0R
+        Me.deleteorderbtn.IconVisible = True
+        Me.deleteorderbtn.IconZoom = 90.0R
+        Me.deleteorderbtn.IsTab = False
+        Me.deleteorderbtn.Location = New System.Drawing.Point(347, 376)
+        Me.deleteorderbtn.Name = "deleteorderbtn"
+        Me.deleteorderbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.deleteorderbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.deleteorderbtn.OnHoverTextColor = System.Drawing.Color.White
+        Me.deleteorderbtn.selected = False
+        Me.deleteorderbtn.Size = New System.Drawing.Size(168, 48)
+        Me.deleteorderbtn.TabIndex = 4
+        Me.deleteorderbtn.Text = "Cancelar"
+        Me.deleteorderbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.deleteorderbtn.Textcolor = System.Drawing.Color.White
+        Me.deleteorderbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'sqltrigger
+        '
+        Me.sqltrigger.Location = New System.Drawing.Point(406, 350)
+        Me.sqltrigger.Name = "sqltrigger"
+        Me.sqltrigger.Size = New System.Drawing.Size(100, 20)
+        Me.sqltrigger.TabIndex = 9
+        Me.sqltrigger.Visible = False
+        '
         'Order
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.Controls.Add(Me.sqltrigger)
         Me.Controls.Add(Me.totalnumlbl)
         Me.Controls.Add(Me.totaltext_lbl)
         Me.Controls.Add(Me.paybtn)
@@ -270,7 +280,7 @@ Partial Class Order
         Me.Controls.Add(Me.deleteorderbtn)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Order"
-        Me.Size = New System.Drawing.Size(515, 495)
+        Me.Size = New System.Drawing.Size(515, 424)
         CType(Me.orderdgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -291,4 +301,5 @@ Partial Class Order
     Friend WithEvents totalnumlbl As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents sqltrigger As TextBox
 End Class

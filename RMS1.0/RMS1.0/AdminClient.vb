@@ -2,6 +2,7 @@
 
 Public Class AdminClient
     Private Sub AdminClient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Orderlist1.Visible = False
 
     End Sub
 
@@ -47,5 +48,10 @@ Public Class AdminClient
         modifyitem.Imagepath = dgvr.Cells(6).Value
         modifyitem.Visible = True
         modifyitem.IsUpdate = True
+    End Sub
+
+    Private Sub ShowOrderListbtn_Click(sender As Object, e As EventArgs) Handles ShowOrderListbtn.Click
+        Orderlist1.Visible = Not Orderlist1.Visible
+
     End Sub
 End Class

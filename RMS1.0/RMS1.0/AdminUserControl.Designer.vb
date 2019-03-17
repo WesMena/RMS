@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AdminUserControl
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class AdminUserControl
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -184,7 +184,7 @@ Partial Class AdminUserControl
         Me.drinksButton.IconVisible = True
         Me.drinksButton.IconZoom = 90.0R
         Me.drinksButton.IsTab = False
-        Me.drinksButton.Location = New System.Drawing.Point(0, 410)
+        Me.drinksButton.Location = New System.Drawing.Point(0, 354)
         Me.drinksButton.Name = "drinksButton"
         Me.drinksButton.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.drinksButton.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
@@ -218,7 +218,7 @@ Partial Class AdminUserControl
         Me.dessertButton.IconVisible = True
         Me.dessertButton.IconZoom = 90.0R
         Me.dessertButton.IsTab = False
-        Me.dessertButton.Location = New System.Drawing.Point(3, 337)
+        Me.dessertButton.Location = New System.Drawing.Point(3, 291)
         Me.dessertButton.Name = "dessertButton"
         Me.dessertButton.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.dessertButton.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
@@ -252,7 +252,7 @@ Partial Class AdminUserControl
         Me.specialsButton.IconVisible = True
         Me.specialsButton.IconZoom = 90.0R
         Me.specialsButton.IsTab = False
-        Me.specialsButton.Location = New System.Drawing.Point(3, 107)
+        Me.specialsButton.Location = New System.Drawing.Point(3, 109)
         Me.specialsButton.Name = "specialsButton"
         Me.specialsButton.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.specialsButton.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
@@ -286,7 +286,7 @@ Partial Class AdminUserControl
         Me.allitemsButton.IconVisible = True
         Me.allitemsButton.IconZoom = 90.0R
         Me.allitemsButton.IsTab = False
-        Me.allitemsButton.Location = New System.Drawing.Point(6, 32)
+        Me.allitemsButton.Location = New System.Drawing.Point(6, 48)
         Me.allitemsButton.Name = "allitemsButton"
         Me.allitemsButton.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.allitemsButton.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
@@ -320,7 +320,7 @@ Partial Class AdminUserControl
         Me.mainCourseButton.IconVisible = True
         Me.mainCourseButton.IconZoom = 90.0R
         Me.mainCourseButton.IsTab = False
-        Me.mainCourseButton.Location = New System.Drawing.Point(0, 259)
+        Me.mainCourseButton.Location = New System.Drawing.Point(3, 226)
         Me.mainCourseButton.Name = "mainCourseButton"
         Me.mainCourseButton.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.mainCourseButton.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
@@ -354,7 +354,7 @@ Partial Class AdminUserControl
         Me.appetizerbtn.IconVisible = True
         Me.appetizerbtn.IconZoom = 90.0R
         Me.appetizerbtn.IsTab = False
-        Me.appetizerbtn.Location = New System.Drawing.Point(0, 178)
+        Me.appetizerbtn.Location = New System.Drawing.Point(0, 163)
         Me.appetizerbtn.Name = "appetizerbtn"
         Me.appetizerbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.appetizerbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))

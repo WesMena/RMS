@@ -118,6 +118,12 @@
     <Compile Include="Component1.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Customer_s_name.Designer.vb">
+      <DependentUpon>Customer_s_name.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_s_name.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DessertList.vb" />
     <Compile Include="dessertsUC.Designer.vb">
       <DependentUpon>dessertsUC.vb</DependentUpon>
@@ -217,6 +223,18 @@
     <Compile Include="categoryUC.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="orderDetail.Designer.vb">
+      <DependentUpon>orderDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderDetail.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="orderlist.Designer.vb">
+      <DependentUpon>orderlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderlist.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="QueriesModule.vb" />
     <Compile Include="SearchUC.Designer.vb">
       <DependentUpon>SearchUC.vb</DependentUpon>
@@ -253,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientSelection.resx">
       <DependentUpon>ClientSelection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_s_name.resx">
+      <DependentUpon>Customer_s_name.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dessertsUC.resx">
       <DependentUpon>dessertsUC.vb</DependentUpon>
@@ -295,6 +316,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="categoryUC.resx">
       <DependentUpon>categoryUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderDetail.resx">
+      <DependentUpon>orderDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderlist.resx">
+      <DependentUpon>orderlist.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchUC.resx">
       <DependentUpon>SearchUC.vb</DependentUpon>

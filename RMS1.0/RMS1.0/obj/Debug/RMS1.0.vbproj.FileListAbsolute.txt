@@ -118,5 +118,8 @@ C:\Users\USER\Source\Repos\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.vbproj.CopyComplet
 C:\Users\USER\Source\Repos\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.exe
 C:\Users\USER\Source\Repos\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.xml
 C:\Users\USER\Source\Repos\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.pdb
-C:\Users\USER\Source\Repos\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.vbprojAssemblyReference.cache
 C:\Users\USER\Source\Repos\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.wrongpass.resources
+C:\Users\USER\Source\Repos\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.Customer_s_name.resources
+C:\Users\USER\Source\Repos\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.orderlist.resources
+C:\Users\USER\Source\Repos\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.orderDetail.resources
+C:\Users\USER\Source\Repos\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.vbprojAssemblyReference.cache

@@ -36,14 +36,14 @@ Partial Class appform
         Me.searchbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.sidepaneltransitionOUT = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.sidepanel = New System.Windows.Forms.Panel()
+        Me.sidepanelsliderbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.cattransition = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.HideTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.sidepanelsliderbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.sidepaneltransitionIN = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.Order1 = New RMS1._0.Order()
         Me.Homehub1 = New RMS1._0.Homehub()
         Me.CategoryUC1 = New RMS1._0.categoryUC()
-        Me.sidepaneltransitionIN = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.sidepanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -347,32 +347,6 @@ Partial Class appform
         Me.sidepanel.Size = New System.Drawing.Size(48, 453)
         Me.sidepanel.TabIndex = 13
         '
-        'cattransition
-        '
-        Me.cattransition.AnimationType = BunifuAnimatorNS.AnimationType.Leaf
-        Me.cattransition.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 1.0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0, 0, 0, 0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.cattransition.DefaultAnimation = Animation2
-        '
-        'HideTimer
-        '
-        Me.HideTimer.Enabled = True
-        Me.HideTimer.Interval = 500
-        '
         'sidepanelsliderbtn
         '
         Me.sidepanelsliderbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
@@ -409,10 +383,57 @@ Partial Class appform
         Me.sidepanelsliderbtn.Textcolor = System.Drawing.Color.White
         Me.sidepanelsliderbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'cattransition
+        '
+        Me.cattransition.AnimationType = BunifuAnimatorNS.AnimationType.Leaf
+        Me.cattransition.Cursor = Nothing
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 1.0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.cattransition.DefaultAnimation = Animation2
+        '
+        'HideTimer
+        '
+        Me.HideTimer.Enabled = True
+        Me.HideTimer.Interval = 500
+        '
         'BunifuElipse1
         '
         Me.BunifuElipse1.ElipseRadius = 5
         Me.BunifuElipse1.TargetControl = Me
+        '
+        'sidepaneltransitionIN
+        '
+        Me.sidepaneltransitionIN.AnimationType = BunifuAnimatorNS.AnimationType.Particles
+        Me.sidepaneltransitionIN.Cursor = Nothing
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 1
+        Animation1.Padding = New System.Windows.Forms.Padding(100, 50, 100, 150)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 2.0!
+        Animation1.TransparencyCoeff = 0!
+        Me.sidepaneltransitionIN.DefaultAnimation = Animation1
         '
         'Order1
         '
@@ -420,11 +441,10 @@ Partial Class appform
         Me.sidepaneltransitionIN.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
         Me.cattransition.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
         Me.sidepaneltransitionOUT.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
-        Me.Order1.Location = New System.Drawing.Point(166, 3)
+        Me.Order1.Location = New System.Drawing.Point(165, -2)
         Me.Order1.Name = "Order1"
-        Me.Order1.Size = New System.Drawing.Size(515, 441)
-        Me.Order1.TabIndex = 12
-        Me.Order1.Visible = False
+        Me.Order1.Size = New System.Drawing.Size(515, 424)
+        Me.Order1.TabIndex = 14
         '
         'Homehub1
         '
@@ -449,34 +469,13 @@ Partial Class appform
         Me.CategoryUC1.Size = New System.Drawing.Size(764, 452)
         Me.CategoryUC1.TabIndex = 10
         '
-        'sidepaneltransitionIN
-        '
-        Me.sidepaneltransitionIN.AnimationType = BunifuAnimatorNS.AnimationType.Particles
-        Me.sidepaneltransitionIN.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 1
-        Animation1.Padding = New System.Windows.Forms.Padding(100, 50, 100, 150)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 2.0!
-        Animation1.TransparencyCoeff = 0!
-        Me.sidepaneltransitionIN.DefaultAnimation = Animation1
-        '
         'appform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.sidepanel)
         Me.Controls.Add(Me.Order1)
+        Me.Controls.Add(Me.sidepanel)
         Me.Controls.Add(Me.Homehub1)
         Me.Controls.Add(Me.CategoryUC1)
         Me.cattransition.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
@@ -499,7 +498,6 @@ Partial Class appform
     Friend WithEvents cattransition As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents CategoryUC1 As categoryUC
     Friend WithEvents Homehub1 As Homehub
-    Friend WithEvents Order1 As Order
     Friend WithEvents HideTimer As Timer
     Friend WithEvents sidepaneltransitionOUT As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents searchbtn As Bunifu.Framework.UI.BunifuFlatButton
@@ -507,4 +505,5 @@ Partial Class appform
     Friend WithEvents sidepanelsliderbtn As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents sidepaneltransitionIN As BunifuAnimatorNS.BunifuTransition
+    Friend WithEvents Order1 As Order
 End Class

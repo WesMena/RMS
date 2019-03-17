@@ -24,6 +24,7 @@
     End Sub
 
     Private Sub AdminUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         InitializeAllLists()
         modifyitem.Visible = False
         admindgv.MultiSelect = False
@@ -133,6 +134,10 @@
     End Sub
 
     Private Sub categorylbl_Click(sender As Object, e As EventArgs) Handles categorylbl.Click
+
+    End Sub
+
+    Private Sub showOrderListBtn_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

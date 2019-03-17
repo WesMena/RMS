@@ -23,68 +23,13 @@ Partial Class AdminClient
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminClient))
+        Me.addItemButton = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.modifyItemButton = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.ShowOrderListbtn = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.Orderlist1 = New RMS1._0.orderlist()
         Me.modifyitem = New RMS1._0.ModifyItemUC()
         Me.AdminUserControl1 = New RMS1._0.AdminUserControl()
-        Me.modifyItemButton = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.addItemButton = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.SuspendLayout()
-        '
-        'modifyitem
-        '
-        Me.modifyitem.Category = Nothing
-        Me.modifyitem.Description = Nothing
-        Me.modifyitem.Id = 0
-        Me.modifyitem.Imagepath = Nothing
-        Me.modifyitem.IsUpdate = False
-        Me.modifyitem.ItemName = Nothing
-        Me.modifyitem.Location = New System.Drawing.Point(235, 1)
-        Me.modifyitem.Name = "modifyitem"
-        Me.modifyitem.Price = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.modifyitem.Size = New System.Drawing.Size(703, 481)
-        Me.modifyitem.Special = False
-        Me.modifyitem.TabIndex = 6
-        Me.modifyitem.Visible = False
-        '
-        'AdminUserControl1
-        '
-        Me.AdminUserControl1.Location = New System.Drawing.Point(-3, -1)
-        Me.AdminUserControl1.Name = "AdminUserControl1"
-        Me.AdminUserControl1.Size = New System.Drawing.Size(941, 483)
-        Me.AdminUserControl1.TabIndex = 0
-        '
-        'modifyItemButton
-        '
-        Me.modifyItemButton.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.modifyItemButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.modifyItemButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.modifyItemButton.BorderRadius = 0
-        Me.modifyItemButton.ButtonText = "Modificar Item"
-        Me.modifyItemButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.modifyItemButton.DisabledColor = System.Drawing.Color.Gray
-        Me.modifyItemButton.Iconcolor = System.Drawing.Color.Transparent
-        Me.modifyItemButton.Iconimage = Nothing
-        Me.modifyItemButton.Iconimage_right = CType(resources.GetObject("modifyItemButton.Iconimage_right"), System.Drawing.Image)
-        Me.modifyItemButton.Iconimage_right_Selected = Nothing
-        Me.modifyItemButton.Iconimage_Selected = Nothing
-        Me.modifyItemButton.IconMarginLeft = 0
-        Me.modifyItemButton.IconMarginRight = 0
-        Me.modifyItemButton.IconRightVisible = True
-        Me.modifyItemButton.IconRightZoom = 0R
-        Me.modifyItemButton.IconVisible = True
-        Me.modifyItemButton.IconZoom = 90.0R
-        Me.modifyItemButton.IsTab = False
-        Me.modifyItemButton.Location = New System.Drawing.Point(365, 432)
-        Me.modifyItemButton.Name = "modifyItemButton"
-        Me.modifyItemButton.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.modifyItemButton.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.modifyItemButton.OnHoverTextColor = System.Drawing.Color.White
-        Me.modifyItemButton.selected = False
-        Me.modifyItemButton.Size = New System.Drawing.Size(227, 48)
-        Me.modifyItemButton.TabIndex = 7
-        Me.modifyItemButton.Text = "Modificar Item"
-        Me.modifyItemButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.modifyItemButton.Textcolor = System.Drawing.Color.White
-        Me.modifyItemButton.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'addItemButton
         '
@@ -120,12 +65,112 @@ Partial Class AdminClient
         Me.addItemButton.Textcolor = System.Drawing.Color.White
         Me.addItemButton.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'modifyItemButton
+        '
+        Me.modifyItemButton.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.modifyItemButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.modifyItemButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.modifyItemButton.BorderRadius = 0
+        Me.modifyItemButton.ButtonText = "Modificar Item"
+        Me.modifyItemButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.modifyItemButton.DisabledColor = System.Drawing.Color.Gray
+        Me.modifyItemButton.Iconcolor = System.Drawing.Color.Transparent
+        Me.modifyItemButton.Iconimage = Nothing
+        Me.modifyItemButton.Iconimage_right = CType(resources.GetObject("modifyItemButton.Iconimage_right"), System.Drawing.Image)
+        Me.modifyItemButton.Iconimage_right_Selected = Nothing
+        Me.modifyItemButton.Iconimage_Selected = Nothing
+        Me.modifyItemButton.IconMarginLeft = 0
+        Me.modifyItemButton.IconMarginRight = 0
+        Me.modifyItemButton.IconRightVisible = True
+        Me.modifyItemButton.IconRightZoom = 0R
+        Me.modifyItemButton.IconVisible = True
+        Me.modifyItemButton.IconZoom = 90.0R
+        Me.modifyItemButton.IsTab = False
+        Me.modifyItemButton.Location = New System.Drawing.Point(365, 432)
+        Me.modifyItemButton.Name = "modifyItemButton"
+        Me.modifyItemButton.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.modifyItemButton.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.modifyItemButton.OnHoverTextColor = System.Drawing.Color.White
+        Me.modifyItemButton.selected = False
+        Me.modifyItemButton.Size = New System.Drawing.Size(227, 48)
+        Me.modifyItemButton.TabIndex = 7
+        Me.modifyItemButton.Text = "Modificar Item"
+        Me.modifyItemButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.modifyItemButton.Textcolor = System.Drawing.Color.White
+        Me.modifyItemButton.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'ShowOrderListbtn
+        '
+        Me.ShowOrderListbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.ShowOrderListbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.ShowOrderListbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ShowOrderListbtn.BorderRadius = 0
+        Me.ShowOrderListbtn.ButtonText = "Pedidos"
+        Me.ShowOrderListbtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ShowOrderListbtn.DisabledColor = System.Drawing.Color.Gray
+        Me.ShowOrderListbtn.Iconcolor = System.Drawing.Color.Transparent
+        Me.ShowOrderListbtn.Iconimage = Nothing
+        Me.ShowOrderListbtn.Iconimage_right = CType(resources.GetObject("ShowOrderListbtn.Iconimage_right"), System.Drawing.Image)
+        Me.ShowOrderListbtn.Iconimage_right_Selected = Nothing
+        Me.ShowOrderListbtn.Iconimage_Selected = Nothing
+        Me.ShowOrderListbtn.IconMarginLeft = 0
+        Me.ShowOrderListbtn.IconMarginRight = 0
+        Me.ShowOrderListbtn.IconRightVisible = True
+        Me.ShowOrderListbtn.IconRightZoom = 0R
+        Me.ShowOrderListbtn.IconVisible = True
+        Me.ShowOrderListbtn.IconZoom = 90.0R
+        Me.ShowOrderListbtn.IsTab = False
+        Me.ShowOrderListbtn.Location = New System.Drawing.Point(-3, 419)
+        Me.ShowOrderListbtn.Name = "ShowOrderListbtn"
+        Me.ShowOrderListbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.ShowOrderListbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.ShowOrderListbtn.OnHoverTextColor = System.Drawing.Color.White
+        Me.ShowOrderListbtn.selected = False
+        Me.ShowOrderListbtn.Size = New System.Drawing.Size(238, 48)
+        Me.ShowOrderListbtn.TabIndex = 11
+        Me.ShowOrderListbtn.Text = "Pedidos"
+        Me.ShowOrderListbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ShowOrderListbtn.Textcolor = System.Drawing.Color.White
+        Me.ShowOrderListbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'Orderlist1
+        '
+        Me.Orderlist1.Location = New System.Drawing.Point(235, 0)
+        Me.Orderlist1.Name = "Orderlist1"
+        Me.Orderlist1.Size = New System.Drawing.Size(710, 482)
+        Me.Orderlist1.TabIndex = 9
+        '
+        'modifyitem
+        '
+        Me.modifyitem.Category = Nothing
+        Me.modifyitem.Description = Nothing
+        Me.modifyitem.Id = 0
+        Me.modifyitem.Imagepath = Nothing
+        Me.modifyitem.IsUpdate = False
+        Me.modifyitem.ItemName = Nothing
+        Me.modifyitem.Location = New System.Drawing.Point(235, -1)
+        Me.modifyitem.Name = "modifyitem"
+        Me.modifyitem.Price = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.modifyitem.Size = New System.Drawing.Size(703, 483)
+        Me.modifyitem.Special = False
+        Me.modifyitem.TabIndex = 6
+        Me.modifyitem.Visible = False
+        '
+        'AdminUserControl1
+        '
+        Me.AdminUserControl1.Location = New System.Drawing.Point(-3, -1)
+        Me.AdminUserControl1.Name = "AdminUserControl1"
+        Me.AdminUserControl1.Size = New System.Drawing.Size(941, 483)
+        Me.AdminUserControl1.TabIndex = 0
+        '
         'AdminClient
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(936, 479)
+        Me.Controls.Add(Me.ShowOrderListbtn)
+        Me.Controls.Add(Me.Orderlist1)
         Me.Controls.Add(Me.modifyitem)
         Me.Controls.Add(Me.addItemButton)
         Me.Controls.Add(Me.modifyItemButton)
@@ -140,4 +185,6 @@ Partial Class AdminClient
     Friend WithEvents modifyitem As ModifyItemUC
     Friend WithEvents modifyItemButton As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents addItemButton As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents Orderlist1 As orderlist
+    Friend WithEvents ShowOrderListbtn As Bunifu.Framework.UI.BunifuFlatButton
 End Class

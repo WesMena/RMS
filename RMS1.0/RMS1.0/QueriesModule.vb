@@ -5,9 +5,10 @@ Module QueriesModule
     Private myCmd As SqlCommand
     Private myReader As SqlDataReader
     Private results As String
-    Private connectionString As String = "Data Source=LAPTOP-3U2PB6I2\WESMENA;Initial Catalog=SimpleMenu;Persist Security Info=True;User ID=sa;Password=wvjjk611"
+    Public connectionString As String = "Data Source=simplemenu.database.windows.net;Initial Catalog=SimpleMenu;User ID=grupo0;Password=Bada907817@;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
 
     Public Sub AddItemToArrayList(query As String, arlist As ArrayList)
+
         myConn = New SqlConnection(connectionString)
 
         myCmd = myConn.CreateCommand
