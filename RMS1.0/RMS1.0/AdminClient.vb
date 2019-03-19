@@ -54,4 +54,8 @@ Public Class AdminClient
         Orderlist1.Visible = Not Orderlist1.Visible
 
     End Sub
+
+    Private Sub closeBtn_Click(sender As Object, e As EventArgs) Handles closeBtn.Click
+        Me.Close()
+    End Sub
 End Class

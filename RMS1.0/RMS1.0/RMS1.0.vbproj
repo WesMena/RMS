@@ -86,6 +86,12 @@
     <Compile Include="AdminClient.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="adminlogin.Designer.vb">
+      <DependentUpon>adminlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminlogin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="AdminUserControl.Designer.vb">
       <DependentUpon>AdminUserControl.vb</DependentUpon>
     </Compile>
@@ -259,6 +265,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AdminClient.resx">
       <DependentUpon>AdminClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminlogin.resx">
+      <DependentUpon>adminlogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUserControl.resx">
       <DependentUpon>AdminUserControl.vb</DependentUpon>

@@ -37,13 +37,13 @@ Partial Class appform
         Me.sidepaneltransitionOUT = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.sidepanel = New System.Windows.Forms.Panel()
         Me.sidepanelsliderbtn = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.Order1 = New RMS1._0.Order()
+        Me.Homehub1 = New RMS1._0.Homehub()
+        Me.CategoryUC1 = New RMS1._0.categoryUC()
         Me.cattransition = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.HideTimer = New System.Windows.Forms.Timer(Me.components)
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.sidepaneltransitionIN = New BunifuAnimatorNS.BunifuTransition(Me.components)
-        Me.Order1 = New RMS1._0.Order()
-        Me.Homehub1 = New RMS1._0.Homehub()
-        Me.CategoryUC1 = New RMS1._0.categoryUC()
         Me.sidepanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -383,6 +383,40 @@ Partial Class appform
         Me.sidepanelsliderbtn.Textcolor = System.Drawing.Color.White
         Me.sidepanelsliderbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'Order1
+        '
+        Me.Order1.BackColor = System.Drawing.Color.Gainsboro
+        Me.sidepaneltransitionIN.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
+        Me.cattransition.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
+        Me.sidepaneltransitionOUT.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
+        Me.Order1.Location = New System.Drawing.Point(165, -2)
+        Me.Order1.Name = "Order1"
+        Me.Order1.Size = New System.Drawing.Size(515, 424)
+        Me.Order1.TabIndex = 14
+        '
+        'Homehub1
+        '
+        Me.sidepaneltransitionIN.SetDecoration(Me.Homehub1, BunifuAnimatorNS.DecorationType.None)
+        Me.cattransition.SetDecoration(Me.Homehub1, BunifuAnimatorNS.DecorationType.None)
+        Me.sidepaneltransitionOUT.SetDecoration(Me.Homehub1, BunifuAnimatorNS.DecorationType.None)
+        Me.Homehub1.Location = New System.Drawing.Point(45, -2)
+        Me.Homehub1.Name = "Homehub1"
+        Me.Homehub1.Size = New System.Drawing.Size(774, 453)
+        Me.Homehub1.TabIndex = 11
+        Me.Homehub1.Visible = False
+        '
+        'CategoryUC1
+        '
+        Me.CategoryUC1.AutoScroll = True
+        Me.CategoryUC1.CategoryName = ""
+        Me.sidepaneltransitionIN.SetDecoration(Me.CategoryUC1, BunifuAnimatorNS.DecorationType.None)
+        Me.cattransition.SetDecoration(Me.CategoryUC1, BunifuAnimatorNS.DecorationType.None)
+        Me.sidepaneltransitionOUT.SetDecoration(Me.CategoryUC1, BunifuAnimatorNS.DecorationType.None)
+        Me.CategoryUC1.Location = New System.Drawing.Point(42, -2)
+        Me.CategoryUC1.Name = "CategoryUC1"
+        Me.CategoryUC1.Size = New System.Drawing.Size(764, 452)
+        Me.CategoryUC1.TabIndex = 10
+        '
         'cattransition
         '
         Me.cattransition.AnimationType = BunifuAnimatorNS.AnimationType.Leaf
@@ -435,40 +469,6 @@ Partial Class appform
         Animation1.TransparencyCoeff = 0!
         Me.sidepaneltransitionIN.DefaultAnimation = Animation1
         '
-        'Order1
-        '
-        Me.Order1.BackColor = System.Drawing.Color.Gainsboro
-        Me.sidepaneltransitionIN.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
-        Me.cattransition.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
-        Me.sidepaneltransitionOUT.SetDecoration(Me.Order1, BunifuAnimatorNS.DecorationType.None)
-        Me.Order1.Location = New System.Drawing.Point(165, -2)
-        Me.Order1.Name = "Order1"
-        Me.Order1.Size = New System.Drawing.Size(515, 424)
-        Me.Order1.TabIndex = 14
-        '
-        'Homehub1
-        '
-        Me.sidepaneltransitionIN.SetDecoration(Me.Homehub1, BunifuAnimatorNS.DecorationType.None)
-        Me.cattransition.SetDecoration(Me.Homehub1, BunifuAnimatorNS.DecorationType.None)
-        Me.sidepaneltransitionOUT.SetDecoration(Me.Homehub1, BunifuAnimatorNS.DecorationType.None)
-        Me.Homehub1.Location = New System.Drawing.Point(45, -2)
-        Me.Homehub1.Name = "Homehub1"
-        Me.Homehub1.Size = New System.Drawing.Size(774, 453)
-        Me.Homehub1.TabIndex = 11
-        Me.Homehub1.Visible = False
-        '
-        'CategoryUC1
-        '
-        Me.CategoryUC1.AutoScroll = True
-        Me.CategoryUC1.CategoryName = ""
-        Me.sidepaneltransitionIN.SetDecoration(Me.CategoryUC1, BunifuAnimatorNS.DecorationType.None)
-        Me.cattransition.SetDecoration(Me.CategoryUC1, BunifuAnimatorNS.DecorationType.None)
-        Me.sidepaneltransitionOUT.SetDecoration(Me.CategoryUC1, BunifuAnimatorNS.DecorationType.None)
-        Me.CategoryUC1.Location = New System.Drawing.Point(42, -2)
-        Me.CategoryUC1.Name = "CategoryUC1"
-        Me.CategoryUC1.Size = New System.Drawing.Size(764, 452)
-        Me.CategoryUC1.TabIndex = 10
-        '
         'appform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -482,6 +482,7 @@ Partial Class appform
         Me.sidepaneltransitionOUT.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.sidepaneltransitionIN.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "appform"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " "
