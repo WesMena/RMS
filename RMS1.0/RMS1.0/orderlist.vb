@@ -1,6 +1,10 @@
 ﻿Imports System.Data.SqlClient
 Public Class orderlist
     Public Shared OrderId As Integer
+    Public Shared givenname As String
+    Public Shared surname As String
+    Public Shared total2pay As String
+
     Private Sub admindgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles orderlistdgv.CellContentClick
 
     End Sub
@@ -23,6 +27,9 @@ Public Class orderlist
         rowindex = e.RowIndex
         Dim row As DataGridViewRow = orderlistdgv.Rows(rowindex)
         OrderId = row.Cells(0).Value
+        total2pay = row.Cells(1).Value
+        givenname = row.Cells(2).Value
+        surname = row.Cells(3).Value
 
     End Sub
 
@@ -59,8 +66,16 @@ Public Class orderlist
         Dim fontheight As Double = font.GetHeight
         Dim startx As Integer = 10
         Dim starty As Integer = 10
-        Dim offset As Integer = 40
-        graphics.DrawString("Simple Menu", New Font("Courier New", 18), New SolidBrush(Color.Black), startx, starty)
+        Dim offset As Integer = 90
+        Dim namestring As String = "Cliente:" + givenname.PadRight(5) + " " + surname
+        Dim idstring As String = "Código de factura:" + OrderId.ToString
+        Dim totalstring As String = "Total a pagar:" + total2pay
+        Dim columntitles As String = "Cant".PadRight(5) + "Prod.".PadRight(10) + "P.U.".PadRight(5) + "Total"
+        graphics.DrawString("Simple Menu".PadLeft(12), New Font("Courier New", 18), New SolidBrush(Color.Black), startx, starty)
+        graphics.DrawString(namestring, font, New SolidBrush(Color.Black), startx, starty + 30)
+        graphics.DrawString(idstring, font, New SolidBrush(Color.Black), startx, starty + 50)
+        graphics.DrawString(columntitles, font, New SolidBrush(Color.Black), startx, starty + 70)
+
         For i As Integer = 0 To AdminClient.Orderlist1.OrderDetail1.orderdetaildgv.Rows.Count - 2
             Dim itemname As String = OrderDetail1.orderdetaildgv.Rows(i).Cells(0).Value
 
@@ -75,7 +90,7 @@ Public Class orderlist
         Next
 
         offset = offset +20
-
+        graphics.DrawString(totalstring, font, New SolidBrush(Color.Black), startx, starty + offset)
 
     End Sub
 End Class
