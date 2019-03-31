@@ -37,7 +37,17 @@ RMS1.0
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:RMS1._0.My.Resources.Resources.FlagofSpain">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RMS1._0.My.Resources.Resources.maincourseImg">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RMS1._0.My.Resources.Resources.USflag">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

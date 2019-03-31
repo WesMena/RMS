@@ -26,7 +26,7 @@
     Private Sub categoryUC_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         categoryNameLabel.Text = Me.CategoryName
         Me.AutoScroll = True
-        If categoryNameLabel.Text = "Busqueda" Then
+        If categoryNameLabel.Text = "Busqueda" Or categoryNameLabel.Text = "Search" Then
             SearchTextBox.Visible = True
         Else
             SearchTextBox.Visible = False
@@ -37,7 +37,7 @@
     Private Function getCategoryImg() As Image
         Dim img As Image
         Select Case Me.CategoryName
-            Case "Entradas"
+            Case "Entradas", "Appetizers"
                 SearchTextBox.Visible = False
                 SearchButton.Visible = False
                 categoryPhotoBox.Visible = True
@@ -46,7 +46,7 @@
                 img = My.Resources.appetizerImg
                 Dim appetizers As AppetizerList = New AppetizerList
                 categoryItems = appetizers.GetItemsArrayList()
-            Case "Plato Fuerte"
+            Case "Plato Fuerte", "Main Courses"
                 SearchTextBox.Visible = False
                 SearchButton.Visible = False
                 categoryPhotoBox.Visible = True
@@ -55,7 +55,7 @@
                 img = My.Resources.maincourseImg
                 Dim maincourses As MainCourseList = New MainCourseList
                 categoryItems = maincourses.GetItemsArrayList()
-            Case "Postres"
+            Case "Postres", "Desserts"
                 SearchTextBox.Visible = False
                 SearchButton.Visible = False
                 categoryPhotoBox.Visible = True
@@ -64,7 +64,7 @@
                 img = My.Resources.dessertImg
                 Dim desserts As DessertList = New DessertList
                 categoryItems = desserts.GetItemsArrayList()
-            Case "Bebidas"
+            Case "Bebidas", "Beverages"
                 SearchTextBox.Visible = False
                 SearchButton.Visible = False
                 categoryPhotoBox.Visible = True

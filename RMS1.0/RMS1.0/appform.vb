@@ -1,4 +1,5 @@
 ﻿Public Class appform
+    Public Shared currentcat As Integer
 
 
     Public Sub toggleButtonVisibility(btn As Control, categoryName As String)
@@ -33,24 +34,30 @@
     End Sub
 
     Private Sub appetizerbtn_Click(sender As Object, e As EventArgs) Handles appetizerbtn.Click
-        toggleButtonVisibility(appetizerbtn, "Entradas")
+        toggleButtonVisibility(appetizerbtn, appetizerbtn.Text)
+        currentcat = 1
         appetizerbtn.selected = True
     End Sub
 
 
     Private Sub maincoursebtn_Click(sender As Object, e As EventArgs) Handles maincoursebtn.Click
-        toggleButtonVisibility(maincoursebtn, "Plato Fuerte")
+        toggleButtonVisibility(maincoursebtn, maincoursebtn.Text)
+        currentcat = 2
+
     End Sub
 
 
     Private Sub drinksbtn_Click(sender As Object, e As EventArgs) Handles drinksbtn.Click
-        toggleButtonVisibility(drinksbtn, "Bebidas")
+        toggleButtonVisibility(drinksbtn, drinksbtn.Text)
+        currentcat = 3
+
     End Sub
 
 
 
     Private Sub dessertsbtn_Click(sender As Object, e As EventArgs) Handles dessertsbtn.Click
-        toggleButtonVisibility(dessertsbtn, "Postres")
+        toggleButtonVisibility(dessertsbtn, dessertsbtn.Text)
+        currentcat = 4
     End Sub
 
 
@@ -63,6 +70,7 @@
         Order1.Visible = False
         Order1.BringToFront()
         homebtn.selected = True
+        langlbl.Text = "Spanish"
     End Sub
 
     Private Sub Homehub1_Load(sender As Object, e As EventArgs)
@@ -85,6 +93,7 @@
 
     Private Sub searchbtn_Click(sender As Object, e As EventArgs) Handles searchbtn.Click
         toggleButtonVisibility(searchbtn, "Busqueda")
+        currentcat = 5
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
@@ -104,4 +113,76 @@
 
 
     End Sub
+
+    Private Sub langbtn_Click(sender As Object, e As EventArgs) Handles langbtn.Click
+
+        If langlbl.Text = "Spanish" Then
+            langlbl.Text = "English"
+        Else
+            langlbl.Text = "Spanish"
+        End If
+
+    End Sub
+
+    Private Sub langlbl_TextChanged(sender As Object, e As EventArgs) Handles langlbl.TextChanged
+        If langlbl.Text = "Spanish" Then
+            langbtn.Iconimage_right = Global.RMS1._0.My.Resources.Resources.FlagofSpain
+            homebtn.Text = "Inicio"
+            appetizerbtn.Text = "Entradas"
+            maincoursebtn.Text = "Plato Fuerte"
+            drinksbtn.Text = "Bebidas"
+            dessertsbtn.Text = "Postres"
+            orderbtn.Text = "Pedido"
+            searchbtn.Text = "Buscar"
+            Order1.Item.HeaderText = "PLATILLO"
+            Order1.quantity.HeaderText = "CANTIDAD"
+            Order1.unitprice.HeaderText = "P. UNITARIO"
+            Order1.totalprice.HeaderText = "PRECIO TOTAL"
+            Order1.deleteorderbtn.Text = "Cancelar"
+            Order1.deleteselectedbtn.Text = "Borrar Item"
+            Order1.paybtn.Text = "Pagar"
+            Order1.orderlbl.Text = "ORDEN"
+            Order1.totaltext_lbl.Text = " TOTAL A PAGAR: ₡"
+            CategoryUC1.SearchButton.Text = "Buscar"
+            Homehub1.OrderButton.Text = "Ordenar"
+            notification.successlbl.Text = "AGREGADO AL PEDIDO"
+            Homehub1.SpecialsUserControl.titleLabel.Text = "Especial de Hoy"
+        Else
+            langbtn.Iconimage_right = Global.RMS1._0.My.Resources.Resources.USflag
+            homebtn.Text = "Home"
+            appetizerbtn.Text = "Appetizers"
+            maincoursebtn.Text = "Main Courses"
+            drinksbtn.Text = "Beverages"
+            dessertsbtn.Text = "Desserts"
+            orderbtn.Text = "Order"
+            searchbtn.Text = "Search"
+            Order1.Item.HeaderText = "ITEM"
+            Order1.quantity.HeaderText = "QUANTITY"
+            Order1.unitprice.HeaderText = "UNIT PRICE"
+            Order1.totalprice.HeaderText = "TOTAL PRICE"
+            Order1.deleteorderbtn.Text = "Cancel"
+            Order1.deleteselectedbtn.Text = "Delete Item"
+            Order1.paybtn.Text = "Pay"
+            Order1.orderlbl.Text = "ORDER"
+            Order1.totaltext_lbl.Text = "TOTAL TO PAY: ₡"
+            CategoryUC1.SearchButton.Text = "Search"
+            Homehub1.OrderButton.Text = "Order"
+            notification.successlbl.Text = "ADDED TO ORDER"
+            Homehub1.SpecialsUserControl.titleLabel.Text = "Today's special"
+        End If
+        Select Case (currentcat)
+            Case 1
+                CategoryUC1.categoryNameLabel.Text = appetizerbtn.Text
+            Case 2
+                CategoryUC1.categoryNameLabel.Text = maincoursebtn.Text
+            Case 3
+                CategoryUC1.categoryNameLabel.Text = drinksbtn.Text
+            Case 4
+                CategoryUC1.categoryNameLabel.Text = dessertsbtn.Text
+            Case 5
+                CategoryUC1.categoryNameLabel.Text = searchbtn.Text
+        End Select
+    End Sub
+
+
 End Class

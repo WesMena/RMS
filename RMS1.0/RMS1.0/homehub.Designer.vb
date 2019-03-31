@@ -101,7 +101,7 @@ Partial Class Homehub
         '
         Me.SpecialsUserControl.BackColor = System.Drawing.Color.White
         Me.hhubtransition.SetDecoration(Me.SpecialsUserControl, BunifuAnimatorNS.DecorationType.None)
-        Me.SpecialsUserControl.Location = New System.Drawing.Point(0, 0)
+        Me.SpecialsUserControl.Location = New System.Drawing.Point(0, 3)
         Me.SpecialsUserControl.Name = "SpecialsUserControl"
         Me.SpecialsUserControl.Size = New System.Drawing.Size(774, 453)
         Me.SpecialsUserControl.TabIndex = 5

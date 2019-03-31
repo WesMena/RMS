@@ -370,5 +370,14 @@
   <ItemGroup>
     <None Include="Resources\bottle-facts-header.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlagofSpain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USflag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MultilingualResources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

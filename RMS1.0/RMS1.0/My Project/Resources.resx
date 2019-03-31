@@ -127,7 +127,13 @@
   <data name="drinksImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bottle-facts-header.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FlagofSpain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlagofSpain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="maincourseImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="USflag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\USflag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

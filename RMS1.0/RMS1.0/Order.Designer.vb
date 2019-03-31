@@ -27,18 +27,18 @@ Partial Class Order
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Order))
         Me.orderdgv = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.Item = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.quantity = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.unitprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.totalprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.totaltext_lbl = New System.Windows.Forms.Label()
         Me.totalnumlbl = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.orderlbl = New System.Windows.Forms.Label()
         Me.paybtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.deleteselectedbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.deleteorderbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.sqltrigger = New System.Windows.Forms.TextBox()
+        Me.Item = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.quantity = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.unitprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.totalprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.orderdgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -49,7 +49,8 @@ Partial Class Order
         Me.orderdgv.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(244, Byte), Integer))
         Me.orderdgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.orderdgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader
+        Me.orderdgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.orderdgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.orderdgv.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.orderdgv.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.orderdgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
@@ -82,37 +83,9 @@ Partial Class Order
         Me.orderdgv.Name = "orderdgv"
         Me.orderdgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.orderdgv.RowHeadersVisible = False
+        Me.orderdgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.orderdgv.Size = New System.Drawing.Size(520, 290)
         Me.orderdgv.TabIndex = 0
-        '
-        'Item
-        '
-        Me.Item.HeaderText = "PLATILLO"
-        Me.Item.Name = "Item"
-        Me.Item.ReadOnly = True
-        Me.Item.Width = 103
-        '
-        'quantity
-        '
-        Me.quantity.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.quantity.HeaderText = "CANTIDAD"
-        Me.quantity.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"})
-        Me.quantity.Name = "quantity"
-        Me.quantity.Width = 98
-        '
-        'unitprice
-        '
-        Me.unitprice.HeaderText = "PRECIO UNITARIO"
-        Me.unitprice.Name = "unitprice"
-        Me.unitprice.ReadOnly = True
-        Me.unitprice.Width = 175
-        '
-        'totalprice
-        '
-        Me.totalprice.HeaderText = "PRECIO TOTAL"
-        Me.totalprice.Name = "totalprice"
-        Me.totalprice.ReadOnly = True
-        Me.totalprice.Width = 144
         '
         'totaltext_lbl
         '
@@ -139,22 +112,22 @@ Partial Class Order
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.SeaGreen
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.orderlbl)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(520, 56)
         Me.Panel1.TabIndex = 8
         '
-        'Label1
+        'orderlbl
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(199, 13)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(107, 32)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ORDEN"
+        Me.orderlbl.AutoSize = True
+        Me.orderlbl.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.orderlbl.ForeColor = System.Drawing.SystemColors.Control
+        Me.orderlbl.Location = New System.Drawing.Point(199, 13)
+        Me.orderlbl.Name = "orderlbl"
+        Me.orderlbl.Size = New System.Drawing.Size(107, 32)
+        Me.orderlbl.TabIndex = 0
+        Me.orderlbl.Text = "ORDEN"
         '
         'paybtn
         '
@@ -266,6 +239,31 @@ Partial Class Order
         Me.sqltrigger.TabIndex = 9
         Me.sqltrigger.Visible = False
         '
+        'Item
+        '
+        Me.Item.HeaderText = "PLATILLO"
+        Me.Item.Name = "Item"
+        Me.Item.ReadOnly = True
+        '
+        'quantity
+        '
+        Me.quantity.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.quantity.HeaderText = "CANTIDAD"
+        Me.quantity.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"})
+        Me.quantity.Name = "quantity"
+        '
+        'unitprice
+        '
+        Me.unitprice.HeaderText = "P. UNITARIO"
+        Me.unitprice.Name = "unitprice"
+        Me.unitprice.ReadOnly = True
+        '
+        'totalprice
+        '
+        Me.totalprice.HeaderText = "PRECIO TOTAL"
+        Me.totalprice.Name = "totalprice"
+        Me.totalprice.ReadOnly = True
+        '
         'Order
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -293,13 +291,13 @@ Partial Class Order
     Friend WithEvents paybtn As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents deleteorderbtn As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents deleteselectedbtn As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents totaltext_lbl As Label
+    Friend WithEvents totalnumlbl As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents orderlbl As Label
+    Friend WithEvents sqltrigger As TextBox
     Friend WithEvents Item As DataGridViewTextBoxColumn
     Friend WithEvents quantity As DataGridViewComboBoxColumn
     Friend WithEvents unitprice As DataGridViewTextBoxColumn
     Friend WithEvents totalprice As DataGridViewTextBoxColumn
-    Friend WithEvents totaltext_lbl As Label
-    Friend WithEvents totalnumlbl As Label
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents sqltrigger As TextBox
 End Class
