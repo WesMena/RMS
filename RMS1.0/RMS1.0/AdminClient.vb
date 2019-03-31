@@ -16,7 +16,7 @@ Public Class AdminClient
 
 
     Private Sub modifyItemButton_Click(sender As Object, e As EventArgs)
-
+        'comentario de muestra
     End Sub
 
     Private Sub addItemButton_Click(sender As Object, e As EventArgs)
