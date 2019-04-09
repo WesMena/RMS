@@ -93,4 +93,5 @@ Public Class orderlist
         graphics.DrawString(totalstring, font, New SolidBrush(Color.Black), startx, starty + offset)
 
     End Sub
+
 End Class
