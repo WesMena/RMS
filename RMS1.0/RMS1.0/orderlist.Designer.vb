@@ -23,20 +23,20 @@ Partial Class orderlist
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(orderlist))
         Me.orderlistdgv = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Orderlbl = New System.Windows.Forms.Label()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.printbtn = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.orderDetailsbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.OrderDetail1 = New RMS1._0.orderDetail()
-        Me.orderDetailsbtn = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.printbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         CType(Me.orderlistdgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -45,31 +45,31 @@ Partial Class orderlist
         '
         Me.orderlistdgv.AllowUserToResizeColumns = False
         Me.orderlistdgv.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(244, Byte), Integer))
-        Me.orderlistdgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(244, Byte), Integer))
+        Me.orderlistdgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.orderlistdgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.orderlistdgv.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.orderlistdgv.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.orderlistdgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.orderlistdgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PaleTurquoise
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.orderlistdgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonFace
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.PaleTurquoise
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.orderlistdgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.orderlistdgv.ColumnHeadersHeight = 35
         Me.orderlistdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(118, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.orderlistdgv.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(118, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.orderlistdgv.DefaultCellStyle = DataGridViewCellStyle6
         Me.orderlistdgv.DoubleBuffered = True
         Me.orderlistdgv.EnableHeadersVisualStyles = False
         Me.orderlistdgv.HeaderBgColor = System.Drawing.Color.SeaGreen
@@ -107,29 +107,39 @@ Partial Class orderlist
         Me.BunifuElipse1.ElipseRadius = 5
         Me.BunifuElipse1.TargetControl = Me
         '
-        'PrintDocument1
+        'printbtn
         '
-        '
-        'PrintDialog1
-        '
-        Me.PrintDialog1.UseEXDialog = True
-        '
-        'PrintPreviewDialog1
-        '
-        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
-        Me.PrintPreviewDialog1.Enabled = True
-        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
-        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
-        Me.PrintPreviewDialog1.Visible = False
-        '
-        'OrderDetail1
-        '
-        Me.OrderDetail1.Location = New System.Drawing.Point(0, -1)
-        Me.OrderDetail1.Name = "OrderDetail1"
-        Me.OrderDetail1.Size = New System.Drawing.Size(717, 424)
-        Me.OrderDetail1.TabIndex = 20
+        Me.printbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.printbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.printbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.printbtn.BorderRadius = 0
+        Me.printbtn.ButtonText = "Imprimir"
+        Me.printbtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.printbtn.DisabledColor = System.Drawing.Color.Gray
+        Me.printbtn.Iconcolor = System.Drawing.Color.Transparent
+        Me.printbtn.Iconimage = Nothing
+        Me.printbtn.Iconimage_right = CType(resources.GetObject("printbtn.Iconimage_right"), System.Drawing.Image)
+        Me.printbtn.Iconimage_right_Selected = Nothing
+        Me.printbtn.Iconimage_Selected = Nothing
+        Me.printbtn.IconMarginLeft = 0
+        Me.printbtn.IconMarginRight = 0
+        Me.printbtn.IconRightVisible = True
+        Me.printbtn.IconRightZoom = 0R
+        Me.printbtn.IconVisible = True
+        Me.printbtn.IconZoom = 90.0R
+        Me.printbtn.IsTab = False
+        Me.printbtn.Location = New System.Drawing.Point(369, 429)
+        Me.printbtn.Name = "printbtn"
+        Me.printbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.printbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
+        Me.printbtn.OnHoverTextColor = System.Drawing.Color.White
+        Me.printbtn.selected = False
+        Me.printbtn.Size = New System.Drawing.Size(177, 48)
+        Me.printbtn.TabIndex = 18
+        Me.printbtn.Text = "Imprimir"
+        Me.printbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.printbtn.Textcolor = System.Drawing.Color.White
+        Me.printbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'orderDetailsbtn
         '
@@ -165,39 +175,29 @@ Partial Class orderlist
         Me.orderDetailsbtn.Textcolor = System.Drawing.Color.White
         Me.orderDetailsbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'printbtn
+        'PrintDocument1
         '
-        Me.printbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.printbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.printbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.printbtn.BorderRadius = 0
-        Me.printbtn.ButtonText = "Imprimir"
-        Me.printbtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.printbtn.DisabledColor = System.Drawing.Color.Gray
-        Me.printbtn.Iconcolor = System.Drawing.Color.Transparent
-        Me.printbtn.Iconimage = Nothing
-        Me.printbtn.Iconimage_right = CType(resources.GetObject("printbtn.Iconimage_right"), System.Drawing.Image)
-        Me.printbtn.Iconimage_right_Selected = Nothing
-        Me.printbtn.Iconimage_Selected = Nothing
-        Me.printbtn.IconMarginLeft = 0
-        Me.printbtn.IconMarginRight = 0
-        Me.printbtn.IconRightVisible = True
-        Me.printbtn.IconRightZoom = 0R
-        Me.printbtn.IconVisible = True
-        Me.printbtn.IconZoom = 90.0R
-        Me.printbtn.IsTab = False
-        Me.printbtn.Location = New System.Drawing.Point(369, 429)
-        Me.printbtn.Name = "printbtn"
-        Me.printbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.printbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(83, Byte), Integer))
-        Me.printbtn.OnHoverTextColor = System.Drawing.Color.White
-        Me.printbtn.selected = False
-        Me.printbtn.Size = New System.Drawing.Size(177, 48)
-        Me.printbtn.TabIndex = 18
-        Me.printbtn.Text = "Imprimir"
-        Me.printbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.printbtn.Textcolor = System.Drawing.Color.White
-        Me.printbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
+        '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
+        '
+        'OrderDetail1
+        '
+        Me.OrderDetail1.Location = New System.Drawing.Point(0, -1)
+        Me.OrderDetail1.Name = "OrderDetail1"
+        Me.OrderDetail1.Size = New System.Drawing.Size(717, 424)
+        Me.OrderDetail1.TabIndex = 20
         '
         'orderlist
         '

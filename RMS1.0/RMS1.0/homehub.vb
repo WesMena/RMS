@@ -25,8 +25,8 @@
             'entonces lo que recomiendo es solo cambiar el prefijo por el correspondiente a sus directorio
             ' y guardar el nombre de las imagenes en la base de datos (con extension) ejemplo: "quesoburguesa.png"
 
-            Dim path As String = "C:\Users\HP\Pictures\imagenes\" & currentSpecial.Imagepath & ".png"
-            'Dim path As String = currentSpecial.Imagepath
+            'Dim path As String = "C:\Users\HP\Pictures\imagenes\" & currentSpecial.Imagepath
+            Dim path As String = currentSpecial.Imagepath
 
             SpecialsUserControl.itemPhotoBox.Image = Image.FromFile(path)
         Else
