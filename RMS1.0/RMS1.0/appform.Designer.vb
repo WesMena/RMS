@@ -43,6 +43,7 @@ Partial Class appform
         Me.HideTimer = New System.Windows.Forms.Timer(Me.components)
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.sidepaneltransitionIN = New BunifuAnimatorNS.BunifuTransition(Me.components)
+        Me.tablenumLbl = New System.Windows.Forms.Label()
         Me.Order1 = New RMS1._0.Order()
         Me.Homehub1 = New RMS1._0.Homehub()
         Me.CategoryUC1 = New RMS1._0.categoryUC()
@@ -74,6 +75,7 @@ Partial Class appform
         'sidepanel
         '
         Me.sidepanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.sidepanel.Controls.Add(Me.tablenumLbl)
         Me.sidepanel.Controls.Add(Me.langlbl)
         Me.sidepanel.Controls.Add(Me.langbtn)
         Me.sidepanel.Controls.Add(Me.sidepanelsliderbtn)
@@ -488,6 +490,19 @@ Partial Class appform
         Animation2.TransparencyCoeff = 0!
         Me.sidepaneltransitionIN.DefaultAnimation = Animation2
         '
+        'tablenumLbl
+        '
+        Me.tablenumLbl.AutoSize = True
+        Me.sidepaneltransitionIN.SetDecoration(Me.tablenumLbl, BunifuAnimatorNS.DecorationType.None)
+        Me.cattransition.SetDecoration(Me.tablenumLbl, BunifuAnimatorNS.DecorationType.None)
+        Me.sidepaneltransitionOUT.SetDecoration(Me.tablenumLbl, BunifuAnimatorNS.DecorationType.None)
+        Me.tablenumLbl.Location = New System.Drawing.Point(4, 59)
+        Me.tablenumLbl.Name = "tablenumLbl"
+        Me.tablenumLbl.Size = New System.Drawing.Size(43, 13)
+        Me.tablenumLbl.TabIndex = 17
+        Me.tablenumLbl.Text = "Mesa #"
+        Me.tablenumLbl.Visible = False
+        '
         'Order1
         '
         Me.Order1.BackColor = System.Drawing.Color.Gainsboro
@@ -563,4 +578,5 @@ Partial Class appform
     Friend WithEvents Order1 As Order
     Friend WithEvents langbtn As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents langlbl As Label
+    Friend WithEvents tablenumLbl As Label
 End Class

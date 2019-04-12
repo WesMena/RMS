@@ -80,6 +80,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddItemUC.Designer.vb">
+      <DependentUpon>AddItemUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddItemUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="AdminClient.Designer.vb">
       <DependentUpon>AdminClient.vb</DependentUpon>
     </Compile>
@@ -255,6 +261,12 @@
     <Compile Include="SpecialsUC.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="tablenumUC.Designer.vb">
+      <DependentUpon>tablenumUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tablenumUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="wrongpass.Designer.vb">
       <DependentUpon>wrongpass.vb</DependentUpon>
     </Compile>
@@ -263,6 +275,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddItemUC.resx">
+      <DependentUpon>AddItemUC.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminClient.resx">
       <DependentUpon>AdminClient.vb</DependentUpon>
     </EmbeddedResource>
@@ -337,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SpecialsUC.resx">
       <DependentUpon>SpecialsUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tablenumUC.resx">
+      <DependentUpon>tablenumUC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="wrongpass.resx">
       <DependentUpon>wrongpass.vb</DependentUpon>

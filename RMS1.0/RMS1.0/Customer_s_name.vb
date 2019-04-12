@@ -5,6 +5,10 @@
         firstname = nameTxt.Text
         surname = surnameTXT.Text
         appform.Order1.sqltrigger.Text = Math.Ceiling(Rnd() * 200000)
+        appform.Order1.orderdgv.Rows.Clear()
+        nameTxt.Text = ""
+        surnameTXT.Text = ""
+        appform.Order1.totalnumlbl.Text = 0
 
         Me.Close()
     End Sub

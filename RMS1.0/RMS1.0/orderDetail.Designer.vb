@@ -78,6 +78,7 @@ Partial Class orderDetail
         Me.orderdetaildgv.Location = New System.Drawing.Point(3, 48)
         Me.orderdetaildgv.MultiSelect = False
         Me.orderdetaildgv.Name = "orderdetaildgv"
+        Me.orderdetaildgv.ReadOnly = True
         Me.orderdetaildgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.orderdetaildgv.RowHeadersVisible = False
         Me.orderdetaildgv.Size = New System.Drawing.Size(707, 434)

@@ -1,7 +1,9 @@
 ﻿Imports System.Data.SqlClient
 Public Class Order
+    Public Shared currentrow As Integer
     Public Shared id As Integer
     Public Shared totaltext As String
+
     Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles deleteselectedbtn.Click
         orderdgv.ClearSelection()
     End Sub
@@ -64,7 +66,7 @@ Public Class Order
 
     Public Sub sqltrigger_Textchanged(sender As Object, e As EventArgs) Handles sqltrigger.TextChanged
         Dim connection As New SqlConnection(QueriesModule.connectionString)
-        Dim query As New SqlCommand("INSERT INTO Order_identifier(total2pay, clientname, clientsurname) Values(@total2pay, @clientname, @clientsurname)", connection)
+        Dim query As New SqlCommand("INSERT INTO Order_identifier(total2pay, clientname, clientsurname, tablenum) Values(@total2pay, @clientname, @clientsurname, @tablenum)", connection)
         Dim query2 As New SqlCommand("SELECT MAX (OrderId)  FROM Order_identifier ", connection)
         Dim query3 As New SqlCommand
 
@@ -75,7 +77,8 @@ Public Class Order
             .Parameters.AddWithValue("@total2pay", totaltext)
             .Parameters.AddWithValue("@clientname", Customer_s_name.firstname)
             .Parameters.AddWithValue("@clientsurname", Customer_s_name.surname)
-            'aquí hace falta que envíe el  número de mesa
+            .Parameters.AddWithValue("@tablenum", appform.tablenumLbl.Text)
+
         End With
         connection.Open()
         query.ExecuteNonQuery()
@@ -113,6 +116,17 @@ Public Class Order
         End With
 
 
+
+    End Sub
+
+    Private Sub orderdgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles orderdgv.CellValueChanged
+        If orderdgv.Rows.Count > 1 Then
+            currentrow = orderdgv.CurrentRow.Index
+            orderdgv.Rows(currentrow).Cells(3).Value = orderdgv.Rows(currentrow).Cells(1).Value * orderdgv.Rows(currentrow).Cells(2).Value
+            orderdgv.Update()
+            totaltext = calculateTotal().ToString
+            totalnumlbl.Text = totaltext
+        End If
 
     End Sub
 

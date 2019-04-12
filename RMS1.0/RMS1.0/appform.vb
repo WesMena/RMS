@@ -184,5 +184,7 @@
         End Select
     End Sub
 
+    Private Sub Order1_Load(sender As Object, e As EventArgs) Handles Order1.Load
 
+    End Sub
 End Class

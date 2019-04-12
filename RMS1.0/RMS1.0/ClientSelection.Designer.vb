@@ -27,11 +27,12 @@ Partial Class ClientSelection
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ClientFormDragctrl = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.menumanagerbtn = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.startmenubtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFormFadeTransition1 = New Bunifu.Framework.UI.BunifuFormFadeTransition(Me.components)
-        Me.Textbox1 = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.passTXT = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.startmenubtn = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.menumanagerbtn = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.TablenumUC1 = New RMS1._0.tablenumUC()
         Me.SuspendLayout()
         '
         'Label1
@@ -56,43 +57,31 @@ Partial Class ClientSelection
         Me.BunifuElipse1.ElipseRadius = 5
         Me.BunifuElipse1.TargetControl = Me
         '
-        'menumanagerbtn
+        'BunifuFormFadeTransition1
         '
-        Me.menumanagerbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.menumanagerbtn.AutoSize = True
-        Me.menumanagerbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.menumanagerbtn.BackgroundImage = CType(resources.GetObject("menumanagerbtn.BackgroundImage"), System.Drawing.Image)
-        Me.menumanagerbtn.BorderRadius = 0
-        Me.menumanagerbtn.ButtonText = "Administrar Menú"
-        Me.menumanagerbtn.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.menumanagerbtn.DisabledColor = System.Drawing.Color.Gray
-        Me.menumanagerbtn.Font = New System.Drawing.Font("Century", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.menumanagerbtn.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.menumanagerbtn.Iconcolor = System.Drawing.Color.Transparent
-        Me.menumanagerbtn.Iconimage = Nothing
-        Me.menumanagerbtn.Iconimage_right = Nothing
-        Me.menumanagerbtn.Iconimage_right_Selected = Nothing
-        Me.menumanagerbtn.Iconimage_Selected = Nothing
-        Me.menumanagerbtn.IconMarginLeft = 0
-        Me.menumanagerbtn.IconMarginRight = 0
-        Me.menumanagerbtn.IconRightVisible = True
-        Me.menumanagerbtn.IconRightZoom = 0R
-        Me.menumanagerbtn.IconVisible = True
-        Me.menumanagerbtn.IconZoom = 90.0R
-        Me.menumanagerbtn.IsTab = False
-        Me.menumanagerbtn.Location = New System.Drawing.Point(-21, 0)
-        Me.menumanagerbtn.Name = "menumanagerbtn"
-        Me.menumanagerbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.menumanagerbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
-        Me.menumanagerbtn.OnHoverTextColor = System.Drawing.Color.White
-        Me.menumanagerbtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.menumanagerbtn.selected = False
-        Me.menumanagerbtn.Size = New System.Drawing.Size(586, 458)
-        Me.menumanagerbtn.TabIndex = 4
-        Me.menumanagerbtn.Text = "Administrar Menú"
-        Me.menumanagerbtn.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.menumanagerbtn.Textcolor = System.Drawing.Color.White
-        Me.menumanagerbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuFormFadeTransition1.Delay = 1
+        '
+        'passTXT
+        '
+        Me.passTXT.BorderColorFocused = System.Drawing.Color.Transparent
+        Me.passTXT.BorderColorIdle = System.Drawing.Color.Gray
+        Me.passTXT.BorderColorMouseHover = System.Drawing.Color.Transparent
+        Me.passTXT.BorderThickness = 3
+        Me.passTXT.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.passTXT.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.passTXT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.passTXT.isPassword = True
+        Me.passTXT.Location = New System.Drawing.Point(13, 269)
+        Me.passTXT.Margin = New System.Windows.Forms.Padding(4)
+        Me.passTXT.Name = "passTXT"
+        Me.passTXT.Size = New System.Drawing.Size(370, 44)
+        Me.passTXT.TabIndex = 9
+        Me.passTXT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'BunifuElipse2
+        '
+        Me.BunifuElipse2.ElipseRadius = 5
+        Me.BunifuElipse2.TargetControl = Me.passTXT
         '
         'startmenubtn
         '
@@ -117,7 +106,8 @@ Partial Class ClientSelection
         Me.startmenubtn.IconVisible = True
         Me.startmenubtn.IconZoom = 90.0R
         Me.startmenubtn.IsTab = False
-        Me.startmenubtn.Location = New System.Drawing.Point(403, 0)
+        Me.startmenubtn.Location = New System.Drawing.Point(395, 0)
+        Me.startmenubtn.Margin = New System.Windows.Forms.Padding(8, 8, 8, 8)
         Me.startmenubtn.Name = "startmenubtn"
         Me.startmenubtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.startmenubtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
@@ -130,38 +120,62 @@ Partial Class ClientSelection
         Me.startmenubtn.Textcolor = System.Drawing.Color.White
         Me.startmenubtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuFormFadeTransition1
+        'menumanagerbtn
         '
-        Me.BunifuFormFadeTransition1.Delay = 1
+        Me.menumanagerbtn.Activecolor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.menumanagerbtn.AutoSize = True
+        Me.menumanagerbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.menumanagerbtn.BackgroundImage = CType(resources.GetObject("menumanagerbtn.BackgroundImage"), System.Drawing.Image)
+        Me.menumanagerbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.menumanagerbtn.BorderRadius = 0
+        Me.menumanagerbtn.ButtonText = "Administrar Menú"
+        Me.menumanagerbtn.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.menumanagerbtn.DisabledColor = System.Drawing.Color.Gray
+        Me.menumanagerbtn.Font = New System.Drawing.Font("Century", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.menumanagerbtn.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.menumanagerbtn.Iconcolor = System.Drawing.Color.Transparent
+        Me.menumanagerbtn.Iconimage = Nothing
+        Me.menumanagerbtn.Iconimage_right = Nothing
+        Me.menumanagerbtn.Iconimage_right_Selected = Nothing
+        Me.menumanagerbtn.Iconimage_Selected = Nothing
+        Me.menumanagerbtn.IconMarginLeft = 0
+        Me.menumanagerbtn.IconMarginRight = 0
+        Me.menumanagerbtn.IconRightVisible = True
+        Me.menumanagerbtn.IconRightZoom = 0R
+        Me.menumanagerbtn.IconVisible = True
+        Me.menumanagerbtn.IconZoom = 90.0R
+        Me.menumanagerbtn.IsTab = False
+        Me.menumanagerbtn.Location = New System.Drawing.Point(-21, 0)
+        Me.menumanagerbtn.Margin = New System.Windows.Forms.Padding(10, 9, 10, 9)
+        Me.menumanagerbtn.Name = "menumanagerbtn"
+        Me.menumanagerbtn.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.menumanagerbtn.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.menumanagerbtn.OnHoverTextColor = System.Drawing.Color.White
+        Me.menumanagerbtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.menumanagerbtn.selected = False
+        Me.menumanagerbtn.Size = New System.Drawing.Size(586, 458)
+        Me.menumanagerbtn.TabIndex = 4
+        Me.menumanagerbtn.Text = "Administrar Menú"
+        Me.menumanagerbtn.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.menumanagerbtn.Textcolor = System.Drawing.Color.White
+        Me.menumanagerbtn.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'Textbox1
+        'TablenumUC1
         '
-        Me.Textbox1.BorderColorFocused = System.Drawing.Color.Transparent
-        Me.Textbox1.BorderColorIdle = System.Drawing.Color.Gray
-        Me.Textbox1.BorderColorMouseHover = System.Drawing.Color.Transparent
-        Me.Textbox1.BorderThickness = 3
-        Me.Textbox1.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.Textbox1.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.Textbox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Textbox1.isPassword = True
-        Me.Textbox1.Location = New System.Drawing.Point(13, 269)
-        Me.Textbox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Textbox1.Name = "Textbox1"
-        Me.Textbox1.Size = New System.Drawing.Size(370, 44)
-        Me.Textbox1.TabIndex = 9
-        Me.Textbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'BunifuElipse2
-        '
-        Me.BunifuElipse2.ElipseRadius = 5
-        Me.BunifuElipse2.TargetControl = Me.Textbox1
+        Me.TablenumUC1.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
+        Me.TablenumUC1.Location = New System.Drawing.Point(395, 126)
+        Me.TablenumUC1.Name = "TablenumUC1"
+        Me.TablenumUC1.Size = New System.Drawing.Size(410, 187)
+        Me.TablenumUC1.TabIndex = 10
+        Me.TablenumUC1.Visible = False
         '
         'ClientSelection
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Textbox1)
+        Me.Controls.Add(Me.TablenumUC1)
+        Me.Controls.Add(Me.passTXT)
         Me.Controls.Add(Me.startmenubtn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.menumanagerbtn)
@@ -180,6 +194,7 @@ Partial Class ClientSelection
     Friend WithEvents ClientFormDragctrl As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents BunifuFormFadeTransition1 As Bunifu.Framework.UI.BunifuFormFadeTransition
-    Friend WithEvents Textbox1 As Bunifu.Framework.UI.BunifuMetroTextbox
+    Friend WithEvents passTXT As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents TablenumUC1 As tablenumUC
 End Class

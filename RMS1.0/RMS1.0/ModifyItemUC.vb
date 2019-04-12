@@ -14,7 +14,7 @@ Public Class ModifyItemUC
     Private myCmd As SqlCommand
     Private myReader As SqlDataReader
     Private results As String
-    Private connectionString As String = "Data Source=LAPTOP-3U2PB6I2\WESMENA;Initial Catalog=SimpleMenu;Persist Security Info=True;User ID=sa;Password=wvjjk611"
+    Private connectionString As String = "Data Source=grupo0.database.windows.net;Initial Catalog=RMS;Persist Security Info=True;User ID=grupo0;Password=Bada907817@"
 
     Public Property Id As Integer
         Get
@@ -260,5 +260,11 @@ Public Class ModifyItemUC
             MsgBox("Se han guardado los cambios")
             Me.Hide()
         End If
+        NameTextBox.Text = ""
+        descRichTextBox.Text = ""
+        categoryComboBox.Text = ""
+        priceNumericUpDown.ResetText()
+        specialCheckBox.Checked = False
+
     End Sub
 End Class

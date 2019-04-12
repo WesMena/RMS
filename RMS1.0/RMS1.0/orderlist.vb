@@ -1,9 +1,11 @@
 ﻿Imports System.Data.SqlClient
 Public Class orderlist
+    Public Shared tablenum As String
     Public Shared OrderId As Integer
     Public Shared givenname As String
     Public Shared surname As String
     Public Shared total2pay As String
+
 
     Private Sub admindgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles orderlistdgv.CellContentClick
 
@@ -14,7 +16,7 @@ Public Class orderlist
 
         Dim orderlist As New DataTable
         Dim connection As New SqlConnection(QueriesModule.connectionString)
-        Dim commandselect As New SqlCommand("SELECT M.OrderId AS '# PEDIDO', M.total2pay AS 'TOTAL A PAGAR', M.clientname AS 'NOMBRE', M.clientsurname AS 'APELLIDOS' FROM Order_identifier M ", connection)
+        Dim commandselect As New SqlCommand("SELECT M.OrderId AS '# PEDIDO', M.total2pay AS 'TOTAL A PAGAR', M.clientname AS 'NOMBRE', M.clientsurname AS 'APELLIDOS', M.tablenum AS '# MESA' FROM Order_identifier M ORDER BY OrderId DESC ", connection)
         Dim dataAdapter As New SqlDataAdapter(commandselect)
         dataAdapter.Fill(orderlist)
         orderlistdgv.DataSource = orderlist
@@ -30,6 +32,14 @@ Public Class orderlist
         total2pay = row.Cells(1).Value
         givenname = row.Cells(2).Value
         surname = row.Cells(3).Value
+        tablenum = row.Cells(4).Value
+
+        Dim orderdetail As New DataTable
+        Dim connection As New SqlConnection(QueriesModule.connectionString)
+        Dim commandselect As New SqlCommand("SELECT M.name AS 'PLATILLO', M.unitprice AS 'PRECIO UNITARIO', M.quantity AS 'CANTIDAD', M.totalprice AS 'PRECIO TOTAL' FROM Order_lines M WHERE OrderId=" & orderlist.OrderId, connection)
+        Dim dataAdapter As New SqlDataAdapter(commandselect)
+        dataAdapter.Fill(orderdetail)
+        OrderDetail1.orderdetaildgv.DataSource = orderdetail
 
     End Sub
 
@@ -66,15 +76,17 @@ Public Class orderlist
         Dim fontheight As Double = font.GetHeight
         Dim startx As Integer = 10
         Dim starty As Integer = 10
-        Dim offset As Integer = 90
+        Dim offset As Integer = 110
         Dim namestring As String = "Cliente:" + givenname.PadRight(5) + " " + surname
         Dim idstring As String = "Código de factura:" + OrderId.ToString
         Dim totalstring As String = "Total a pagar:" + total2pay
+        Dim tablenumstring As String = "Número de mesa:" + tablenum
         Dim columntitles As String = "Cant".PadRight(5) + "Prod.".PadRight(10) + "P.U.".PadRight(5) + "Total"
         graphics.DrawString("Simple Menu".PadLeft(12), New Font("Courier New", 18), New SolidBrush(Color.Black), startx, starty)
         graphics.DrawString(namestring, font, New SolidBrush(Color.Black), startx, starty + 30)
         graphics.DrawString(idstring, font, New SolidBrush(Color.Black), startx, starty + 50)
-        graphics.DrawString(columntitles, font, New SolidBrush(Color.Black), startx, starty + 70)
+        graphics.DrawString(tablenumstring, font, New SolidBrush(Color.Black), startx, starty + 70)
+        graphics.DrawString(columntitles, font, New SolidBrush(Color.Black), startx, starty + 90)
 
         For i As Integer = 0 To AdminClient.Orderlist1.OrderDetail1.orderdetaildgv.Rows.Count - 2
             Dim itemname As String = OrderDetail1.orderdetaildgv.Rows(i).Cells(0).Value
@@ -89,8 +101,12 @@ Public Class orderlist
 
         Next
 
-        offset = offset +20
+        offset = offset + 20
         graphics.DrawString(totalstring, font, New SolidBrush(Color.Black), startx, starty + offset)
+
+    End Sub
+
+    Private Sub OrderDetail1_Load(sender As Object, e As EventArgs)
 
     End Sub
 End Class
