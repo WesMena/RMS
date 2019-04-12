@@ -43,6 +43,8 @@
     Private Sub addbtn_Click(sender As Object, e As EventArgs) Handles addbtn.Click
         appform.Order1.AddItem(Me.ItemName, 1, Me.ItemPrice)
         notification.itemNameLabel.Text = "1 " & Me.ItemName
+        notification.StartPosition = FormStartPosition.Manual
+        notification.Location = New Point(825, 160)
         notification.ShowDialog()
     End Sub
 End Class

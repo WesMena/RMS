@@ -78,6 +78,8 @@
         Dim currentItem As MenuItem = specials.GetItemAt(current)
         appform.Order1.AddItem(currentItem.Name, 1, currentItem.Price)
         notification.itemNameLabel.Text = "1 " & currentItem.Name
+        notification.StartPosition = FormStartPosition.Manual
+        notification.Location = New Point(825, 160)
         notification.ShowDialog()
     End Sub
 End Class

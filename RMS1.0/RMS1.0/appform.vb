@@ -92,7 +92,7 @@
 
 
     Private Sub searchbtn_Click(sender As Object, e As EventArgs) Handles searchbtn.Click
-        toggleButtonVisibility(searchbtn, "Busqueda")
+        toggleButtonVisibility(searchbtn, CategoryUC1.SearchButton.Text)
         currentcat = 5
     End Sub
 
@@ -147,6 +147,10 @@
             Homehub1.OrderButton.Text = "Ordenar"
             notification.successlbl.Text = "AGREGADO AL PEDIDO"
             Homehub1.SpecialsUserControl.titleLabel.Text = "Especial de Hoy"
+            Customer_s_name.namelbl.Text = "INGRESE SU NOMBRE Y APELLIDOS"
+            Customer_s_name.paybtn.Text = "CONFIRMAR PEDIDO"
+            Customer_s_name.givenNlbl.Text = "NOMBRE"
+            Customer_s_name.surnamelbl.Text = "APELLIDOS"
         Else
             langbtn.Iconimage_right = Global.RMS1._0.My.Resources.Resources.USflag
             homebtn.Text = "Home"
@@ -169,6 +173,10 @@
             Homehub1.OrderButton.Text = "Order"
             notification.successlbl.Text = "ADDED TO ORDER"
             Homehub1.SpecialsUserControl.titleLabel.Text = "Today's special"
+            Customer_s_name.namelbl.Text = "ENTER YOUR GIVEN NAME AND SURNAME"
+            Customer_s_name.paybtn.Text = "CONFIRM ORDER"
+            Customer_s_name.givenNlbl.Text = "GIVEN NAME"
+            Customer_s_name.surnamelbl.Text = "SURNAME"
         End If
         Select Case (currentcat)
             Case 1

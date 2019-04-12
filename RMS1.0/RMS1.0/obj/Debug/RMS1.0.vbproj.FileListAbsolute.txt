@@ -128,5 +128,5 @@ C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.orderDeta
 C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.orderlist.resources
 C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.wrongpass.resources
 C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.tablenumUC.resources
-C:\Users\USER\source\repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.vbprojAssemblyReference.cache
 C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.AddItemUC.resources
+C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.vbprojAssemblyReference.cache

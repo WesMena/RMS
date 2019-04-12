@@ -73,7 +73,7 @@
                 img = My.Resources.drinksImg
                 Dim drinks As DrinksList = New DrinksList
                 categoryItems = drinks.getItemsArrayList()
-            Case "Busqueda"
+            Case "Buscar", "Search"
                 SearchTextBox.Visible = True
                 SearchButton.Visible = True
                 categoryNameLabel.ForeColor = Color.FromArgb(87, 153, 204)

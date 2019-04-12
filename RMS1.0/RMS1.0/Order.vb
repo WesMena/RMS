@@ -26,9 +26,11 @@ Public Class Order
 
     Public Sub appetizerbtn_Click(sender As Object, e As EventArgs) Handles paybtn.Click
 
-
-
+        Customer_s_name.StartPosition = FormStartPosition.Manual
+        Customer_s_name.Location = New Point(450, 300)
         Customer_s_name.ShowDialog()
+
+
 
     End Sub
 
@@ -65,8 +67,9 @@ Public Class Order
     End Sub
 
     Public Sub sqltrigger_Textchanged(sender As Object, e As EventArgs) Handles sqltrigger.TextChanged
+        Dim todaysdate As String = String.Format("{0:MM/dd/yyyy}", DateTime.Now)
         Dim connection As New SqlConnection(QueriesModule.connectionString)
-        Dim query As New SqlCommand("INSERT INTO Order_identifier(total2pay, clientname, clientsurname, tablenum) Values(@total2pay, @clientname, @clientsurname, @tablenum)", connection)
+        Dim query As New SqlCommand("INSERT INTO Order_identifier(total2pay, clientname, clientsurname, tablenum, orderDate) Values(@total2pay, @clientname, @clientsurname, @tablenum, @orderDate)", connection)
         Dim query2 As New SqlCommand("SELECT MAX (OrderId)  FROM Order_identifier ", connection)
         Dim query3 As New SqlCommand
 
@@ -78,6 +81,7 @@ Public Class Order
             .Parameters.AddWithValue("@clientname", Customer_s_name.firstname)
             .Parameters.AddWithValue("@clientsurname", Customer_s_name.surname)
             .Parameters.AddWithValue("@tablenum", appform.tablenumLbl.Text)
+            .Parameters.AddWithValue("@orderDate", todaysdate)
 
         End With
         connection.Open()

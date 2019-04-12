@@ -30,8 +30,8 @@ Public Class ClientSelection
         adapter.Fill(table)
 
         If table.Rows.Count <= 0 Then
-            wrongpass.Top = 0
-            wrongpass.Left = 0
+            wrongpass.StartPosition = FormStartPosition.Manual
+            wrongpass.Location = New Point(290, 160)
             wrongpass.ShowDialog()
         Else
             AdminClient.Show()

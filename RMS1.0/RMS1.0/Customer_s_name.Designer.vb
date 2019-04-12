@@ -28,8 +28,8 @@ Partial Class Customer_s_name
         Me.paybtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.namelbl = New System.Windows.Forms.Label()
         Me.nameTxt = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.givenNlbl = New System.Windows.Forms.Label()
+        Me.surnamelbl = New System.Windows.Forms.Label()
         Me.surnameTXT = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.SuspendLayout()
         '
@@ -77,7 +77,7 @@ Partial Class Customer_s_name
         Me.namelbl.AutoSize = True
         Me.namelbl.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.namelbl.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.namelbl.Location = New System.Drawing.Point(41, 9)
+        Me.namelbl.Location = New System.Drawing.Point(3, 9)
         Me.namelbl.Name = "namelbl"
         Me.namelbl.Size = New System.Drawing.Size(398, 28)
         Me.namelbl.TabIndex = 5
@@ -102,27 +102,27 @@ Partial Class Customer_s_name
         Me.nameTxt.TabIndex = 6
         Me.nameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'Label1
+        'givenNlbl
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(58, 71)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 23)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "NOMBRE"
+        Me.givenNlbl.AutoSize = True
+        Me.givenNlbl.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.givenNlbl.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.givenNlbl.Location = New System.Drawing.Point(58, 71)
+        Me.givenNlbl.Name = "givenNlbl"
+        Me.givenNlbl.Size = New System.Drawing.Size(89, 23)
+        Me.givenNlbl.TabIndex = 7
+        Me.givenNlbl.Text = "NOMBRE"
         '
-        'Label2
+        'surnamelbl
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(296, 71)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(105, 23)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "APELLIDOS"
+        Me.surnamelbl.AutoSize = True
+        Me.surnamelbl.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.surnamelbl.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.surnamelbl.Location = New System.Drawing.Point(296, 71)
+        Me.surnamelbl.Name = "surnamelbl"
+        Me.surnamelbl.Size = New System.Drawing.Size(105, 23)
+        Me.surnamelbl.TabIndex = 9
+        Me.surnamelbl.Text = "APELLIDOS"
         '
         'surnameTXT
         '
@@ -149,9 +149,9 @@ Partial Class Customer_s_name
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(484, 206)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.surnamelbl)
         Me.Controls.Add(Me.surnameTXT)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.givenNlbl)
         Me.Controls.Add(Me.nameTxt)
         Me.Controls.Add(Me.namelbl)
         Me.Controls.Add(Me.paybtn)
@@ -165,9 +165,9 @@ Partial Class Customer_s_name
 
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents paybtn As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents Label2 As Label
+    Friend WithEvents surnamelbl As Label
     Friend WithEvents surnameTXT As Bunifu.Framework.UI.BunifuMaterialTextbox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents givenNlbl As Label
     Friend WithEvents nameTxt As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents namelbl As Label
 End Class

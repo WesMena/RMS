@@ -16,7 +16,8 @@
     End Sub
 
     Private Sub orderlbl_Click(sender As Object, e As EventArgs) Handles orderlbl.Click
-
+        notification.StartPosition = FormStartPosition.Manual
+        notification.Location = New Point(750, 160)
         notification.ShowDialog()
 
     End Sub
