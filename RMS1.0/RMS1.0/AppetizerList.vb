@@ -19,9 +19,13 @@ Public Class AppetizerList
     End Function
 
     Public Sub New()
-        Dim query As String = "SELECT id, name, description, category, price, special FROM Menu WHERE category = 'Entrada'"
-        AddItemToArrayList(query, appetizerList)
-
+        If appform.langlbl.Text = "Spanish" Then
+            Dim query As String = "SELECT id, name, description, category, price, special FROM Menu WHERE category = 'Entrada'"
+            AddItemToArrayList(query, appetizerList)
+        Else
+            Dim query As String = "SELECT id, name, Engdesc, category, price, special FROM Menu WHERE category = 'Entrada'"
+            AddItemToArrayList(query, appetizerList)
+        End If
     End Sub
 
 

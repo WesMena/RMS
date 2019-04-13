@@ -27,8 +27,11 @@ Public Class MainCourseList
         myConn = New SqlConnection(connectionString)
 
         myCmd = myConn.CreateCommand
-
-        myCmd.CommandText = "SELECT id, name, description, category, price, special FROM Menu WHERE category = 'Principal'"
+        If appform.langlbl.Text = "Spanish" Then
+            myCmd.CommandText = "SELECT id, name, description, category, price, special FROM Menu WHERE category = 'Principal'"
+        Else
+            myCmd.CommandText = "SELECT id, name, Engdesc, category, price, special FROM Menu WHERE category = 'Principal'"
+        End If
         'Open the connection.
         myConn.Open()
 
