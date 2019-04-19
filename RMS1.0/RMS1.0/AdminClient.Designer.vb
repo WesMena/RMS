@@ -25,15 +25,15 @@ Partial Class AdminClient
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminClient))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.closeBtn = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
-        Me.Orderlist1 = New RMS1._0.orderlist()
-        Me.modifyitem = New RMS1._0.ModifyItemUC()
-        Me.AdminUserControl1 = New RMS1._0.AdminUserControl()
-        Me.closeBtn = New Bunifu.Framework.UI.BunifuImageButton()
         Me.ShowOrderListbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.addItemButton = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.modifyItemButton = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.Orderlist1 = New RMS1._0.orderlist()
+        Me.modifyitem = New RMS1._0.ModifyItemUC()
+        Me.AdminUserControl1 = New RMS1._0.AdminUserControl()
         Me.Panel1.SuspendLayout()
         CType(Me.closeBtn, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,48 +47,6 @@ Partial Class AdminClient
         Me.Panel1.Size = New System.Drawing.Size(941, 41)
         Me.Panel1.TabIndex = 12
         '
-        'BunifuElipse1
-        '
-        Me.BunifuElipse1.ElipseRadius = 5
-        Me.BunifuElipse1.TargetControl = Me
-        '
-        'BunifuDragControl1
-        '
-        Me.BunifuDragControl1.Fixed = True
-        Me.BunifuDragControl1.Horizontal = True
-        Me.BunifuDragControl1.TargetControl = Me.Panel1
-        Me.BunifuDragControl1.Vertical = True
-        '
-        'Orderlist1
-        '
-        Me.Orderlist1.Location = New System.Drawing.Point(236, 29)
-        Me.Orderlist1.Name = "Orderlist1"
-        Me.Orderlist1.Size = New System.Drawing.Size(710, 482)
-        Me.Orderlist1.TabIndex = 9
-        '
-        'modifyitem
-        '
-        Me.modifyitem.Category = Nothing
-        Me.modifyitem.Description = Nothing
-        Me.modifyitem.Id = 0
-        Me.modifyitem.Imagepath = Nothing
-        Me.modifyitem.IsUpdate = False
-        Me.modifyitem.ItemName = Nothing
-        Me.modifyitem.Location = New System.Drawing.Point(236, 28)
-        Me.modifyitem.Name = "modifyitem"
-        Me.modifyitem.Price = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.modifyitem.Size = New System.Drawing.Size(703, 483)
-        Me.modifyitem.Special = False
-        Me.modifyitem.TabIndex = 6
-        Me.modifyitem.Visible = False
-        '
-        'AdminUserControl1
-        '
-        Me.AdminUserControl1.Location = New System.Drawing.Point(-2, 28)
-        Me.AdminUserControl1.Name = "AdminUserControl1"
-        Me.AdminUserControl1.Size = New System.Drawing.Size(941, 483)
-        Me.AdminUserControl1.TabIndex = 0
-        '
         'closeBtn
         '
         Me.closeBtn.BackColor = System.Drawing.Color.MediumSeaGreen
@@ -101,6 +59,18 @@ Partial Class AdminClient
         Me.closeBtn.TabIndex = 21
         Me.closeBtn.TabStop = False
         Me.closeBtn.Zoom = 10
+        '
+        'BunifuElipse1
+        '
+        Me.BunifuElipse1.ElipseRadius = 5
+        Me.BunifuElipse1.TargetControl = Me
+        '
+        'BunifuDragControl1
+        '
+        Me.BunifuDragControl1.Fixed = True
+        Me.BunifuDragControl1.Horizontal = True
+        Me.BunifuDragControl1.TargetControl = Me.Panel1
+        Me.BunifuDragControl1.Vertical = True
         '
         'ShowOrderListbtn
         '
@@ -203,6 +173,36 @@ Partial Class AdminClient
         Me.modifyItemButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.modifyItemButton.Textcolor = System.Drawing.Color.White
         Me.modifyItemButton.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'Orderlist1
+        '
+        Me.Orderlist1.Location = New System.Drawing.Point(236, 29)
+        Me.Orderlist1.Name = "Orderlist1"
+        Me.Orderlist1.Size = New System.Drawing.Size(710, 482)
+        Me.Orderlist1.TabIndex = 9
+        '
+        'modifyitem
+        '
+        Me.modifyitem.Category = Nothing
+        Me.modifyitem.Description = Nothing
+        Me.modifyitem.Id = 0
+        Me.modifyitem.Imagepath = Nothing
+        Me.modifyitem.IsUpdate = False
+        Me.modifyitem.ItemName = Nothing
+        Me.modifyitem.Location = New System.Drawing.Point(236, 28)
+        Me.modifyitem.Name = "modifyitem"
+        Me.modifyitem.Price = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.modifyitem.Size = New System.Drawing.Size(703, 483)
+        Me.modifyitem.Special = False
+        Me.modifyitem.TabIndex = 6
+        Me.modifyitem.Visible = False
+        '
+        'AdminUserControl1
+        '
+        Me.AdminUserControl1.Location = New System.Drawing.Point(-2, 28)
+        Me.AdminUserControl1.Name = "AdminUserControl1"
+        Me.AdminUserControl1.Size = New System.Drawing.Size(941, 483)
+        Me.AdminUserControl1.TabIndex = 0
         '
         'AdminClient
         '

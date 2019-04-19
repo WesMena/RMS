@@ -2,7 +2,7 @@
 
 Public Class ModifyItemUC
     Private _isUpdate1 As Boolean
-    Private _id As Integer
+    Public Shared _id As Integer
     Private _itemName As String
     Private _description As String
     Private _category As String
@@ -133,15 +133,17 @@ Public Class ModifyItemUC
 
         myCmd = myConn.CreateCommand
 
-        myCmd.CommandText = "INSERT INTO Menu(name, description , category , price , special , imagepath) VALUES (@name, @description, @category , @price , @special , @imagepath)"
+        myCmd.CommandText = "INSERT INTO Menu(name, description , category , price , special , imagepath, Engdesc) VALUES (@name, @description, @category , @price , @special , @imagepath, @Engdesc)"
 
         With myCmd
             .Parameters.AddWithValue("@name", ItemName)
-            .Parameters.AddWithValue("@description", Description)
+            .Parameters.AddWithValue("@description", Espdesctxt.Text)
             .Parameters.AddWithValue("@category", Category)
             .Parameters.AddWithValue("@price", Price)
             .Parameters.AddWithValue("@special", Special)
             .Parameters.AddWithValue("@imagepath", Imagepath)
+            .Parameters.AddWithValue("@Engdesc", descRichTextBox.Text)
+
         End With
 
 
@@ -156,16 +158,18 @@ Public Class ModifyItemUC
 
         myCmd = myConn.CreateCommand
 
-        myCmd.CommandText = "UPDATE Menu SET name = @name, description = @description , category = @category , price = @price , special = @special , imagepath = @imagepath WHERE id = @id"
+        myCmd.CommandText = "UPDATE Menu SET name = @name, description = @description , category = @category , price = @price , special = @special , imagepath = @imagepath, Engdesc=@Engdesc WHERE id = @id"
 
         With myCmd
             .Parameters.AddWithValue("@name", ItemName)
-            .Parameters.AddWithValue("@description", Description)
+            .Parameters.AddWithValue("@description", Espdesctxt.Text)
             .Parameters.AddWithValue("@category", Category)
             .Parameters.AddWithValue("@price", Price)
             .Parameters.AddWithValue("@special", Special)
             .Parameters.AddWithValue("@imagepath", Imagepath)
             .Parameters.AddWithValue("@id", Id)
+            .Parameters.AddWithValue("@Engdesc", descRichTextBox.Text)
+
         End With
 
 
@@ -174,12 +178,17 @@ Public Class ModifyItemUC
         myConn.Close()
 
     End Sub
+    Private Sub modifyItemvisiblechanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
+
+    End Sub
 
     Private Sub ModifyItemUC_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         If IsUpdate Then
             updateFields()
         Else
             clearFields()
+
         End If
     End Sub
 
@@ -211,7 +220,13 @@ Public Class ModifyItemUC
     End Sub
 
     Private Sub ModifyItemUC_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
-        updateFields()
+
+        If IsUpdate Then
+            updateFields()
+        Else
+            clearFields()
+
+        End If
     End Sub
 
     Private Sub browseFileButton_Click(sender As Object, e As EventArgs)

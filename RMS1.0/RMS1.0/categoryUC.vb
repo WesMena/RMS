@@ -153,7 +153,13 @@
 
 
 
-        Dim query As String = "SELECT id, name, description, category, price, special FROM Menu WHERE  name LIKE  '%" & searchinput & "%'"
+        Dim query As String
+        If appform.langlbl.Text = "Spanish" Then
+            query = "SELECT id, name, description, category, price, special FROM Menu WHERE  name LIKE  '%" & searchinput & "%'"
+        Else
+            query = "SELECT id, name, Eng, category, price, special FROM Menu WHERE  name LIKE  '%" & searchinput & "%'"
+        End If
+
         AddItemToArrayList(query, searchitems)
         categoryItems = searchitems
         CreateCategoryItems()

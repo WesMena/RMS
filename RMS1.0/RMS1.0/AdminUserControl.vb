@@ -1,4 +1,5 @@
-﻿Public Class AdminUserControl
+﻿Imports System.Data.SqlClient
+Public Class AdminUserControl
     'Private menuitemslist As MenuItemList = New MenuItemList
     'Private drinksList As DrinksList = New DrinksList
     'Private dessertsList As DessertList = New DessertList
@@ -6,7 +7,8 @@
     'Private maincouseList As MainCourseList = New MainCourseList
     'Private specialsList As SpecialsList = New SpecialsList
 
-
+    Public Shared espDesc As String
+    Public Shared id As Integer
     Private menuitemslist As MenuItemList
     Private drinksList As DrinksList
     Private dessertsList As DessertList
@@ -76,6 +78,9 @@
         modifyitem.Price = Decimal.Parse(dgvr.Cells(4).Value)
         modifyitem.Special = Boolean.Parse(dgvr.Cells(5).Value)
         modifyitem.Imagepath = dgvr.Cells(6).Value
+
+
+
         modifyitem.Visible = True
     End Sub
 

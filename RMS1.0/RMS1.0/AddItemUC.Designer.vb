@@ -23,6 +23,8 @@ Partial Class AddItemUC
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddItemUC))
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Espdesctxt = New System.Windows.Forms.RichTextBox()
         Me.saveAddButton = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.cancelbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.browseFileButton = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -39,6 +41,27 @@ Partial Class AddItemUC
         Me.categoryComboBox = New System.Windows.Forms.ComboBox()
         CType(Me.priceNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(377, 46)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(190, 19)
+        Me.Label1.TabIndex = 35
+        Me.Label1.Text = "Descripción en español"
+        '
+        'Espdesctxt
+        '
+        Me.Espdesctxt.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Espdesctxt.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Espdesctxt.Location = New System.Drawing.Point(321, 68)
+        Me.Espdesctxt.Name = "Espdesctxt"
+        Me.Espdesctxt.Size = New System.Drawing.Size(292, 48)
+        Me.Espdesctxt.TabIndex = 34
+        Me.Espdesctxt.Text = ""
         '
         'saveAddButton
         '
@@ -68,7 +91,7 @@ Partial Class AddItemUC
         Me.saveAddButton.OnHoverTextColor = System.Drawing.Color.White
         Me.saveAddButton.selected = False
         Me.saveAddButton.Size = New System.Drawing.Size(201, 48)
-        Me.saveAddButton.TabIndex = 31
+        Me.saveAddButton.TabIndex = 33
         Me.saveAddButton.Text = "Guardar"
         Me.saveAddButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.saveAddButton.Textcolor = System.Drawing.Color.White
@@ -102,7 +125,7 @@ Partial Class AddItemUC
         Me.cancelbtn.OnHoverTextColor = System.Drawing.Color.White
         Me.cancelbtn.selected = False
         Me.cancelbtn.Size = New System.Drawing.Size(201, 48)
-        Me.cancelbtn.TabIndex = 30
+        Me.cancelbtn.TabIndex = 32
         Me.cancelbtn.Text = "Cancelar"
         Me.cancelbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.cancelbtn.Textcolor = System.Drawing.Color.White
@@ -136,7 +159,7 @@ Partial Class AddItemUC
         Me.browseFileButton.OnHoverTextColor = System.Drawing.Color.White
         Me.browseFileButton.selected = False
         Me.browseFileButton.Size = New System.Drawing.Size(201, 48)
-        Me.browseFileButton.TabIndex = 29
+        Me.browseFileButton.TabIndex = 31
         Me.browseFileButton.Text = "Seleccionar"
         Me.browseFileButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.browseFileButton.Textcolor = System.Drawing.Color.White
@@ -149,7 +172,7 @@ Partial Class AddItemUC
         Me.filenameLabel.Location = New System.Drawing.Point(41, 247)
         Me.filenameLabel.Name = "filenameLabel"
         Me.filenameLabel.Size = New System.Drawing.Size(80, 19)
-        Me.filenameLabel.TabIndex = 28
+        Me.filenameLabel.TabIndex = 30
         Me.filenameLabel.Text = "filename"
         '
         'imageLabel
@@ -160,17 +183,17 @@ Partial Class AddItemUC
         Me.imageLabel.Location = New System.Drawing.Point(50, 228)
         Me.imageLabel.Name = "imageLabel"
         Me.imageLabel.Size = New System.Drawing.Size(71, 19)
-        Me.imageLabel.TabIndex = 27
+        Me.imageLabel.TabIndex = 29
         Me.imageLabel.Text = "Imagen"
         '
         'descRichTextBox
         '
         Me.descRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.descRichTextBox.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.descRichTextBox.Location = New System.Drawing.Point(108, 68)
+        Me.descRichTextBox.Location = New System.Drawing.Point(23, 68)
         Me.descRichTextBox.Name = "descRichTextBox"
         Me.descRichTextBox.Size = New System.Drawing.Size(292, 48)
-        Me.descRichTextBox.TabIndex = 26
+        Me.descRichTextBox.TabIndex = 28
         Me.descRichTextBox.Text = ""
         '
         'NameTextBox
@@ -180,18 +203,18 @@ Partial Class AddItemUC
         Me.NameTextBox.Location = New System.Drawing.Point(108, 23)
         Me.NameTextBox.Name = "NameTextBox"
         Me.NameTextBox.Size = New System.Drawing.Size(292, 20)
-        Me.NameTextBox.TabIndex = 25
+        Me.NameTextBox.TabIndex = 27
         '
         'descLabel
         '
         Me.descLabel.AutoSize = True
         Me.descLabel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.descLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.descLabel.Location = New System.Drawing.Point(178, 46)
+        Me.descLabel.Location = New System.Drawing.Point(50, 46)
         Me.descLabel.Name = "descLabel"
-        Me.descLabel.Size = New System.Drawing.Size(100, 19)
-        Me.descLabel.TabIndex = 24
-        Me.descLabel.Text = "Descripción"
+        Me.descLabel.Size = New System.Drawing.Size(173, 19)
+        Me.descLabel.TabIndex = 26
+        Me.descLabel.Text = "Descripción en inglés"
         '
         'nameLabel
         '
@@ -201,7 +224,7 @@ Partial Class AddItemUC
         Me.nameLabel.Location = New System.Drawing.Point(178, 1)
         Me.nameLabel.Name = "nameLabel"
         Me.nameLabel.Size = New System.Drawing.Size(73, 19)
-        Me.nameLabel.TabIndex = 23
+        Me.nameLabel.TabIndex = 25
         Me.nameLabel.Text = "Nombre"
         '
         'specialCheckBox
@@ -212,7 +235,7 @@ Partial Class AddItemUC
         Me.specialCheckBox.Location = New System.Drawing.Point(419, 145)
         Me.specialCheckBox.Name = "specialCheckBox"
         Me.specialCheckBox.Size = New System.Drawing.Size(89, 25)
-        Me.specialCheckBox.TabIndex = 22
+        Me.specialCheckBox.TabIndex = 24
         Me.specialCheckBox.Text = "Especial"
         Me.specialCheckBox.UseVisualStyleBackColor = True
         '
@@ -224,7 +247,7 @@ Partial Class AddItemUC
         Me.priceLabel.Location = New System.Drawing.Point(178, 176)
         Me.priceLabel.Name = "priceLabel"
         Me.priceLabel.Size = New System.Drawing.Size(57, 19)
-        Me.priceLabel.TabIndex = 21
+        Me.priceLabel.TabIndex = 23
         Me.priceLabel.Text = "Precio"
         '
         'categoryLabel
@@ -235,7 +258,7 @@ Partial Class AddItemUC
         Me.categoryLabel.Location = New System.Drawing.Point(178, 119)
         Me.categoryLabel.Name = "categoryLabel"
         Me.categoryLabel.Size = New System.Drawing.Size(87, 19)
-        Me.categoryLabel.TabIndex = 20
+        Me.categoryLabel.TabIndex = 22
         Me.categoryLabel.Text = "Categoria"
         '
         'priceNumericUpDown
@@ -247,7 +270,7 @@ Partial Class AddItemUC
         Me.priceNumericUpDown.Maximum = New Decimal(New Integer() {20000, 0, 0, 0})
         Me.priceNumericUpDown.Name = "priceNumericUpDown"
         Me.priceNumericUpDown.Size = New System.Drawing.Size(292, 23)
-        Me.priceNumericUpDown.TabIndex = 19
+        Me.priceNumericUpDown.TabIndex = 21
         Me.priceNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'categoryComboBox
@@ -259,12 +282,14 @@ Partial Class AddItemUC
         Me.categoryComboBox.Location = New System.Drawing.Point(108, 144)
         Me.categoryComboBox.Name = "categoryComboBox"
         Me.categoryComboBox.Size = New System.Drawing.Size(292, 29)
-        Me.categoryComboBox.TabIndex = 18
+        Me.categoryComboBox.TabIndex = 20
         '
         'AddItemUC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Espdesctxt)
         Me.Controls.Add(Me.saveAddButton)
         Me.Controls.Add(Me.cancelbtn)
         Me.Controls.Add(Me.browseFileButton)
@@ -287,6 +312,8 @@ Partial Class AddItemUC
 
     End Sub
 
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Espdesctxt As RichTextBox
     Friend WithEvents saveAddButton As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents cancelbtn As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents browseFileButton As Bunifu.Framework.UI.BunifuFlatButton

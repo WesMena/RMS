@@ -31,6 +31,7 @@ Public Class MenuItemList
         Else
             Dim query As String = "SELECT id, name, Engdesc, category, price, special FROM Menu"
             AddItemToArrayList(query, menuItemsList)
+
         End If
     End Sub
 

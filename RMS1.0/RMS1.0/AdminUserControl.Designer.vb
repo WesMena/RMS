@@ -34,6 +34,8 @@ Partial Class AdminUserControl
         Me.mainCourseButton = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.appetizerbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.admindgv = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.categorylbl = New System.Windows.Forms.Label()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.itemname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Description = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,8 +43,6 @@ Partial Class AdminUserControl
         Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Special = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.categorylbl = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.admindgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -308,45 +308,6 @@ Partial Class AdminUserControl
         Me.admindgv.Size = New System.Drawing.Size(705, 376)
         Me.admindgv.TabIndex = 14
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "IdColumn"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'itemname
-        '
-        Me.itemname.HeaderText = "Nombre"
-        Me.itemname.Name = "itemname"
-        '
-        'Description
-        '
-        Me.Description.HeaderText = "Descripción"
-        Me.Description.Name = "Description"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Categoría"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Visible = False
-        '
-        'Price
-        '
-        Me.Price.HeaderText = "Precio"
-        Me.Price.Name = "Price"
-        '
-        'Special
-        '
-        Me.Special.HeaderText = "Especial"
-        Me.Special.Name = "Special"
-        Me.Special.Visible = False
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Imagen"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Visible = False
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.SeaGreen
@@ -366,6 +327,47 @@ Partial Class AdminUserControl
         Me.categorylbl.Size = New System.Drawing.Size(316, 32)
         Me.categorylbl.TabIndex = 0
         Me.categorylbl.Text = "La categoría sale aquí "
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "IdColumn"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'itemname
+        '
+        Me.itemname.HeaderText = "Nombre"
+        Me.itemname.Name = "itemname"
+        '
+        'Description
+        '
+        Me.Description.HeaderText = "Descripción"
+        Me.Description.Name = "Description"
+        Me.Description.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Categoría"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Visible = False
+        '
+        'Price
+        '
+        Me.Price.HeaderText = "Precio"
+        Me.Price.Name = "Price"
+        Me.Price.Visible = False
+        '
+        'Special
+        '
+        Me.Special.HeaderText = "Especial"
+        Me.Special.Name = "Special"
+        Me.Special.Visible = False
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Imagen"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Visible = False
         '
         'AdminUserControl
         '
@@ -391,6 +393,8 @@ Partial Class AdminUserControl
     Friend WithEvents allitemsButton As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Panel1 As Panel
     Friend WithEvents admindgv As Bunifu.Framework.UI.BunifuCustomDataGrid
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents categorylbl As Label
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents itemname As DataGridViewTextBoxColumn
     Friend WithEvents Description As DataGridViewTextBoxColumn
@@ -398,6 +402,4 @@ Partial Class AdminUserControl
     Friend WithEvents Price As DataGridViewTextBoxColumn
     Friend WithEvents Special As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents categorylbl As Label
 End Class

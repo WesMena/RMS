@@ -67,6 +67,7 @@
     End Sub
 
     Private Sub currentplusbtn_Click_1(sender As Object, e As EventArgs) Handles currentplusbtn.Click
+
         Dim tmp = Me.current
         tmp = tmp + 1
         tmp = WrapAroundLimits(tmp)

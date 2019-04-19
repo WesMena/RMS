@@ -37,6 +37,8 @@ Partial Class ModifyItemUC
         Me.browseFileButton = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.cancelbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.saveAddButton = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.Espdesctxt = New System.Windows.Forms.RichTextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.priceNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -113,11 +115,11 @@ Partial Class ModifyItemUC
         Me.descLabel.AutoSize = True
         Me.descLabel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.descLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.descLabel.Location = New System.Drawing.Point(201, 65)
+        Me.descLabel.Location = New System.Drawing.Point(73, 65)
         Me.descLabel.Name = "descLabel"
-        Me.descLabel.Size = New System.Drawing.Size(100, 19)
+        Me.descLabel.Size = New System.Drawing.Size(173, 19)
         Me.descLabel.TabIndex = 7
-        Me.descLabel.Text = "Descripción"
+        Me.descLabel.Text = "Descripción en inglés"
         '
         'NameTextBox
         '
@@ -132,7 +134,7 @@ Partial Class ModifyItemUC
         '
         Me.descRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.descRichTextBox.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.descRichTextBox.Location = New System.Drawing.Point(131, 87)
+        Me.descRichTextBox.Location = New System.Drawing.Point(33, 87)
         Me.descRichTextBox.Name = "descRichTextBox"
         Me.descRichTextBox.Size = New System.Drawing.Size(292, 48)
         Me.descRichTextBox.TabIndex = 9
@@ -261,10 +263,33 @@ Partial Class ModifyItemUC
         Me.saveAddButton.Textcolor = System.Drawing.Color.White
         Me.saveAddButton.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'Espdesctxt
+        '
+        Me.Espdesctxt.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Espdesctxt.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Espdesctxt.Location = New System.Drawing.Point(347, 87)
+        Me.Espdesctxt.Name = "Espdesctxt"
+        Me.Espdesctxt.Size = New System.Drawing.Size(292, 48)
+        Me.Espdesctxt.TabIndex = 18
+        Me.Espdesctxt.Text = ""
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(400, 65)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(190, 19)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "Descripción en español"
+        '
         'ModifyItemUC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Espdesctxt)
         Me.Controls.Add(Me.saveAddButton)
         Me.Controls.Add(Me.cancelbtn)
         Me.Controls.Add(Me.browseFileButton)
@@ -301,4 +326,6 @@ Partial Class ModifyItemUC
     Friend WithEvents browseFileButton As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents cancelbtn As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents saveAddButton As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents Espdesctxt As RichTextBox
+    Friend WithEvents Label1 As Label
 End Class
