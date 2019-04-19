@@ -1,5 +1,4 @@
 ﻿Public Class MenuItem
-
     Private _id As Integer
     Private _name As String
     Private _description As String
@@ -7,20 +6,26 @@
     Private _price As Decimal
     Private _special As Boolean
     Private _imagepath As String
+    Private _engdesc As String
+
+
+
 
 
 
 
     Public Sub New(id As Integer, name As String, description As String, category As String, price As Decimal, special As Boolean)
+        'engdesc As String
         Me.Id = id
         Me.Name = name
         Me.Description = description
         Me.Category = category
         Me.Price = price
         Me.Special = special
+        Me.Engdesc = Engdesc
     End Sub
 
-    Public Sub New(id As Integer, name As String, description As String, category As String, price As Decimal, special As Boolean, imagepath As String)
+    Public Sub New(id As Integer, name As String, description As String, category As String, price As Decimal, special As Boolean, imagepath As String, engdesc As String)
         Me.Id = id
         Me.Name = name
         Me.Description = description
@@ -28,6 +33,7 @@
         Me.Price = price
         Me.Special = special
         Me.Imagepath = imagepath
+        Me.Engdesc = engdesc
     End Sub
 
     Public Property Id As Integer
@@ -90,6 +96,14 @@
         End Get
         Set(value As String)
             _imagepath = value
+        End Set
+    End Property
+    Public Property Engdesc As String
+        Get
+            Return _engdesc
+        End Get
+        Set(value As String)
+            _engdesc = value
         End Set
     End Property
 End Class

@@ -12,13 +12,23 @@
     End Sub
 
 
-    Private Sub updateItemInfo()
+    Public Sub updateItemInfo()
         If specials IsNot Nothing Then
 
             Dim currentSpecial As MenuItem = specials.GetItemAt(current)
-            SpecialsUserControl.titleLabel.Text = "Especial de Hoy"
+            If appform.lang = "Spanish" Then
+                SpecialsUserControl.titleLabel.Text = "Especial de Hoy"
+            Else
+                SpecialsUserControl.titleLabel.Text = "Today's special"
+            End If
+
             SpecialsUserControl.itemNameLabel.Text = currentSpecial.Name
-            SpecialsUserControl.itemDescriptionLabel.Text = currentSpecial.Description
+            If appform.lang = "Spanish" Then
+                SpecialsUserControl.itemDescriptionLabel.Text = currentSpecial.Description
+            Else
+                SpecialsUserControl.itemDescriptionLabel.Text = currentSpecial.Engdesc
+            End If
+
             SpecialsUserControl.priceLabel.Text = "₡" & currentSpecial.Price.ToString
 
             'Ojo aqui es donde hay que especificar el path entero de las imagenes que queremos ensenhar

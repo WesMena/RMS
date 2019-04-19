@@ -34,7 +34,10 @@ Public Class SpecialsList
 
         myCmd = myConn.CreateCommand
 
-        myCmd.CommandText = "SELECT id, name, description, category, price, special, imagepath FROM Menu WHERE special = 1 "
+        myCmd.CommandText = "SELECT id, name, description, category, price, special, imagepath, Engdesc FROM Menu WHERE special = 1 "
+
+
+
 
         'Open the connection.
         myConn.Open()
@@ -42,7 +45,7 @@ Public Class SpecialsList
         myReader = myCmd.ExecuteReader()
 
         Do While myReader.Read()
-            specialsList.Add(New MenuItem(myReader.GetValue(0), myReader.GetValue(1), myReader.GetValue(2), myReader.GetValue(3), myReader.GetValue(4), myReader.GetValue(5), myReader.GetValue(6)))
+            specialsList.Add(New MenuItem(myReader.GetValue(0), myReader.GetValue(1), myReader.GetValue(2), myReader.GetValue(3), myReader.GetValue(4), myReader.GetValue(5), myReader.GetValue(6), myReader.GetValue(7)))
         Loop
 
         myReader.Close()

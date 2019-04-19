@@ -1,4 +1,5 @@
 ﻿Public Class appform
+    Public Shared lang As String = "Spanish"
     Public Shared currentcat As Integer
 
 
@@ -8,7 +9,7 @@
 
         CategoryUC1.Visible = False
         scrollToTop()
-            CategoryUC1.categoryNameLabel.Text = categoryName
+        CategoryUC1.categoryNameLabel.Text = categoryName
         cattransition.ShowSync(CategoryUC1)
 
 
@@ -118,8 +119,12 @@
 
         If langlbl.Text = "Spanish" Then
             langlbl.Text = "English"
+            lang = "English"
+            Homehub1.updateItemInfo()
         Else
             langlbl.Text = "Spanish"
+            lang = "Spanish"
+            Homehub1.updateItemInfo()
         End If
 
     End Sub
@@ -151,6 +156,7 @@
             Customer_s_name.paybtn.Text = "CONFIRMAR PEDIDO"
             Customer_s_name.givenNlbl.Text = "NOMBRE"
             Customer_s_name.surnamelbl.Text = "APELLIDOS"
+
         Else
             langbtn.Iconimage_right = Global.RMS1._0.My.Resources.Resources.USflag
             homebtn.Text = "Home"
@@ -177,6 +183,7 @@
             Customer_s_name.paybtn.Text = "CONFIRM ORDER"
             Customer_s_name.givenNlbl.Text = "GIVEN NAME"
             Customer_s_name.surnamelbl.Text = "SURNAME"
+
         End If
         Select Case (currentcat)
             Case 1
