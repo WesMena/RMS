@@ -49,7 +49,7 @@ Partial Class SearchUC
         Me.dessertslbl.Name = "dessertslbl"
         Me.dessertslbl.Size = New System.Drawing.Size(165, 36)
         Me.dessertslbl.TabIndex = 32
-        Me.dessertslbl.Text = "BUSQUEDA"
+        Me.dessertslbl.Text = "BÚSQUEDA"
         '
         'Itemtemplate2
         '

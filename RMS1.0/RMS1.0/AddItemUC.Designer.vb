@@ -259,7 +259,7 @@ Partial Class AddItemUC
         Me.categoryLabel.Name = "categoryLabel"
         Me.categoryLabel.Size = New System.Drawing.Size(87, 19)
         Me.categoryLabel.TabIndex = 22
-        Me.categoryLabel.Text = "Categoria"
+        Me.categoryLabel.Text = "Categoría"
         '
         'priceNumericUpDown
         '

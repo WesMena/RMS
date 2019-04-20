@@ -86,7 +86,7 @@ Partial Class Customer_s_name
         'nameTxt
         '
         Me.nameTxt.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.nameTxt.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nameTxt.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nameTxt.ForeColor = System.Drawing.Color.White
         Me.nameTxt.HintForeColor = System.Drawing.Color.Empty
         Me.nameTxt.HintText = ""
@@ -94,11 +94,11 @@ Partial Class Customer_s_name
         Me.nameTxt.LineFocusedColor = System.Drawing.Color.SeaGreen
         Me.nameTxt.LineIdleColor = System.Drawing.Color.Gray
         Me.nameTxt.LineMouseHoverColor = System.Drawing.Color.SeaGreen
-        Me.nameTxt.LineThickness = 3
-        Me.nameTxt.Location = New System.Drawing.Point(13, 108)
+        Me.nameTxt.LineThickness = 4
+        Me.nameTxt.Location = New System.Drawing.Point(13, 101)
         Me.nameTxt.Margin = New System.Windows.Forms.Padding(4)
         Me.nameTxt.Name = "nameTxt"
-        Me.nameTxt.Size = New System.Drawing.Size(197, 31)
+        Me.nameTxt.Size = New System.Drawing.Size(197, 38)
         Me.nameTxt.TabIndex = 6
         Me.nameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
@@ -127,7 +127,7 @@ Partial Class Customer_s_name
         'surnameTXT
         '
         Me.surnameTXT.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.surnameTXT.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.surnameTXT.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.surnameTXT.ForeColor = System.Drawing.Color.White
         Me.surnameTXT.HintForeColor = System.Drawing.Color.Empty
         Me.surnameTXT.HintText = ""
@@ -135,11 +135,11 @@ Partial Class Customer_s_name
         Me.surnameTXT.LineFocusedColor = System.Drawing.Color.SeaGreen
         Me.surnameTXT.LineIdleColor = System.Drawing.Color.Gray
         Me.surnameTXT.LineMouseHoverColor = System.Drawing.Color.SeaGreen
-        Me.surnameTXT.LineThickness = 3
-        Me.surnameTXT.Location = New System.Drawing.Point(241, 108)
+        Me.surnameTXT.LineThickness = 4
+        Me.surnameTXT.Location = New System.Drawing.Point(243, 101)
         Me.surnameTXT.Margin = New System.Windows.Forms.Padding(4)
         Me.surnameTXT.Name = "surnameTXT"
-        Me.surnameTXT.Size = New System.Drawing.Size(214, 31)
+        Me.surnameTXT.Size = New System.Drawing.Size(197, 38)
         Me.surnameTXT.TabIndex = 8
         Me.surnameTXT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '

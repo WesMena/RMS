@@ -63,7 +63,7 @@ Public Class AdminClient
         modifyitem.ItemName = ""
         modifyitem.Description = ""
         modifyitem.Category = ""
-        modifyitem.Price = 2000
+        modifyitem.Price = 4500
         modifyitem.Special = False
         modifyitem.Imagepath = ""
         modifyitem.Espdesctxt.Text = ""
@@ -79,6 +79,10 @@ Public Class AdminClient
 
     Private Sub closeBtn_Click(sender As Object, e As EventArgs) Handles closeBtn.Click
         Me.Close()
+    End Sub
+
+    Private Sub Orderlist1_Load(sender As Object, e As EventArgs) Handles Orderlist1.Load
+
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint

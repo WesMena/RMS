@@ -121,7 +121,7 @@ Public Class ModifyItemUC
         Dim p As Boolean = Price = 0
         Dim img As Boolean = Special And Imagepath = ""
         If img Then
-            MsgBox("Los Items especiales requieren una imagen", MsgBoxStyle.Exclamation)
+            MsgBox("Los ítems especiales requieren una imagen", MsgBoxStyle.Exclamation)
         End If
         Return n Or cat Or p Or img
 

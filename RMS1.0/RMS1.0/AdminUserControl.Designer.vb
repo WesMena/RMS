@@ -34,8 +34,6 @@ Partial Class AdminUserControl
         Me.mainCourseButton = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.appetizerbtn = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.admindgv = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.categorylbl = New System.Windows.Forms.Label()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.itemname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Description = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,6 +41,8 @@ Partial Class AdminUserControl
         Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Special = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.categorylbl = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.admindgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -136,7 +136,7 @@ Partial Class AdminUserControl
         Me.specialsButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.specialsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.specialsButton.BorderRadius = 0
-        Me.specialsButton.ButtonText = "Items Especiales"
+        Me.specialsButton.ButtonText = "Ítems Especiales"
         Me.specialsButton.Cursor = System.Windows.Forms.Cursors.Hand
         Me.specialsButton.DisabledColor = System.Drawing.Color.Gray
         Me.specialsButton.Iconcolor = System.Drawing.Color.Transparent
@@ -159,7 +159,7 @@ Partial Class AdminUserControl
         Me.specialsButton.selected = False
         Me.specialsButton.Size = New System.Drawing.Size(238, 48)
         Me.specialsButton.TabIndex = 11
-        Me.specialsButton.Text = "Items Especiales"
+        Me.specialsButton.Text = "Ítems Especiales"
         Me.specialsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.specialsButton.Textcolor = System.Drawing.Color.White
         Me.specialsButton.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -170,7 +170,7 @@ Partial Class AdminUserControl
         Me.allitemsButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(144, Byte), Integer))
         Me.allitemsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.allitemsButton.BorderRadius = 0
-        Me.allitemsButton.ButtonText = "Todos los Items"
+        Me.allitemsButton.ButtonText = "Todos los Ítems"
         Me.allitemsButton.Cursor = System.Windows.Forms.Cursors.Hand
         Me.allitemsButton.DisabledColor = System.Drawing.Color.Gray
         Me.allitemsButton.Iconcolor = System.Drawing.Color.Transparent
@@ -193,7 +193,7 @@ Partial Class AdminUserControl
         Me.allitemsButton.selected = False
         Me.allitemsButton.Size = New System.Drawing.Size(235, 48)
         Me.allitemsButton.TabIndex = 12
-        Me.allitemsButton.Text = "Todos los Items"
+        Me.allitemsButton.Text = "Todos los Ítems"
         Me.allitemsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.allitemsButton.Textcolor = System.Drawing.Color.White
         Me.allitemsButton.TextFont = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -308,26 +308,6 @@ Partial Class AdminUserControl
         Me.admindgv.Size = New System.Drawing.Size(705, 376)
         Me.admindgv.TabIndex = 14
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.SeaGreen
-        Me.Panel2.Controls.Add(Me.categorylbl)
-        Me.Panel2.Location = New System.Drawing.Point(238, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(705, 52)
-        Me.Panel2.TabIndex = 15
-        '
-        'categorylbl
-        '
-        Me.categorylbl.AutoSize = True
-        Me.categorylbl.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.categorylbl.ForeColor = System.Drawing.SystemColors.Control
-        Me.categorylbl.Location = New System.Drawing.Point(268, 13)
-        Me.categorylbl.Name = "categorylbl"
-        Me.categorylbl.Size = New System.Drawing.Size(316, 32)
-        Me.categorylbl.TabIndex = 0
-        Me.categorylbl.Text = "La categoría sale aquí "
-        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.HeaderText = "IdColumn"
@@ -368,6 +348,26 @@ Partial Class AdminUserControl
         Me.DataGridViewTextBoxColumn3.HeaderText = "Imagen"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.Visible = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.SeaGreen
+        Me.Panel2.Controls.Add(Me.categorylbl)
+        Me.Panel2.Location = New System.Drawing.Point(238, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(705, 52)
+        Me.Panel2.TabIndex = 15
+        '
+        'categorylbl
+        '
+        Me.categorylbl.AutoSize = True
+        Me.categorylbl.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.categorylbl.ForeColor = System.Drawing.SystemColors.Control
+        Me.categorylbl.Location = New System.Drawing.Point(268, 13)
+        Me.categorylbl.Name = "categorylbl"
+        Me.categorylbl.Size = New System.Drawing.Size(316, 32)
+        Me.categorylbl.TabIndex = 0
+        Me.categorylbl.Text = "La categoría sale aquí "
         '
         'AdminUserControl
         '
