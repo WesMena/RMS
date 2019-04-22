@@ -129,4 +129,9 @@ C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.orderlist
 C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.wrongpass.resources
 C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.tablenumUC.resources
 C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1._0.AddItemUC.resources
-C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.vbprojAssemblyReference.cache
+C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\bin\Debug\RMS1.0.exe.manifest
+C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\bin\Debug\RMS1.0.application
+C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.exe.manifest
+C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\obj\Debug\RMS1.0.application
+C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\bin\Debug\RMS1.0.exe.CodeAnalysisLog.xml
+C:\Users\USER\Source\Repos\WesMena\RMS\RMS1.0\RMS1.0\bin\Debug\RMS1.0.exe.lastcodeanalysissucceeded
